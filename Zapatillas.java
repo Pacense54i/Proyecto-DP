@@ -13,6 +13,9 @@ public class Zapatillas
     private int valor; //valor numérico del agarre o amortiguación de las zapatillas
     private int numero;
     
+    private int ESUNAPRUEBA
+        
+    
     /**
      * Constructor for objects of class Zapatillas
      */
