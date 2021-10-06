@@ -13,7 +13,8 @@ public class Zapatillas
     private int valor; //valor numérico del agarre o amortiguación de las zapatillas
     private int numero;
     
-    private int ESUNAPRUEBA
+    private int ESUNAPRUEBA;
+    //y esta es la segunda
         
     
     /**
