@@ -15,6 +15,7 @@ public class Zapatillas
     
     private int ESUNAPRUEBA;
     //y esta es la segunda
+    //3
         
     
     /**
