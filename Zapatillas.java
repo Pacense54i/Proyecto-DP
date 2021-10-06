@@ -13,8 +13,6 @@ public class Zapatillas
     private int valor; //valor numérico del agarre o amortiguación de las zapatillas
     private int numero;
     
-    private int ESUNAPRUEBA123456;
-    //hola carlosbdsvubdv
     
     /**
      * Constructor for objects of class Zapatillas
@@ -99,7 +97,7 @@ public class Zapatillas
     /**
      * Show in screen the values stored in instance variables
      */
-    public void show()
+    public void showZapatillas()
     {
         System.out.println(modelo);
         System.out.println(tipo);
