@@ -11,7 +11,6 @@ public class Campeonato
     private String nombre;
     private String competidores;
     private String eliminados;
-    //ESOS CHAVALES
     
     /**
      * Constructor for objects of class Campeonato
