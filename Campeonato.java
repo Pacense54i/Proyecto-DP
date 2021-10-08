@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Write a description of class Campeonato here.
  * 
@@ -9,8 +9,8 @@ public class Campeonato
 {
     // instance variables - replace the example below with your own
     private String nombre;
-    private String competidores;
-    private String eliminados;
+    private ArrayList competidores;
+    private ArrayList eliminados;
     
     /**
      * Constructor for objects of class Campeonato
@@ -19,8 +19,8 @@ public class Campeonato
     {
         // initialise instance variables
         nombre = " ";
-        competidores = " ";
-        eliminados = " ";
+        competidores = new ArrayList() ;
+        eliminados = new ArrayList();
     }
 
     /**
@@ -33,7 +33,6 @@ public class Campeonato
     {
         // put your code here
         nombre = " ";
-        competidores = " ";
-        eliminados = " ";
+        
     }
 }
