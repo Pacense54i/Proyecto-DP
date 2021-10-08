@@ -11,7 +11,7 @@ public class Campeonato
     private String nombre;
     private String competidores;
     private String eliminados;
-    //ESOS CHAVALES
+    
     
     /**
      * Constructor for objects of class Campeonato
@@ -33,6 +33,6 @@ public class Campeonato
     public void mostrarCaracteristicas()
     {
         // put your code here
-      //hola
+      
     }
 }
