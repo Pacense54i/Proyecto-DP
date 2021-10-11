@@ -12,6 +12,7 @@ public class Tenista
     private int resto;
     private int ranking;
     private int puntosAcumulados;
+    private int guardarPtoSaque;
     private String nombre;
     private String pais;
     private Zapatillas zapatilla;
@@ -100,6 +101,24 @@ public class Tenista
     
     
     /**
+     * Set guardarSaque to specify the guardarPtoSaque of the Tenista
+     */
+    public void setGuardarPtoSaque(int guardarSaque)
+    {
+        guardarPtoSaque = guardarSaque;
+    }
+    
+    /**
+     * Devuelve el valor guardado en la variable guardarPtoSaque
+     */
+    public int getGuardarPtoSaque()
+    {
+       return guardarPtoSaque;
+    }
+    
+    
+    
+    /**
      * Set name to specify the nombre of the Tenista
      */
     public void setNombre(String name)
@@ -159,7 +178,7 @@ public class Tenista
         result = 0;
         
         result =  getSaque() * aux.calcularValorSaque();
-        
+        guardarPtoSaque = result;
         return result;
     }
     
@@ -199,13 +218,14 @@ public class Tenista
      */
     public void restar(Tenista oponente)//consideramos t2 como el tenista oponente
     {
+        int incrementar;
+        double resto;
+        resto = calcularResto();
         
-       
-        //restoT1 = t1.calcularResto();
-        //saqueT2 = t2.calcularSaque();
-        
-        //if(restoT1 > saqueT2){
-            // t2.puntosAcumulados += restoT1;
+            if(resto > oponente.getGuardarPtoSaque()){
+                //incrementar = getPuntosAcumulados() + resto;
+                //setPuntosAcumulados(incrementar);
+            }
      }
      /**
      * 

@@ -67,7 +67,10 @@ public class Campeonato
     public void juego(Tenista t1, Tenista t2)
     {
        t1.sacar();
-       
+       t2.restar(t1);
+       t2.sacar();
+       t1.restar(t2);
+
         
     }
 
