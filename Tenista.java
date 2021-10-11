@@ -153,12 +153,12 @@ public class Tenista
     /**
      * Devuelve el valor del saque del tenista ti con las zapatillas aux
      */
-    public int calcularSaque(Tenista t1,Zapatillas aux)
+    public int calcularSaque(Zapatillas aux)
     {
         int result;
         result = 0;
         
-        result =  t1.getSaque() * aux.calcularValorSaque();
+        result =  getSaque() * aux.calcularValorSaque();
         
         return result;
     }
@@ -166,17 +166,17 @@ public class Tenista
     /**
      * Poner la pelota en juego
      */
-    public void sacar(Tenista t1)
+    public void sacar()
     {
         int increment;
         increment = 0;
         Zapatillas aux = new Zapatillas();
         
-        aux = t1.getZapatilla();
+        aux = getZapatilla();
         
-        increment = t1.getPuntosAcumulados() + calcularSaque(t1,aux);
+        increment = getPuntosAcumulados() + calcularSaque(aux);
         
-        t1.setPuntosAcumulados(increment);
+        setPuntosAcumulados(increment);
         
     }
     
@@ -199,22 +199,23 @@ public class Tenista
      */
     public void restar(Tenista oponente)//consideramos t2 como el tenista oponente
     {
-        double restoT2;
-        int saqueT1;
-        //restoT2 = t2.calcularResto();
-        //saqueT1 = t1.calcularSaque();
         
-        //if(restoT2 > saqueT1){
-            //t2.puntosAcumulados += restoT2;
-        //}
-    }
-    
-    /**
+       
+        //restoT1 = t1.calcularResto();
+        //saqueT2 = t2.calcularSaque();
+        
+        //if(restoT1 > saqueT2){
+            // t2.puntosAcumulados += restoT1;
+     }
+     /**
      * 
      */
     public void jugar(Tenista t1, Tenista oponente)//consideramos t2 como el tenista oponente
     {
-        sacar(t1);
+        t1.sacar();
         restar(oponente);
     }
 }
+    
+    
+  
