@@ -40,7 +40,7 @@ public class Tenista
     }
     
     /**
-     * Return the current saque
+     * Devuelve el valor guardado en la variable saque
      */
     public int getSaque()
     {
@@ -57,7 +57,7 @@ public class Tenista
     }
     
     /**
-     * Return the current resto
+     * Devuelve el valor guardado en la variable resto
      */
     public int getResto()
     {
@@ -74,7 +74,7 @@ public class Tenista
     }
     
     /**
-     * Return the current ranking
+     * Devuelve el valor guardado en la variable ranking
      */
     public int getRanking()
     {
@@ -91,7 +91,7 @@ public class Tenista
     }
     
     /**
-     * Return the current puntosAcumulados
+     * Devuelve el valor guardado en la variable puntosAcumulados
      */
     public int getPuntosAcumulados()
     {
@@ -108,7 +108,7 @@ public class Tenista
     }
     
     /**
-     * Return the current nombre
+     * Devuelve el valor guardado en la variable nombre
      */
     public String getNombre()
     {
@@ -125,7 +125,7 @@ public class Tenista
     }
     
     /**
-     * Return the current nombre
+     * Devuelve el valor guardado en la variable pais
      */
     public String getPais()
     {
@@ -142,7 +142,7 @@ public class Tenista
     }
     
     /**
-     * Return the current zapatilla
+     * Devuelve el valor guardado en la variable zapatilla
      */
     public Zapatillas getZapatilla()
     {
@@ -151,7 +151,7 @@ public class Tenista
     
     
     /**
-     * c
+     * Devuelve el valor del saque del tenista ti con las zapatillas aux
      */
     public int calcularSaque(Tenista t1,Zapatillas aux)
     {

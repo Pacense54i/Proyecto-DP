@@ -25,6 +25,17 @@ public class Zapatillas
         valor = 0;
         numero = 0;
     }
+    
+    /**
+     * Constructor parametrizado para objetos de la clase Zapatilla
+     */
+    public Zapatillas(String model,String type, int value,int number)
+    {
+        modelo = model;
+        tipo = type;
+        valor = value;
+        numero = number;
+    }
 
     /**
      * Set model to specify the modelo of the zapatillas
@@ -35,7 +46,7 @@ public class Zapatillas
     }
     
     /**
-     * Return the current modelo
+     * Devuelve el modelo actual
      */
     public String getModelo()
     {
@@ -52,7 +63,7 @@ public class Zapatillas
     }
     
     /**
-     * Return the current tipo
+     * Devuelve el tipo actual
      */
     public String getTipo()
     {
@@ -69,7 +80,7 @@ public class Zapatillas
     }
     
     /**
-     * Return the current valor
+     * Devuelve el valor actual
      */
     public int getValor()
     {
@@ -86,7 +97,7 @@ public class Zapatillas
     }
     
     /**
-     * Return the current numero
+     * Devuelve el numero actual
      */
     public int getNumero()
     {
@@ -95,7 +106,7 @@ public class Zapatillas
     
     
     /**
-     * Show in screen the values stored in instance variables
+     * Muestra en pantalla los valores de la diferentes variables
      */
     public void showZapatillas()
     {
