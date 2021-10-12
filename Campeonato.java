@@ -24,20 +24,18 @@ public class Campeonato
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Muestra por pantalla las caracteristicas de un campeonato
      */
     public void mostrarCaracteristicas()
     {
-        // put your code here
         nombre = " ";
+        
 
     }
 
     /**
-     *
+     * Inscribe a los tenistas en la competicion
+     * (añade tenistas a la lista de competidores)
      */
     public void inscribirJugadores(Tenista T)
     {
@@ -46,10 +44,7 @@ public class Campeonato
 
     }
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y
+     * Pone en juego la competicion y comprueba la condicion de victoria
      */
     public void competicion()
     {
@@ -59,19 +54,15 @@ public class Campeonato
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * Pone en juego el partido
      *
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y
+     * @param  Tenistas t1 y t2 
      */
     public void juego(Tenista t1, Tenista t2)
     {
-       t1.sacar();
-       t2.restar(t1);
-       t2.sacar();
-       t1.restar(t2);
-
-        
+       t1.jugar(t2);
+       t2.jugar(t1);
+    
     }
 
 }

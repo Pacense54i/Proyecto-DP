@@ -10,7 +10,7 @@ public class Zapatillas
     // instance variables - replace the example below with your own
     private String modelo;
     private String tipo;
-    private int valor; //valor numérico del agarre o amortiguación de las zapatillas
+    private double valor; //valor numérico del agarre o amortiguación de las zapatillas
     private int numero;
     
     
@@ -42,15 +42,17 @@ public class Zapatillas
      */
     public void setModelo(String model)
     {
-        modelo = model;
+        this.modelo = model;
     }
     
     /**
      * Devuelve el modelo actual
+     * 
+     * @return valor de la varible modelo(String)
      */
     public String getModelo()
     {
-        return modelo;
+        return this.modelo;
     }
     
     
@@ -59,32 +61,36 @@ public class Zapatillas
      */
     public void setTipo(String type)
     {
-        tipo = type;
+        this.tipo = type;
     }
     
     /**
      * Devuelve el tipo actual
+     * 
+     * @return valor de la varible Tipo(String)
      */
     public String getTipo()
     {
-        return tipo;
+        return this.tipo;
     }
     
     
     /**
      * Set type to specify the tipo of the zapatillas
      */
-    public void setValor(int value)
+    public void setValor(double value)
     {
-        valor = value;
+        this.valor = value;
     }
     
     /**
      * Devuelve el valor actual
+     * 
+     * @return valor de la varible valor(int)
      */
-    public int getValor()
+    public double getValor()
     {
-        return valor;
+        return this.valor;
     }
     
     
@@ -93,15 +99,17 @@ public class Zapatillas
      */
     public void setNumero(int num)
     {
-        numero = num;
+        this.numero = num;
     }
     
     /**
      * Devuelve el numero actual
+     * 
+     * @return valor de la varible numero(int)
      */
     public int getNumero()
     {
-        return numero;
+        return this.numero;
     }
     
     
@@ -118,10 +126,13 @@ public class Zapatillas
     
     /**
      * Devolve el valor de saque de las zapatillas
+     * 
+     * @return  variable resto multiplicado por 2 si la zapatilla
+     *          es de tipo amortiguacion
      */
-    public int calcularValorSaque()
+    public double calcularValorSaque()
     {
-        int resto;
+        double resto;
         resto = 0;
         
         if(tipo == "amortiguacion"){
@@ -133,6 +144,9 @@ public class Zapatillas
     
     /**
      * Devolve el valor de resto de las zapatillas
+     * 
+     * @return  variable resto multiplicado por 1.5 si la zapatilla
+     *          es de tipo agarre
      */
     public double calcularValorResto()
     {

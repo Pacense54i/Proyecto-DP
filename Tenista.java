@@ -8,11 +8,11 @@
 public class Tenista
 {
     // instance variables - replace the example below with your own
-    private int saque;
-    private int resto;
+    private double saque;
+    private double resto;
     private int ranking;
-    private int puntosAcumulados;
-    private int guardarPtoSaque;
+    private double puntosAcumulados;
+    private double guardarPtoSaque;
     private String nombre;
     private String pais;
     private Zapatillas zapatilla;
@@ -35,34 +35,34 @@ public class Tenista
     /**
      * Set saque1 to specify the saque of the Tenista
      */
-    public void setSaque(int saque1)
+    public void setSaque(double saque1)
     {
-        saque = saque1;
+        this.saque = saque1;
     }
     
     /**
      * Devuelve el valor guardado en la variable saque
      */
-    public int getSaque()
+    public double getSaque()
     {
-        return saque;
+        return this.saque;
     }
     
     
     /**
      * Set rest to specify the resto of the Tenista
      */
-    public void setResto(int rest)
+    public void setResto(double rest)
     {
-        resto = rest;
+        this.resto = rest;
     }
     
     /**
      * Devuelve el valor guardado en la variable resto
      */
-    public int getResto()
+    public double getResto()
     {
-        return resto;
+        return this.resto;
     }
     
     
@@ -71,7 +71,7 @@ public class Tenista
      */
     public void setRanking(int rankin)
     {
-        ranking = rankin;
+        this.ranking = rankin;
     }
     
     /**
@@ -79,41 +79,41 @@ public class Tenista
      */
     public int getRanking()
     {
-        return ranking;
+        return this.ranking;
     }
     
     
     /**
      * Set ptoAcumulados to specify the puntosAcumulados of the Tenista
      */
-    public void setPuntosAcumulados(int ptoAcumulados)
+    public void setPuntosAcumulados(double ptoAcumulados)
     {
-        puntosAcumulados = ptoAcumulados;
+        this.puntosAcumulados = ptoAcumulados;
     }
     
     /**
      * Devuelve el valor guardado en la variable puntosAcumulados
      */
-    public int getPuntosAcumulados()
+    public double getPuntosAcumulados()
     {
-       return puntosAcumulados;
+       return this.puntosAcumulados;
     }
     
     
     /**
      * Set guardarSaque to specify the guardarPtoSaque of the Tenista
      */
-    public void setGuardarPtoSaque(int guardarSaque)
+    public void setGuardarPtoSaque(double guardarSaque)
     {
-        guardarPtoSaque = guardarSaque;
+       this.guardarPtoSaque = guardarSaque;
     }
     
     /**
      * Devuelve el valor guardado en la variable guardarPtoSaque
      */
-    public int getGuardarPtoSaque()
+    public double getGuardarPtoSaque()
     {
-       return guardarPtoSaque;
+       return this.guardarPtoSaque;
     }
     
     
@@ -123,7 +123,7 @@ public class Tenista
      */
     public void setNombre(String name)
     {
-        nombre = name;
+        this.nombre = name;
     }
     
     /**
@@ -131,7 +131,7 @@ public class Tenista
      */
     public String getNombre()
     {
-       return nombre;
+       return this.nombre;
     }
     
     
@@ -140,7 +140,7 @@ public class Tenista
      */
     public void setPais(String country)
     {
-        pais = country;
+        this.pais = country;
     }
     
     /**
@@ -148,7 +148,7 @@ public class Tenista
      */
     public String getPais()
     {
-       return pais;
+       return this.pais;
     }
     
     
@@ -157,7 +157,7 @@ public class Tenista
      */
     public void setZapatilla(Zapatillas calzado)
     {
-        zapatilla = calzado;
+        this.zapatilla = calzado;
     }
     
     /**
@@ -165,20 +165,21 @@ public class Tenista
      */
     public Zapatillas getZapatilla()
     {
-       return zapatilla;
+       return this.zapatilla;
     }
     
     
     /**
      * Devuelve el valor del saque del tenista ti con las zapatillas aux
      */
-    public int calcularSaque(Zapatillas aux)
+    public double calcularSaque(Zapatillas aux)
     {
-        int result;
+        double result;
         result = 0;
         
         result =  getSaque() * aux.calcularValorSaque();
         guardarPtoSaque = result;
+        
         return result;
     }
     
@@ -187,7 +188,7 @@ public class Tenista
      */
     public void sacar()
     {
-        int increment;
+        double increment;
         increment = 0;
         Zapatillas aux = new Zapatillas();
         
@@ -218,21 +219,21 @@ public class Tenista
      */
     public void restar(Tenista oponente)//consideramos t2 como el tenista oponente
     {
-        int incrementar;
+        double incrementar;
         double resto;
         resto = calcularResto();
         
             if(resto > oponente.getGuardarPtoSaque()){
-                //incrementar = getPuntosAcumulados() + resto;
-                //setPuntosAcumulados(incrementar);
+                incrementar = getPuntosAcumulados() + resto;
+                setPuntosAcumulados(incrementar);
             }
      }
      /**
      * 
      */
-    public void jugar(Tenista t1, Tenista oponente)//consideramos t2 como el tenista oponente
+    public void jugar(Tenista oponente)//consideramos t2 como el tenista oponente
     {
-        t1.sacar();
+        sacar();
         restar(oponente);
     }
 }
