@@ -46,25 +46,13 @@ public class Campeonato
     }
     
     /**
-     * Pone en juego la competicion y comprueba la condicion de victoria
+     * Comprueba que tenista ha ganado el partido y hace lo correspondiente si el tenista ha ganado o ha perdido
+     *
+     * @param  Tenistas t1 y t2 
      */
-    public void competicion()
+    public void comprobacionVictoria(Tenista t1,Tenista t2,int tamanoLista,int i)
     {
-        //juego (t1,t2);
-        Tenista t1;
-        Tenista t2;
-        List <Tenista> aux;
-        int tamanoLista;
-        
-        //PRIMERA RONDA (4 veces)
-            for(int i=0; i < 4;i++){
-                t1 = competidores.get(i);
-                tamanoLista = competidores.size();
-                t2 = competidores.get(tamanoLista-1);
-                
-                juego (t1,t2);
-                
-                if( t1.getPuntosAcumulados() == t2.getPuntosAcumulados() ){
+        if( t1.getPuntosAcumulados() == t2.getPuntosAcumulados() ){
                     double sumat1,sumat2;
                     sumat1 = t1.getSaque() + t1.getResto();
                     sumat2 = t2.getSaque() + t2.getResto();
@@ -91,10 +79,44 @@ public class Campeonato
                         competidores.remove(tamanoLista-1);
                     }
                 }
+    }
+    
+    
+    /**
+     * Pone en juego la competicion y comprueba la condicion de victoria
+     */
+    public void competicion()
+    {
+        //juego (t1,t2);
+        Tenista t1;
+        Tenista t2;
+        List <Tenista> aux;
+        int tamanoLista;
+        
+        //PRIMERA RONDA (4 veces)
+            for(int i=0; i < 4;i++){
+                t1 = competidores.get(i);
+                tamanoLista = competidores.size();
+                t2 = competidores.get(tamanoLista-1);
+                
+                juego (t1,t2);
+                
+                comprobacionVictoria(t1,t2,tamanoLista,i);
             }
-        
-        
-        //CONDICION DE VICTORIA
+            
+        //A esta altura hemos terminado la primera ronda y se han eliminado la mitad de jugadores
+        //SEGUNDA RONDA (2 veces)
+            for(int i=0; i < 2;i++){
+                t1 = competidores.get(i);
+                tamanoLista = competidores.size();
+                t2 = competidores.get(tamanoLista-1);
+                
+                juego (t1,t2);
+                
+                comprobacionVictoria(t1,t2,tamanoLista,i);
+            }    
+            
+        //ULTIMA RONDA (1 vez)
 
     }
     
