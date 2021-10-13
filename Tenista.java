@@ -228,13 +228,14 @@ public class Tenista
                 setPuntosAcumulados(incrementar);
             }
      }
+     
      /**
      * 
      */
     public void jugar(Tenista oponente)//consideramos t2 como el tenista oponente
     {
         sacar();
-        restar(oponente);
+        //oponente.restar();
     }
 }
     
