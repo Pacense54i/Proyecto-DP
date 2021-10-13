@@ -2,8 +2,8 @@
 /**
  * Write a description of class Tenista here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Carlos Garcia Sanchez, Sergio Jimenez Macias, Alfonso David Recio Calderon) 
+ * @version (1.0)
  */
 public class Tenista
 {
@@ -34,6 +34,8 @@ public class Tenista
 
     /**
      * Set saque1 to specify the saque of the Tenista
+     * 
+     * @param double saque1
      */
     public void setSaque(double saque1)
     {
@@ -42,6 +44,8 @@ public class Tenista
     
     /**
      * Devuelve el valor guardado en la variable saque
+     * 
+     * @return double saque
      */
     public double getSaque()
     {
@@ -51,6 +55,8 @@ public class Tenista
     
     /**
      * Set rest to specify the resto of the Tenista
+     * 
+     * @param double rest
      */
     public void setResto(double rest)
     {
@@ -59,6 +65,8 @@ public class Tenista
     
     /**
      * Devuelve el valor guardado en la variable resto
+     * 
+     * @return double resto
      */
     public double getResto()
     {
@@ -68,6 +76,8 @@ public class Tenista
     
     /**
      * Set rankin to specify the ranking of the Tenista
+     * 
+     * @param int rankin
      */
     public void setRanking(int rankin)
     {
@@ -76,6 +86,8 @@ public class Tenista
     
     /**
      * Devuelve el valor guardado en la variable ranking
+     * 
+     * @return int ranking
      */
     public int getRanking()
     {
@@ -85,6 +97,8 @@ public class Tenista
     
     /**
      * Set ptoAcumulados to specify the puntosAcumulados of the Tenista
+     * 
+     * @param double puntosAcomulados
      */
     public void setPuntosAcumulados(double ptoAcumulados)
     {
@@ -93,6 +107,8 @@ public class Tenista
     
     /**
      * Devuelve el valor guardado en la variable puntosAcumulados
+     * 
+     * @return double puntosAcomulados
      */
     public double getPuntosAcumulados()
     {
@@ -102,6 +118,8 @@ public class Tenista
     
     /**
      * Set guardarSaque to specify the guardarPtoSaque of the Tenista
+     * 
+     * @param double guardarSaque
      */
     public void setGuardarPtoSaque(double guardarSaque)
     {
@@ -110,6 +128,8 @@ public class Tenista
     
     /**
      * Devuelve el valor guardado en la variable guardarPtoSaque
+     * 
+     * @return double guardarPuntosSaque
      */
     public double getGuardarPtoSaque()
     {
@@ -120,6 +140,8 @@ public class Tenista
     
     /**
      * Set name to specify the nombre of the Tenista
+     * 
+     * @param string name
      */
     public void setNombre(String name)
     {
@@ -128,6 +150,8 @@ public class Tenista
     
     /**
      * Devuelve el valor guardado en la variable nombre
+     * 
+     * @return string nombre
      */
     public String getNombre()
     {
@@ -137,6 +161,8 @@ public class Tenista
     
     /**
      * Set country to specify the pais of the Tenista
+     * 
+     * @param string country
      */
     public void setPais(String country)
     {
@@ -145,6 +171,8 @@ public class Tenista
     
     /**
      * Devuelve el valor guardado en la variable pais
+     * 
+     * @return string pais
      */
     public String getPais()
     {
@@ -154,6 +182,8 @@ public class Tenista
     
     /**
      * Set calzado to specify the zapatilla of the Tenista
+     * 
+     * @param calzado es de tipo Zapatilla
      */
     public void setZapatilla(Zapatillas calzado)
     {
@@ -162,6 +192,8 @@ public class Tenista
     
     /**
      * Devuelve el valor guardado en la variable zapatilla
+     * 
+     * @return Zapatilla
      */
     public Zapatillas getZapatilla()
     {
@@ -170,7 +202,9 @@ public class Tenista
     
     
     /**
-     * Devuelve el valor del saque del tenista ti con las zapatillas aux
+     * Devuelve el valor del saque del tenista con las zapatillas aux
+     * 
+     * @return result tipo double contiene el valor de multiplicar los puntos de la variable saque por el valor del saque
      */
     public double calcularSaque(Zapatillas aux)
     {
@@ -202,7 +236,9 @@ public class Tenista
     
     
     /**
-     * c
+     * Devuelve el valor del resto del tenista con las zapatillas aux
+     * 
+     * @return result tipo double contiene el valor de multiplicar los puntos de la variable resto por el valor del resto
      */
     public double calcularResto()
     {
@@ -215,9 +251,11 @@ public class Tenista
     }
     
     /**
+     * Compara el resto del tenista t2 con el valor del saque del tenista t1. Si es mayor se incrementan los puntos acomulados
      * 
+     * @param tenista oponente
      */
-    public void restar(Tenista oponente)//consideramos t2 como el tenista oponente
+    public void restar(Tenista oponente)
     {
         double incrementar;
         double resto;
@@ -230,12 +268,14 @@ public class Tenista
      }
      
      /**
+     * Pone en juego a los tenistas
      * 
+     * @param tenista oponente
      */
-    public void jugar(Tenista oponente)//consideramos t2 como el tenista oponente
+    public void jugar(Tenista oponente)
     {
         sacar();
-        //oponente.restar();
+        oponente.restar(this);
     }
 }
     

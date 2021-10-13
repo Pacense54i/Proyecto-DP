@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Zapatillas here.
+ * Clase Zapatilla
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Carlos Garcia Sanchez, Sergio Jimenez Macias, Alfonso David Recio Calderon) 
+ * @version (1.0)
  */
 public class Zapatillas
 {
@@ -39,6 +39,8 @@ public class Zapatillas
 
     /**
      * Set model to specify the modelo of the zapatillas
+     * 
+     * @param String model
      */
     public void setModelo(String model)
     {
@@ -58,6 +60,8 @@ public class Zapatillas
     
     /**
      * Set type to specify the tipo of the zapatillas
+     * 
+     * @param String type
      */
     public void setTipo(String type)
     {
@@ -77,6 +81,8 @@ public class Zapatillas
     
     /**
      * Set type to specify the tipo of the zapatillas
+     * 
+     * @param double value
      */
     public void setValor(double value)
     {
@@ -96,6 +102,8 @@ public class Zapatillas
     
     /**
      * Set num to specify the numero of the zapatillas
+     * 
+     * @param int num
      */
     public void setNumero(int num)
     {
