@@ -1,6 +1,6 @@
 
 /**
- * Clase Zapatilla
+ * Clase Zapatilla la cual incluye los metodos get y set de cada atributo y otros modulos necesarios
  * 
  * @author (Carlos Garcia Sanchez, Sergio Jimenez Macias, Alfonso David Recio Calderon) 
  * @version (1.0)
@@ -15,7 +15,7 @@ public class Zapatillas
     
     
     /**
-     * Constructor for objects of class Zapatillas
+     * Contructor de los objetos de la clase Zapatillas
      */
     public Zapatillas()
     {
@@ -38,7 +38,7 @@ public class Zapatillas
     }
 
     /**
-     * Set model to specify the modelo of the zapatillas
+     * Set model para especificar el modelo de la zapatillas
      * 
      * @param String model
      */
@@ -59,7 +59,7 @@ public class Zapatillas
     
     
     /**
-     * Set type to specify the tipo of the zapatillas
+     * Set type para especificar tipo de las zapatillas
      * 
      * @param String type
      */
@@ -80,7 +80,7 @@ public class Zapatillas
     
     
     /**
-     * Set type to specify the tipo of the zapatillas
+     * Set value para especificar el valor de las zapatillas
      * 
      * @param double value
      */
@@ -101,7 +101,7 @@ public class Zapatillas
     
     
     /**
-     * Set num to specify the numero of the zapatillas
+     * Set num para especificar el numero de las zapatillas
      * 
      * @param int num
      */

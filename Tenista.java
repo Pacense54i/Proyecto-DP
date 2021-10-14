@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Tenista here.
+ * Clase Tenista la cual incluye los metodos get y set de cada atributo y otros modulos necesarios
  * 
  * @author (Carlos Garcia Sanchez, Sergio Jimenez Macias, Alfonso David Recio Calderon) 
  * @version (1.0)
@@ -21,7 +21,7 @@ public class Tenista
     //Al ser una variable creada con ese proposito no es necesario mostrarla 
     //por pantalla en el metodo mostrarTenista
     /**
-     * Constructor for objects of class Tenista
+     * Contructor de los objetos de la clase Tenista
      */
     public Tenista()
     {
@@ -44,18 +44,11 @@ public class Tenista
         System.out.println(" Tenista [" + 
         "Nombre=" + nombre + "," + "Saque=" + saque + "," + "Resto=" + resto + "," + "Ranking=" + ranking + "," +
         "Pais=" + pais + ","  + "]");
-        System.out.println("Nombre=" + nombre + ",");
-        System.out.println("Saque=" + saque + ",");
-        System.out.println("Resto=" + resto + ",");
-        System.out.println("Ranking=" + ranking + ",");
-        //System.out.println("PuntosAcumulados del Tenista: " + puntosAcumulados);
-        System.out.println("Pais=" + pais + ",");
-        System.out.println("]");
         zapatilla.mostrarZapatillas();
     }
     
     /**
-     * Set saque1 to specify the saque of the Tenista
+     * Set saque1 para especificar el saque del Tenista
      * 
      * @param double saque1
      */
@@ -76,7 +69,7 @@ public class Tenista
     
     
     /**
-     * Set rest to specify the resto of the Tenista
+     * Set rest para especificar el resto del Tenista
      * 
      * @param double rest
      */
@@ -97,7 +90,7 @@ public class Tenista
     
     
     /**
-     * Set rankin to specify the ranking of the Tenista
+     * Set rankin para especificar el ranking del Tenista
      * 
      * @param int rankin
      */
@@ -118,7 +111,7 @@ public class Tenista
     
     
     /**
-     * Set ptoAcumulados to specify the puntosAcumulados of the Tenista
+     * Set ptoAcumulados para especificar puntosAcumulados del Tenista
      * 
      * @param double puntosAcomulados
      */
@@ -139,7 +132,7 @@ public class Tenista
     
     
     /**
-     * Set guardarSaque to specify the guardarPtoSaque of the Tenista
+     * Set guardarSaque para especificar el  guardarPtoSaque del Tenista
      * 
      * @param double guardarSaque
      */
@@ -161,7 +154,7 @@ public class Tenista
     
     
     /**
-     * Set name to specify the nombre of the Tenista
+     * Set name para especificar el nombre del Tenista
      * 
      * @param string name
      */
@@ -182,7 +175,7 @@ public class Tenista
     
     
     /**
-     * Set country to specify the pais of the Tenista
+     * Set country para especificar el pais del Tenista
      * 
      * @param string country
      */
@@ -203,7 +196,7 @@ public class Tenista
     
     
     /**
-     * Set calzado to specify the zapatilla of the Tenista
+     * Set calzado para especificar la zapatilla del Tenista
      * 
      * @param calzado es de tipo Zapatilla
      */
