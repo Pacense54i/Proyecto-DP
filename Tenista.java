@@ -35,6 +35,18 @@ public class Tenista
         pais = " ";
         zapatilla = new Zapatillas();
     }
+    
+    public Tenista (String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais)
+    {
+        saque = Saque;
+        resto = Resto;
+        ranking = Ranking;
+        puntosAcumulados = 0;
+        guardarPtoSaque = 0;
+        nombre = Nombre;
+        pais = Pais;
+        zapatilla = z;
+    }
 
     /**
      * Muestra por pantalla los valores de la variable de la clase Tenista

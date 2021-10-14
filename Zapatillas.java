@@ -11,7 +11,7 @@ public class Zapatillas
     private String modelo;
     private String tipo;
     private double valor; //valor numérico del agarre o amortiguación de las zapatillas
-    private int numero;
+    private double numero;
     
     
     /**
@@ -23,13 +23,13 @@ public class Zapatillas
         modelo = " ";
         tipo = " ";
         valor = 0;
-        numero = 0;
+        numero = 0.0;
     }
     
     /**
      * Constructor parametrizado para objetos de la clase Zapatilla
      */
-    public Zapatillas(String model,String type, int value,int number)
+    public Zapatillas(String model,int value, String type, double number)
     {
         modelo = model;
         tipo = type;
@@ -115,7 +115,7 @@ public class Zapatillas
      * 
      * @return valor de la varible numero(int)
      */
-    public int getNumero()
+    public double getNumero()
     {
         return this.numero;
     }

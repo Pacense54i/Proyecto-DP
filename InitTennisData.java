@@ -22,53 +22,53 @@ public class InitTennisData {
     
     private void cargarDatos1(Campeonato campeonato) {
 		//Instanciamos 8 zapatillas: (Los parámetros están en el orden: modelo, número, tipo valor)
-		 /*z1 = ("Air Zoom Vapor Pro", 41, "amortiguacion", 5);
-		 z2 = ("Court Vapor React", 41, "agarre", 5);
-		 z3 = ("Gel-Resolution 8 GS", 41, "agarre", 4);
-		 z4 = ("Vapor Lite", 41, "amortiguacion", 3);
-		 z5 = ("Court Lite", 41, "agarre", 3);
-		 z6 = ("UberSonic 4K", 41, "amortiguacion", 5.5);
-		 z7 = ("Zoom GP Turbo", 41, "amortiguacion", 6);
-		 z8 = ("CourtJam Bounce", 41, "agarre", 3.5);
+		 Zapatillas z1 = new Zapatillas ("Air Zoom Vapor Pro", 41, "amortiguacion", 5);
+		 Zapatillas z2 = new Zapatillas ("Court Vapor React", 41, "agarre", 5);
+		 Zapatillas z3 = new Zapatillas ("Gel-Resolution 8 GS", 41, "agarre", 4);
+		 Zapatillas z4 = new Zapatillas ("Vapor Lite", 41, "amortiguacion", 3);
+		 Zapatillas z5 = new Zapatillas ("Court Lite", 41, "agarre", 3);
+		 Zapatillas z6 = new Zapatillas ("UberSonic 4K", 41, "amortiguacion", 5.5);
+		 Zapatillas z7 = new Zapatillas ("Zoom GP Turbo", 41, "amortiguacion", 6);
+		 Zapatillas z8 = new Zapatillas ("CourtJam Bounce", 41, "agarre", 3.5);
 
 
 
 		//Instanciamos 8 tenistas: (Los parámetros están en el orden nombre, zapatillas, saque, resto, ranking, pais)
-		 t1 = ("Novak Djokovic", z1, 90, 80, 1, "Serbia");
-		 t2 = ("Ashleigh Barty", z3, 70, 80, 1, "Australia");
-		 t3 = ("Stefanos Tsitsipas", z7, 55, 48, 3, "Grecia");
-		 t4 = ("Karolina Pliskova", z5, 67, 68.5, 3, "Rep Checa");
-		 t5 = ("Elina Svitolina", z6, 55.5, 68.5, 4, "Ucrania");
-		 t6 = ("Alexander Zverev", z8, 59, 49.5, 4, "Alemania");
-		 t7 = ("Aryna Sabalenka", z2, 67.5, 79.5, 2, "Bielorrusia");
-		 t8 = ("Daniil Medvedev", z4, 79, 68, 2, "Rusia");
+		 Tenista t1 = new Tenista ("Novak Djokovic", z1, 90, 80, 1, "Serbia");
+		 Tenista t2 = new Tenista ("Ashleigh Barty", z3, 70, 80, 1, "Australia");
+		 Tenista t3 = new Tenista ("Stefanos Tsitsipas", z7, 55, 48, 3, "Grecia");
+		 Tenista t4 = new Tenista ("Karolina Pliskova", z5, 67, 68.5, 3, "Rep Checa");
+		 Tenista t5 = new Tenista ("Elina Svitolina", z6, 55.5, 68.5, 4, "Ucrania");
+		 Tenista t6 = new Tenista ("Alexander Zverev", z8, 59, 49.5, 4, "Alemania");
+		 Tenista t7 = new Tenista ("Aryna Sabalenka", z2, 67.5, 79.5, 2, "Bielorrusia");
+		 Tenista t8 = new Tenista ("Daniil Medvedev", z4, 79, 68, 2, "Rusia");
 		 
 		 //A continuación se inscribirán a los 8 tenistas en el campeonato
     }
 	
 	private void cargarDatos2(Campeonato campeonato) {
         //Instanciamos 8 zapatillas: (Los parámetros están en el orden: modelo, número, tipo valor)
-		z1 = ("Air Zoom Vapor Pro", 41, "amortiguacion", 5);
-		z2 = ("Court Vapor React", 41, "agarre", 5);
-		z3 = ("Gel-Resolution 8 GS", 41, "agarre", 4);
-		z4 = ("Vapor Lite", 41, "amortiguacion", 3);
-		z5 = ("Court Lite", 41, "agarre", 3);
-		z6 = ("UberSonic 4K", 41, "amortiguacion", 5.5);
-		z7 = ("Zoom GP Turbo", 41, "amortiguacion", 6);
-		z8 = ("CourtJam Bounce", 41, "agarre", 3.5);
+		Zapatillas z1 = new Zapatillas ("Air Zoom Vapor Pro", 41, "amortiguacion", 5);
+		Zapatillas z2 = new Zapatillas ("Court Vapor React", 41, "agarre", 5);
+		Zapatillas z3 = new Zapatillas ("Gel-Resolution 8 GS", 41, "agarre", 4);
+		Zapatillas z4 = new Zapatillas ("Vapor Lite", 41, "amortiguacion", 3);
+		Zapatillas z5 = new Zapatillas ("Court Lite", 41, "agarre", 3);
+		Zapatillas z6 = new Zapatillas ("UberSonic 4K", 41, "amortiguacion", 5.5);
+		Zapatillas z7 = new Zapatillas ("Zoom GP Turbo", 41, "amortiguacion", 6);
+		Zapatillas z8 = new Zapatillas ("CourtJam Bounce", 41, "agarre", 3.5);
 
 
 
 		//Instanciamos 8 tenistas: (Los parámetros están en el orden nombre, zapatillas, saque, resto, ranking, pais)
-		t1 = ("Novak Djokovic", z3, 90, 80, 1, "Serbia");
-		t2 = ("Ashleigh Barty", z1, 70, 80, 1, "Australia");
-		t3 = ("Stefanos Tsitsipas", z7, 55, 48, 3, "Grecia");
-		t4 = ("Karolina Pliskova", z5, 67, 68.5, 3, "Rep Checa");
-		t5 = ("Elina Svitolina", z6, 55.5, 68.5, 4, "Ucrania");
-		t6 = ("Alexander Zverev", z8, 59, 49.5, 4, "Alemania");
-		t7 = ("Aryna Sabalenka", z2, 67.5, 79.5, 2, "Bielorrusia");
-		t8 = ("Daniil Medvedev", z4, 79, 68, 2, "Rusia");
-                 */
+		Tenista t1 = new Tenista ("Novak Djokovic", z3, 90, 80, 1, "Serbia");
+		Tenista t2 = new Tenista ("Ashleigh Barty", z1, 70, 80, 1, "Australia");
+		Tenista t3 = new Tenista ("Stefanos Tsitsipas", z7, 55, 48, 3, "Grecia");
+		Tenista t4 = new Tenista ("Karolina Pliskova", z5, 67, 68.5, 3, "Rep Checa");
+		Tenista t5 = new Tenista ("Elina Svitolina", z6, 55.5, 68.5, 4, "Ucrania");
+		Tenista t6 = new Tenista ("Alexander Zverev", z8, 59, 49.5, 4, "Alemania");
+		Tenista t7 = new Tenista ("Aryna Sabalenka", z2, 67.5, 79.5, 2, "Bielorrusia");
+		Tenista t8 = new Tenista ("Daniil Medvedev", z4, 79, 68, 2, "Rusia");
+                
 		//A continuación se inscribirán a los 8 tenistas en el campeonato
     }
 }
