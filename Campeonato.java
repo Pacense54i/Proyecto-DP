@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 /**
  * Write a description of class Campeonato here.
  * 
@@ -115,7 +114,6 @@ public class Campeonato
         //juego (t1,t2);
         Tenista t1;
         Tenista t2;
-        List <Tenista> aux;
         int tamanoLista;
         
         //PRIMERA RONDA (4 veces)
