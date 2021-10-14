@@ -41,13 +41,16 @@ public class Tenista
      */
     public void mostrarTenista()
     {
-        System.out.println("Valor del saque del Tenista: " + saque);
-        System.out.println("Valor del resto del Tenista: " + resto);
-        System.out.println("Ranking del Tenista: " + ranking);
-        System.out.println("PuntosAcumulados del Tenista: " + puntosAcumulados);
-        System.out.println("Mostrando nombre del Tenista: " + nombre);
-        System.out.println("Mostrando el pais del Tenista: " + pais);
-        System.out.println("Mostrando Zapatilla del Tenista: " );
+        System.out.println(" Tenista [" + 
+        "Nombre=" + nombre + "," + "Saque=" + saque + "," + "Resto=" + resto + "," + "Ranking=" + ranking + "," +
+        "Pais=" + pais + ","  + "]");
+        System.out.println("Nombre=" + nombre + ",");
+        System.out.println("Saque=" + saque + ",");
+        System.out.println("Resto=" + resto + ",");
+        System.out.println("Ranking=" + ranking + ",");
+        //System.out.println("PuntosAcumulados del Tenista: " + puntosAcumulados);
+        System.out.println("Pais=" + pais + ",");
+        System.out.println("]");
         zapatilla.mostrarZapatillas();
     }
     
