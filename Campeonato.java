@@ -29,8 +29,33 @@ public class Campeonato
      */
     public void mostrarCaracteristicas()
     {
+        Tenista aux;
+        int tamLista;
+        int i;
+        i = 0;
         nombre = " ";
         
+        //se realiza un bucle while dado que no se el numero exacto de
+        //posiciones que voy a tener a la hora de llamar al modulo
+        //mostrarCaracteristicas(), esto es apicable tanto 
+        //a la lista competidores como a eliminados
+        
+        tamLista = competidores.size(); //tamaño de la lista competidores
+        System.out.println("==Mostrando Tenista de la lista de competidores==" );
+        while(i < tamLista){
+            aux = competidores.get(i);
+            aux.mostrarTenista();
+            i = i + 1;
+        }
+        
+        i = 0;
+        tamLista = eliminados.size(); //tamaño de la lista eliminados
+        System.out.println("==Mostrando Tenista de la lista de eliminados==" );
+        while(i < tamLista){
+            aux = eliminados.get(i);
+            aux.mostrarTenista();
+            i = i + 1;
+        }
 
     }
 

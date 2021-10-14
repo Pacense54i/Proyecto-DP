@@ -124,12 +124,12 @@ public class Zapatillas
     /**
      * Muestra en pantalla los valores de la diferentes variables
      */
-    public void showZapatillas()
+    public void mostrarZapatillas()
     {
-        System.out.println(modelo);
-        System.out.println(tipo);
-        System.out.println(valor);
-        System.out.println(numero);
+        System.out.println("Modelo de la Zapatilla: " + modelo);
+        System.out.println("Tipo de la Zapatilla: " + tipo);
+        System.out.println("Valor de la característica de la Zapatillas: " + valor);
+        System.out.println("Numero de pie de la Zapatilla: " + numero);
     }
     
     /**

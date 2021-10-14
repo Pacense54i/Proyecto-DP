@@ -12,11 +12,14 @@ public class Tenista
     private double resto;
     private int ranking;
     private double puntosAcumulados;
-    private double guardarPtoSaque;
+    private double guardarPtoSaque; 
     private String nombre;
     private String pais;
     private Zapatillas zapatilla;
-
+    // guardarPtoSaque es una variable creada para guardar 
+    //los puntos que ha conseguido un tenista con su saque
+    //Al ser una variable creada con ese proposito no es necesario mostrarla 
+    //por pantalla en el metodo mostrarTenista
     /**
      * Constructor for objects of class Tenista
      */
@@ -27,11 +30,27 @@ public class Tenista
         resto = 0;
         ranking = 0;
         puntosAcumulados = 0;
+        guardarPtoSaque = 0;
         nombre = " ";
         pais = " ";
         zapatilla = new Zapatillas();
     }
 
+    /**
+     * Muestra por pantalla los valores de la variable de la clase Tenista
+     */
+    public void mostrarTenista()
+    {
+        System.out.println("Valor del saque del Tenista: " + saque);
+        System.out.println("Valor del resto del Tenista: " + resto);
+        System.out.println("Ranking del Tenista: " + ranking);
+        System.out.println("PuntosAcumulados del Tenista: " + puntosAcumulados);
+        System.out.println("Mostrando nombre del Tenista: " + nombre);
+        System.out.println("Mostrando el pais del Tenista: " + pais);
+        System.out.println("Mostrando Zapatilla del Tenista: " );
+        zapatilla.mostrarZapatillas();
+    }
+    
     /**
      * Set saque1 to specify the saque of the Tenista
      * 
@@ -265,6 +284,10 @@ public class Tenista
                 incrementar = getPuntosAcumulados() + resto;
                 setPuntosAcumulados(incrementar);
             }
+        //Al haber usado ya la variable guardarPtoSaque voy a ponerla a 0
+        //para que no haya problemas a la hora de volver a 
+        //usarla con otro tenista
+        guardarPtoSaque = 0;
      }
      
      /**
