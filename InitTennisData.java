@@ -1,5 +1,4 @@
 
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +12,7 @@ import org.junit.jupiter.api.Test;
  */
 public class InitTennisData {
 
-    public InitTennisData(Campeonato campeonato) {
+    public void InitTennisData(Campeonato campeonato) {
 	//Descomentar la carga de datos que se quiera probar
         cargarDatos1(campeonato);//Produce la salida Salida1_EC1
 		//cargarDatos2(campeonato);/Produce la salida Salida2_EC1
@@ -44,10 +43,18 @@ public class InitTennisData {
 		 Tenista t8 = new Tenista ("Daniil Medvedev", z4, 79, 68, 2, "Rusia");
 		 
 		 //A continuación se inscribirán a los 8 tenistas en el campeonato
+		campeonato.inscribirJugadores(t1);
+		campeonato.inscribirJugadores(t2);
+		campeonato.inscribirJugadores(t3);
+		campeonato.inscribirJugadores(t4);
+		campeonato.inscribirJugadores(t5);
+		campeonato.inscribirJugadores(t6);
+		campeonato.inscribirJugadores(t7);
+		campeonato.inscribirJugadores(t8);
     }
 	
 	private void cargarDatos2(Campeonato campeonato) {
-        //Instanciamos 8 zapatillas: (Los parámetros están en el orden: modelo, número, tipo valor)
+                //Instanciamos 8 zapatillas: (Los parámetros están en el orden: modelo, número, tipo valor)
 		Zapatillas z1 = new Zapatillas ("Air Zoom Vapor Pro", 41, "amortiguacion", 5);
 		Zapatillas z2 = new Zapatillas ("Court Vapor React", 41, "agarre", 5);
 		Zapatillas z3 = new Zapatillas ("Gel-Resolution 8 GS", 41, "agarre", 4);
@@ -70,5 +77,13 @@ public class InitTennisData {
 		Tenista t8 = new Tenista ("Daniil Medvedev", z4, 79, 68, 2, "Rusia");
                 
 		//A continuación se inscribirán a los 8 tenistas en el campeonato
+		campeonato.inscribirJugadores(t1);
+		campeonato.inscribirJugadores(t2);
+		campeonato.inscribirJugadores(t3);
+		campeonato.inscribirJugadores(t4);
+		campeonato.inscribirJugadores(t5);
+		campeonato.inscribirJugadores(t6);
+		campeonato.inscribirJugadores(t7);
+		campeonato.inscribirJugadores(t8);
     }
 }
