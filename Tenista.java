@@ -26,11 +26,11 @@ public class Tenista
     public Tenista()
     {
         // initialise instance variables
-        saque = 0;
-        resto = 0;
+        saque = 0.0;
+        resto = 0.0;
         ranking = 0;
-        puntosAcumulados = 0;
-        guardarPtoSaque = 0;
+        puntosAcumulados = 0.0;
+        guardarPtoSaque = 0.0;
         nombre = " ";
         pais = " ";
         zapatilla = new Zapatillas();
@@ -41,7 +41,7 @@ public class Tenista
         saque = Saque;
         resto = Resto;
         ranking = Ranking;
-        puntosAcumulados = 0;
+        puntosAcumulados = 0.0;
         guardarPtoSaque = 0;
         nombre = Nombre;
         pais = Pais;
