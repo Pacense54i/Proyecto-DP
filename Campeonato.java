@@ -17,6 +17,7 @@ public class Campeonato
      */
     public Campeonato()
     {
+        // initialise instance
         // initialise instance variables
         nombre = " ";
         competidores = new ArrayList() ;
