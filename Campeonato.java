@@ -30,8 +30,6 @@ public class Campeonato
     public void mostrarCompetidores()
     {
         Zapatillas z = new Zapatillas();
-            
-        System.out.println("**********Listado de competidores");
         
         for(Tenista t: competidores){
           System.out.println(t);
@@ -53,8 +51,6 @@ public class Campeonato
           System.out.println(t);
           z = t.getZapatilla();
           System.out.println(z);
-          System.out.println("posicionnnn");
-          System.out.println(t.getOrdenEliminado());
         }        
     }
     
@@ -73,10 +69,11 @@ public class Campeonato
      * Comprueba que tenista ha ganado el partido y hace lo correspondiente si el tenista ha ganado o ha perdido
      *
      * @param  Tenistas t1 y t2 //RECORDATORIO:cambiar mas adelante
+     * auxNum = numero de veces que se ha jugado un partido
      */
     
     //cada vez que añadamos un nuevo tenista a la lista de elominados tendremos que ordenar meterlo en orden descendiente
-    public void comprobacionVictoria(Tenista t1,Tenista t2,int tamanoLista,int i)
+    public void comprobacionVictoria(Tenista t1,Tenista t2,int tamanoLista,int i,int auxNum)
     {
         
         if( t1.getPuntosAcumulados() == t2.getPuntosAcumulados() ){
@@ -85,8 +82,8 @@ public class Campeonato
                 sumat2 = t2.getSaque() + t2.getResto();
                 if (sumat1 > sumat2){
                     //sumat2 habra ganado
-                    int num = t1.getOrdenEliminado();
-                    t1.setOrdenEliminado(num + 1);
+                    
+                    t1.setOrdenEliminado(auxNum);
                     eliminados.add(t1);
                     eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
                     
@@ -97,12 +94,12 @@ public class Campeonato
                     t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acomulados.");
                     System.out.println("    ## Se elimina:" + 
                     t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acomulados. Tenista eliminado num: " + 
-                    i);
+                    t1.getOrdenEliminado());
                 }
                 else{
                     //sumat1 habra gando dado que sumat2 es menor
-                    int num = t1.getOrdenEliminado();
-                    t2.setOrdenEliminado(num +1);
+                    
+                    t2.setOrdenEliminado(auxNum);
                     eliminados.add(t2);
                     eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
                     
@@ -111,15 +108,15 @@ public class Campeonato
                     t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acomulados.");
                     System.out.println("    ## Se elimina:" + 
                     t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acomulados. Tenista eliminado num: " + 
-                    tamanoLista);
+                    t2.getOrdenEliminado());
                 }
                 competidores.remove(tamanoLista); 
         }
         else{
                 if( t1.getPuntosAcumulados() > t2.getPuntosAcumulados() ){
                     //t1 es mayor, gana t1
-                    int num = t1.getOrdenEliminado();
-                    t2.setOrdenEliminado(num + 1);
+                    
+                    t2.setOrdenEliminado(auxNum);
                     eliminados.add(t2);
                     eliminados.sort( new ComparatorEliminados() ); //ordena la lista de eliminados de manera descendente
                     
@@ -127,12 +124,12 @@ public class Campeonato
                     t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acomulados.");
                     System.out.println("    ## Se elimina:" + 
                     t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acomulados. Tenista eliminado num: " + 
-                    tamanoLista);
+                    t2.getOrdenEliminado());
                 }
                 else{
                     //t2 es mayor, gana t2
-                    int num = t1.getOrdenEliminado();
-                    t1.setOrdenEliminado(num + 1);
+                    
+                    t1.setOrdenEliminado(auxNum);
                     eliminados.add(t1);
                     eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
                     
@@ -143,7 +140,7 @@ public class Campeonato
                     t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acomulados.");
                     System.out.println("    ## Se elimina:" + 
                     t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acomulados. Tenista eliminado num: " + 
-                    i);
+                    t1.getOrdenEliminado());
                 }
                 competidores.remove(tamanoLista);
         }
@@ -161,16 +158,21 @@ public class Campeonato
         int tamanoLista;
         int ronda = 1;
         int juego = 0;
+        int auxNum = 0; //numero de veces que se ejecuta un partido
+        int numBucle = 0; //numero de veces que se juega un partido en cada ronda
+        
         /*Ejecutamos while de tal manera que el código no terminará hasta
          * quedar un único tenista final que será el ganador de la 
          * competición.
         */
         System.out.println("***** Inicio del campeonato: Campeonato de Extremadura *****");
+        System.out.println("**********Listado de competidores");
         mostrarCompetidores();
         
             while (competidores.size() > 1){
                 System.out.println("***** Ronda---->>>: " + ronda);
-                for(int i=0; i < competidores.size()/2;i++){
+                numBucle = competidores.size()/2;
+                for(int i=0; i < numBucle;i++){
                     System.out.println("   ### Juego ----------->>>: " + juego);
                     tamanoLista = competidores.size();
                     
@@ -182,8 +184,10 @@ public class Campeonato
                     System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre());
                     
                     juego (t1,t2);
+                   
+                    auxNum++;
                     
-                    comprobacionVictoria(t1,t2,tamanoLista-1,i);
+                    comprobacionVictoria(t1,t2,tamanoLista-1,i,auxNum);
                     
                     juego++;
                 }
@@ -191,9 +195,9 @@ public class Campeonato
                 juego = 0;
             }
         System.out.println("---->>>>  Gana la competición:");
-        ganador = competidores.get(0);
-        // ganador.mostrarTenista();
-                
+        mostrarCompetidores();
+        System.out.println("<<<<----");
+        
         mostrarEliminados();
     }
     
