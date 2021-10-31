@@ -65,6 +65,7 @@ public class Campeonato
     public void inscribirJugadores(Tenista T)
     {
         competidores.add(T);
+        //com
     }
     
     /**
