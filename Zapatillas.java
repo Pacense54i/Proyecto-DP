@@ -29,7 +29,7 @@ public class Zapatillas
     /**
      * Constructor parametrizado para objetos de la clase Zapatilla
      */
-    public Zapatillas(String model,int value, String type, double number)
+    public Zapatillas(String model,double number,String type,double value)
     {
         modelo = model;
         tipo = type;
@@ -40,7 +40,7 @@ public class Zapatillas
     /**
      * Set model para especificar el modelo de la zapatillas
      * 
-     * @param String model
+     * @param String model: modelo de la zapatilla.
      */
     public void setModelo(String model)
     {
@@ -50,7 +50,7 @@ public class Zapatillas
     /**
      * Devuelve el modelo actual
      * 
-     * @return valor de la varible modelo(String)
+     * @return devuelve el valor de la varible modelo(String)
      */
     public String getModelo()
     {
@@ -61,7 +61,7 @@ public class Zapatillas
     /**
      * Set type para especificar tipo de las zapatillas
      * 
-     * @param String type
+     * @param String type: tipo de la zapatilla
      */
     public void setTipo(String type)
     {
@@ -71,7 +71,7 @@ public class Zapatillas
     /**
      * Devuelve el tipo actual
      * 
-     * @return valor de la varible Tipo(String)
+     * @return devuelve el valor de la varible Tipo(String)
      */
     public String getTipo()
     {
@@ -82,7 +82,7 @@ public class Zapatillas
     /**
      * Set value para especificar el valor de las zapatillas
      * 
-     * @param double value
+     * @param double value: cambiar el valor de la variable de la clase zapatillas por value
      */
     public void setValor(double value)
     {
@@ -92,7 +92,7 @@ public class Zapatillas
     /**
      * Devuelve el valor actual
      * 
-     * @return valor de la varible valor(int)
+     * @return devuelve el valor de la variable de la clase zapatillas ---> (int)
      */
     public double getValor()
     {
@@ -103,7 +103,7 @@ public class Zapatillas
     /**
      * Set num para especificar el numero de las zapatillas
      * 
-     * @param int num
+     * @param int num: se cambia el valor de la variable Numero por num
      */
     public void setNumero(int num)
     {
@@ -113,7 +113,7 @@ public class Zapatillas
     /**
      * Devuelve el numero actual
      * 
-     * @return valor de la varible numero(int)
+     * @return valor actual de la varible numero(int) de la clase Zapatillas
      */
     public double getNumero()
     {
@@ -124,25 +124,27 @@ public class Zapatillas
     /**
      * Muestra en pantalla los valores de la diferentes variables
      */
-    public void mostrarZapatillas()
+    @Override
+    public String toString()
     {
-        System.out.println(" Zapatillas [" + 
-        "Modelo=" + modelo + "," + "Numero=" + numero + "," + "Tipo=" + tipo + "," + "Valor " + valor + "," + "]");
+        String cadena =" Zapatillas [" + 
+        "Modelo=" + modelo + "," + "Numero=" + numero + "," + "Tipo=" + tipo + "," + "Valor " + valor + "," + "]";
+        return cadena;
     }
     
     /**
      * Devolve el valor de saque de las zapatillas
      * 
-     * @return  variable resto multiplicado por 2 si la zapatilla
-     *          es de tipo amortiguacion
+     * @return double resto: si el tipo de la zapatilla es amortiguacion la variable resto es multiplicado por 2 
+     *                       si no duevuelve 0 
      */
     public double calcularValorSaque()
     {
         double resto;
         resto = 0;
         
-        if(tipo == "amortiguacion"){
-            resto = valor * 2;
+        if(tipo.equals("amortiguacion")){
+            resto = this.getValor() * 2;
         }
 
         return resto;
@@ -151,16 +153,16 @@ public class Zapatillas
     /**
      * Devolve el valor de resto de las zapatillas
      * 
-     * @return  variable resto multiplicado por 1.5 si la zapatilla
-     *          es de tipo agarre
+     * @return  double resto: si el tipo de la zapatilla es agarre la variable resto es multiplicado por 1,5
+     *                       si no duevuelve 0 
      */
     public double calcularValorResto()
     {
         double resto;
         resto = 0;
         
-        if(tipo == "agarre"){
-            resto = valor * 1.5;
+        if(tipo.equals("agarre")){
+            resto = this.getValor() * 1.5;
         }
         
         return resto;

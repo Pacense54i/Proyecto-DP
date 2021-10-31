@@ -29,16 +29,15 @@ public class Campeonato
      */
     public void mostrarCompetidores()
     {
-        Tenista aux;
-        int tamLista;
-        int i = 0;
-        
-        tamLista = competidores.size(); //tamaño de la lista competidores
+        Zapatillas z = new Zapatillas();
+            
         System.out.println("**********Listado de competidores");
-        for(i=0; i < tamLista; i++){
-            aux = competidores.get(i);
-            aux.mostrarTenista();
-        }
+        
+        for(Tenista t: competidores){
+          System.out.println(t);
+          z = t.getZapatilla();
+          System.out.println(z);
+        }        
     }
 
     /**
@@ -46,24 +45,22 @@ public class Campeonato
      */
     public void mostrarEliminados()
     {
-        Tenista aux;
-        aux = new Tenista();
-        int tamLista;
-        int i = 0;
+        Zapatillas z = new Zapatillas();
         
-        tamLista = eliminados.size(); //tamaño de la lista eliminados
         System.out.println("**********Listado de eliminados");
-        for(i=0; i < tamLista; i++){
-            aux = eliminados.get(i);
-            aux.mostrarTenista();
-        }
+       
+        for(Tenista t: eliminados){
+          System.out.println(t);
+          z = t.getZapatilla();
+          System.out.println(z);
+        }        
     }
     
     /**
      * Inscribe a los tenistas en la competicion
      * (añade tenistas a la lista de competidores)
      * 
-     * @param Tenista T
+     * @param Tenista T: Tenista que se quiere añadir a la lista de competidores
      */
     public void inscribirJugadores(Tenista T)
     {
@@ -73,8 +70,10 @@ public class Campeonato
     /**
      * Comprueba que tenista ha ganado el partido y hace lo correspondiente si el tenista ha ganado o ha perdido
      *
-     * @param  Tenistas t1 y t2 
+     * @param  Tenistas t1 y t2 //RECORDATORIO:cambiar mas adelante
      */
+    
+    //cada vez que añadamos un nuevo tenista a la lista de elominados tendremos que ordenar meterlo en orden descendiente
     public void comprobacionVictoria(Tenista t1,Tenista t2,int tamanoLista,int i)
     {
         if( t1.getPuntosAcumulados() == t2.getPuntosAcumulados() ){
@@ -83,8 +82,11 @@ public class Campeonato
                 sumat2 = t2.getSaque() + t2.getResto();
                 if (sumat1 > sumat2){
                     //sumat2 habra ganado
+                    t1.setOrdenEliminado(i);
                     eliminados.add(t1);
-                    competidores.set(i,t2);
+                    eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
+                    
+                    competidores.set(i,t2); //intercambia la posicion del tenista
                     
                     //muestro ganador y perdedor
                     System.out.println("  ## Gana este juego:" + 
@@ -95,7 +97,9 @@ public class Campeonato
                 }
                 else{
                     //sumat1 habra gando dado que sumat2 es menor
+                    t2.setOrdenEliminado(i);
                     eliminados.add(t2);
+                    eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
                     
                     //muestro ganador y perdedor
                     System.out.println("  ## Gana este juego:" + 
@@ -109,7 +113,9 @@ public class Campeonato
         else{
                 if( t1.getPuntosAcumulados() > t2.getPuntosAcumulados() ){
                     //t1 es mayor, gana t1
+                    t2.setOrdenEliminado(i);
                     eliminados.add(t2);
+                    eliminados.sort( new ComparatorEliminados() ); //ordena la lista de eliminados de manera descendente
                     
                     System.out.println("  ## Gana este juego:" + 
                     t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acomulados.");
@@ -119,10 +125,13 @@ public class Campeonato
                 }
                 else{
                     //t2 es mayor, gana t2
+                    t1.setOrdenEliminado(i);
                     eliminados.add(t1);
-                    competidores.set(i,t2);
+                    eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
                     
+                    competidores.set(i,t2); //intercambia la posicion del tenista
                     
+                                        
                     System.out.println("  ## Gana este juego:" + 
                     t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acomulados.");
                     System.out.println("    ## Se elimina:" + 
@@ -176,7 +185,7 @@ public class Campeonato
             }
         System.out.println("---->>>>  Gana la competición:");
         ganador = competidores.get(0);
-        ganador.mostrarTenista();
+        // ganador.mostrarTenista();
                 
         mostrarEliminados();
     }
@@ -184,15 +193,15 @@ public class Campeonato
     /**
      * Pone en juego el partido
      *
-     * @param  Tenistas t1 y t2 
+     * @param  Tenistas t1 y t2: Tenistas que van a jugar el partido
      */
     public void juego(Tenista t1, Tenista t2)
     {
-       t1.jugar(t2);
-       t2.jugar(t1);    
-       
        t1.setPuntosAcumulados(0.0);
        t2.setPuntosAcumulados(0.0);
+       
+       t1.jugar(t2);
+       t2.jugar(t1);    
     }
 
 }
