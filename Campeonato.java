@@ -53,6 +53,8 @@ public class Campeonato
           System.out.println(t);
           z = t.getZapatilla();
           System.out.println(z);
+          System.out.println("posicionnnn");
+          System.out.println(t.getOrdenEliminado());
         }        
     }
     
@@ -65,7 +67,6 @@ public class Campeonato
     public void inscribirJugadores(Tenista T)
     {
         competidores.add(T);
-        //com
     }
     
     /**
@@ -77,13 +78,15 @@ public class Campeonato
     //cada vez que añadamos un nuevo tenista a la lista de elominados tendremos que ordenar meterlo en orden descendiente
     public void comprobacionVictoria(Tenista t1,Tenista t2,int tamanoLista,int i)
     {
+        
         if( t1.getPuntosAcumulados() == t2.getPuntosAcumulados() ){
                 double sumat1,sumat2;
                 sumat1 = t1.getSaque() + t1.getResto();
                 sumat2 = t2.getSaque() + t2.getResto();
                 if (sumat1 > sumat2){
                     //sumat2 habra ganado
-                    t1.setOrdenEliminado(i);
+                    int num = t1.getOrdenEliminado();
+                    t1.setOrdenEliminado(num + 1);
                     eliminados.add(t1);
                     eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
                     
@@ -98,7 +101,8 @@ public class Campeonato
                 }
                 else{
                     //sumat1 habra gando dado que sumat2 es menor
-                    t2.setOrdenEliminado(i);
+                    int num = t1.getOrdenEliminado();
+                    t2.setOrdenEliminado(num +1);
                     eliminados.add(t2);
                     eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
                     
@@ -114,7 +118,8 @@ public class Campeonato
         else{
                 if( t1.getPuntosAcumulados() > t2.getPuntosAcumulados() ){
                     //t1 es mayor, gana t1
-                    t2.setOrdenEliminado(i);
+                    int num = t1.getOrdenEliminado();
+                    t2.setOrdenEliminado(num + 1);
                     eliminados.add(t2);
                     eliminados.sort( new ComparatorEliminados() ); //ordena la lista de eliminados de manera descendente
                     
@@ -126,7 +131,8 @@ public class Campeonato
                 }
                 else{
                     //t2 es mayor, gana t2
-                    t1.setOrdenEliminado(i);
+                    int num = t1.getOrdenEliminado();
+                    t1.setOrdenEliminado(num + 1);
                     eliminados.add(t1);
                     eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
                     
