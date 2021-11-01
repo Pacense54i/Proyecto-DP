@@ -184,7 +184,7 @@ public class Campeonato
                     System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre());
                     
                     juego (t1,t2);
-                   
+                       
                     auxNum++;
                     
                     comprobacionVictoria(t1,t2,tamanoLista-1,i,auxNum);

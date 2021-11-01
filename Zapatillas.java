@@ -146,6 +146,9 @@ public class Zapatillas
         if(tipo.equals("amortiguacion")){
             resto = this.getValor() * 2;
         }
+        else{
+            resto = this.getValor();
+        }
 
         return resto;
     }
@@ -163,6 +166,9 @@ public class Zapatillas
         
         if(tipo.equals("agarre")){
             resto = this.getValor() * 1.5;
+        }
+        else{
+            resto = this.getValor();
         }
         
         return resto;
