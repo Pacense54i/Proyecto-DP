@@ -12,7 +12,6 @@ public class Zapatillas implements InterfaceZapatillas
     private double valor; //valor numérico del agarre o amortiguación de las zapatillas
     private double numero;
     
-    
     /**
      * Contructor de los objetos de la clase Zapatillas
      */
@@ -34,71 +33,36 @@ public class Zapatillas implements InterfaceZapatillas
         numero = number;
     }
 
-    /**
-     * Set model para especificar el modelo de la zapatillas
-     * 
-     * @param String model: modelo de la zapatilla.
-     */
     public void setModelo(String model)
     {
         this.modelo = model;
     }
     
-    /**
-     * Devuelve el modelo actual
-     * 
-     * @return devuelve el valor de la varible modelo(String)
-     */
     public String getModelo()
     {
         return this.modelo;
     }
     
-    /**
-     * Set value para especificar el valor de las zapatillas
-     * 
-     * @param double value: cambiar el valor de la variable de la clase zapatillas por value
-     */
     public void setValor(double value)
     {
         this.valor = value;
     }
     
-    /**
-     * Devuelve el valor actual
-     * 
-     * @return devuelve el valor de la variable de la clase zapatillas ---> (int)
-     */
     public double getValor()
     {
         return this.valor;
     }
     
-    
-    /**
-     * Set num para especificar el numero de las zapatillas
-     * 
-     * @param int num: se cambia el valor de la variable Numero por num
-     */
     public void setNumero(int num)
     {
         this.numero = num;
     }
     
-    /**
-     * Devuelve el numero actual
-     * 
-     * @return valor actual de la varible numero(int) de la clase Zapatillas
-     */
     public double getNumero()
     {
         return this.numero;
     }
     
-    
-    /**
-     * Muestra en pantalla los valores de la diferentes variables
-     */
     @Override
     public String toString()
     {
@@ -107,13 +71,6 @@ public class Zapatillas implements InterfaceZapatillas
         return cadena;
     }
     
-    /**
-     * Devolve el valor de saque de las zapatillas
-     * 
-     * @return double resto: si el tipo de la zapatilla es amortiguacion la variable resto es multiplicado por 2 
-     *                       si no duevuelve 0 
-     */
-    @Override
     public double calcularValorSaque()
     {   
         double ValorDeSaque;
@@ -121,14 +78,6 @@ public class Zapatillas implements InterfaceZapatillas
         return ValorDeSaque;
     }
     
-    /**
-     * Devolve el valor de resto de las zapatillas
-     * 
-     * @return  double resto: si el tipo de la zapatilla es agarre la variable resto es multiplicado por 1,5
-     *                       si no duevuelve 0 
-     */
-    
-    @Override
     public double calcularValorResto()
     {
         double ValorDeResto;

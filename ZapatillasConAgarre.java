@@ -15,19 +15,20 @@ public class ZapatillasConAgarre extends Zapatillas
     public ZapatillasConAgarre(String model,double number,double value)
     {
         super(model,number,value);
-        //Jose dice que no hay que poner tipo aquí, desaparece por completo
-        //ya del proyecto
     }
     
-    public double calcularValorSaqueConAgarre ()
+    @Override
+    public double calcularValorSaque()
     {
-        
-       return 0;
+        return super.calcularValorSaque();
     }
     
-    public double calcularValorRestoConAgarre ()
+    @Override
+    public double calcularValorResto()
     {
-        return 0;
+        double j = super.calcularValorResto();
+        j = j * 1.7;
+        return j;
     }
 
 }

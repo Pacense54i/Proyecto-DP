@@ -16,14 +16,18 @@ public class ZapatillasAmortiguadas extends Zapatillas
         super(model,number,value);
     }
     
-    public double calcularValorSaqueAmortiguadas ()
+    @Override
+    public double calcularValorSaque()
     {
-        return 0;
+        double v = super.calcularValorSaque();
+        v = v * 1.8;
+        return v;
     }
     
-    public double calcularValorRestoAmortiguadas ()
+    @Override
+    public double calcularValorResto()
     {
-        return 0;
+        return super.calcularValorResto();
     }
 
 }
