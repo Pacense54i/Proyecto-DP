@@ -87,5 +87,13 @@ public class RaquetaGenerica implements InterfaceRaqueta
         return this.estiloDeEncordado;
     }
     
-    
+    @Override
+    public String toString()
+    {
+        String cadena =" Raqueta [" + 
+        "Modelo=" + modelo + "," + "Peso=" + peso + "," + "Longitud=" + longitud + ","
+        + "tamanoDeLaCabeza=" + tamanoDeLaCabeza + "estiloDeEncordado=" + estiloDeEncordado + "]";
+        
+        return cadena;
+    }
 }
