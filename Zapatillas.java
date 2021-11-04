@@ -9,7 +9,6 @@ public class Zapatillas
 {
     // instance variables - replace the example below with your own
     private String modelo;
-    private String tipo;
     private double valor; //valor numérico del agarre o amortiguación de las zapatillas
     private double numero;
     
@@ -21,7 +20,6 @@ public class Zapatillas
     {
         // initialise instance variables
         modelo = " ";
-        tipo = " ";
         valor = 0;
         numero = 0.0;
     }
@@ -29,10 +27,9 @@ public class Zapatillas
     /**
      * Constructor parametrizado para objetos de la clase Zapatilla
      */
-    public Zapatillas(String model,double number,String type,double value)
+    public Zapatillas(String model,double number,double value)
     {
         modelo = model;
-        tipo = type;
         valor = value;
         numero = number;
     }
@@ -55,27 +52,6 @@ public class Zapatillas
     public String getModelo()
     {
         return this.modelo;
-    }
-    
-    
-    /**
-     * Set type para especificar tipo de las zapatillas
-     * 
-     * @param String type: tipo de la zapatilla
-     */
-    public void setTipo(String type)
-    {
-        this.tipo = type;
-    }
-    
-    /**
-     * Devuelve el tipo actual
-     * 
-     * @return devuelve el valor de la varible Tipo(String)
-     */
-    public String getTipo()
-    {
-        return this.tipo;
     }
     
     
@@ -128,7 +104,7 @@ public class Zapatillas
     public String toString()
     {
         String cadena =" Zapatillas [" + 
-        "Modelo=" + modelo + "," + "Numero=" + numero + "," + "Tipo=" + tipo + "," + "Valor " + valor + "," + "]";
+        "Modelo=" + modelo + "," + "Numero=" + numero + "," + "Tipo="  + "," + "Valor " + valor + "," + "]";
         return cadena;
     }
     
@@ -143,12 +119,12 @@ public class Zapatillas
         double resto;
         resto = 0;
         
-        if(tipo.equals("amortiguacion")){
-            resto = this.getValor() * 2;
-        }
-        else{
-            resto = this.getValor();
-        }
+        // if(tipo.equals("amortiguacion")){
+            // resto = this.getValor() * 1.8;
+        // }
+        // else{
+            // resto = this.getValor() * 1.2;
+        // }
 
         return resto;
     }
@@ -164,12 +140,12 @@ public class Zapatillas
         double resto;
         resto = 0;
         
-        if(tipo.equals("agarre")){
-            resto = this.getValor() * 1.5;
-        }
-        else{
-            resto = this.getValor();
-        }
+        // if(tipo.equals("agarre")){
+            // resto = this.getValor() * 1.7;
+        // }
+        // else{
+            // resto = this.getValor() * 1.3;
+        // }
         
         return resto;
     }
