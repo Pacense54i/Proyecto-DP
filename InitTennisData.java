@@ -20,15 +20,15 @@ public class InitTennisData {
     }
     
     private void cargarDatos1(Campeonato campeonato) {
-        //Instanciamos 8 zapatillas: (Los parámetros están en el orden: modelo, número, tipo, valor)
-         Zapatillas z1 = new Zapatillas ("Air Zoom Vapor Pro", 41, "amortiguacion", 5);
-         Zapatillas z2 = new Zapatillas ("Court Vapor React", 41, "agarre", 5);
-         Zapatillas z3 = new Zapatillas ("Gel-Resolution 8 GS", 41, "agarre", 4);
-         Zapatillas z4 = new Zapatillas ("Vapor Lite", 41, "amortiguacion", 3);
-         Zapatillas z5 = new Zapatillas ("Court Lite", 41, "agarre", 3);
-         Zapatillas z6 = new Zapatillas ("UberSonic 4K", 41, "amortiguacion", 5.5);
-         Zapatillas z7 = new Zapatillas ("Zoom GP Turbo", 41, "amortiguacion", 6);
-         Zapatillas z8 = new Zapatillas ("CourtJam Bounce", 41, "agarre", 3.5);
+        //Instanciamos 8 zapatillas: (Los parámetros están en el orden: modelo, número,valor)
+         Zapatillas z1 = new Zapatillas ("Air Zoom Vapor Pro", 41, 5);
+         Zapatillas z2 = new Zapatillas ("Court Vapor React", 41, 5);
+         Zapatillas z3 = new Zapatillas ("Gel-Resolution 8 GS", 41, 4);
+         Zapatillas z4 = new Zapatillas ("Vapor Lite", 41, 3);
+         Zapatillas z5 = new Zapatillas ("Court Lite", 41, 3);
+         Zapatillas z6 = new Zapatillas ("UberSonic 4K", 41, 5.5);
+         Zapatillas z7 = new Zapatillas ("Zoom GP Turbo", 41, 6);
+         Zapatillas z8 = new Zapatillas ("CourtJam Bounce", 41, 3.5);
 
 
 
@@ -54,15 +54,15 @@ public class InitTennisData {
     }
     
     private void cargarDatos2(Campeonato campeonato) {
-                //Instanciamos 8 zapatillas: (Los parámetros están en el orden: modelo, número, tipo valor)
-        Zapatillas z1 = new Zapatillas ("Air Zoom Vapor Pro", 41, "amortiguacion", 5);
-        Zapatillas z2 = new Zapatillas ("Court Vapor React", 41, "agarre", 5);
-        Zapatillas z3 = new Zapatillas ("Gel-Resolution 8 GS", 41, "agarre", 4);
-        Zapatillas z4 = new Zapatillas ("Vapor Lite", 41, "amortiguacion", 3);
-        Zapatillas z5 = new Zapatillas ("Court Lite", 41, "agarre", 3);
-        Zapatillas z6 = new Zapatillas ("UberSonic 4K", 41, "amortiguacion", 5.5);
-        Zapatillas z7 = new Zapatillas ("Zoom GP Turbo", 41, "amortiguacion", 6);
-        Zapatillas z8 = new Zapatillas ("CourtJam Bounce", 41, "agarre", 3.5);
+                //Instanciamos 8 zapatillas: (Los parámetros están en el orden: modelo, número, valor)
+        Zapatillas z1 = new Zapatillas ("Air Zoom Vapor Pro", 41, 5);
+        Zapatillas z2 = new Zapatillas ("Court Vapor React", 41, 5);
+        Zapatillas z3 = new Zapatillas ("Gel-Resolution 8 GS", 41, 4);
+        Zapatillas z4 = new Zapatillas ("Vapor Lite", 41, 3);
+        Zapatillas z5 = new Zapatillas ("Court Lite", 41, 3);
+        Zapatillas z6 = new Zapatillas ("UberSonic 4K", 41, 5.5);
+        Zapatillas z7 = new Zapatillas ("Zoom GP Turbo", 41, 6);
+        Zapatillas z8 = new Zapatillas ("CourtJam Bounce", 41, 3.5);
 
 
 

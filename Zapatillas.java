@@ -5,11 +5,10 @@
  * @author (Carlos Garcia Sanchez, Sergio Jimenez Macias, Alfonso David Recio Calderon) 
  * @version (1.0)
  */
-public class Zapatillas
+public class Zapatillas implements InterfaceZapatillas
 {
     // instance variables - replace the example below with your own
     private String modelo;
-    private String tipo;
     private double valor; //valor numérico del agarre o amortiguación de las zapatillas
     private double numero;
     
@@ -21,7 +20,6 @@ public class Zapatillas
     {
         // initialise instance variables
         modelo = " ";
-        tipo = " ";
         valor = 0;
         numero = 0.0;
     }
@@ -29,10 +27,9 @@ public class Zapatillas
     /**
      * Constructor parametrizado para objetos de la clase Zapatilla
      */
-    public Zapatillas(String model,double number,String type,double value)
+    public Zapatillas(String model,double number,double value)
     {
         modelo = model;
-        tipo = type;
         valor = value;
         numero = number;
     }
@@ -56,28 +53,6 @@ public class Zapatillas
     {
         return this.modelo;
     }
-    
-    
-    /**
-     * Set type para especificar tipo de las zapatillas
-     * 
-     * @param String type: tipo de la zapatilla
-     */
-    public void setTipo(String type)
-    {
-        this.tipo = type;
-    }
-    
-    /**
-     * Devuelve el tipo actual
-     * 
-     * @return devuelve el valor de la varible Tipo(String)
-     */
-    public String getTipo()
-    {
-        return this.tipo;
-    }
-    
     
     /**
      * Set value para especificar el valor de las zapatillas
@@ -128,7 +103,7 @@ public class Zapatillas
     public String toString()
     {
         String cadena =" Zapatillas [" + 
-        "Modelo=" + modelo + "," + "Numero=" + numero + "," + "Tipo=" + tipo + "," + "Valor " + valor + "," + "]";
+        "Modelo=" + modelo + "," + "Numero=" + numero + "," + "Valor " + valor + "," + "]";
         return cadena;
     }
     
@@ -138,19 +113,12 @@ public class Zapatillas
      * @return double resto: si el tipo de la zapatilla es amortiguacion la variable resto es multiplicado por 2 
      *                       si no duevuelve 0 
      */
+    @Override
     public double calcularValorSaque()
-    {
-        double resto;
-        resto = 0;
-        
-        if(tipo.equals("amortiguacion")){
-            resto = this.getValor() * 2;
-        }
-        else{
-            resto = this.getValor();
-        }
-
-        return resto;
+    {   
+        double ValorDeSaque;
+        ValorDeSaque= this.getValor() * 1.2;
+        return ValorDeSaque;
     }
     
     /**
@@ -159,18 +127,11 @@ public class Zapatillas
      * @return  double resto: si el tipo de la zapatilla es agarre la variable resto es multiplicado por 1,5
      *                       si no duevuelve 0 
      */
+    @Override
     public double calcularValorResto()
     {
-        double resto;
-        resto = 0;
-        
-        if(tipo.equals("agarre")){
-            resto = this.getValor() * 1.5;
-        }
-        else{
-            resto = this.getValor();
-        }
-        
-        return resto;
+        double ValorDeResto;
+        ValorDeResto= this.getValor() * 1.3;
+        return ValorDeResto;
     }
 }
