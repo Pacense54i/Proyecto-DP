@@ -32,7 +32,7 @@ public interface InterfaceZapatillas
     /**
      * Devuelve el valor actual
      * 
-     * @return devuelve el valor de la variable de la clase zapatillas ---> (int)
+     * @return devuelve el valor de la variable valor(double) de la clase zapatillas 
      */
     public double getValor();
     
@@ -51,7 +51,9 @@ public interface InterfaceZapatillas
     public double getNumero();
     
     /**
-     * Muestra en pantalla los valores de la diferentes variables
+     * Muestra en pantalla los valores de la diferentes variables de la clase Zapatillas
+     * 
+     * Con @Override se sobreescribe el metodo toString de la clase Object
      */
     public String toString ();
     
