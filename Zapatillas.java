@@ -127,6 +127,7 @@ public class Zapatillas implements InterfaceZapatillas
      * @return  double resto: si el tipo de la zapatilla es agarre la variable resto es multiplicado por 1,5
      *                       si no duevuelve 0 
      */
+    
     @Override
     public double calcularValorResto()
     {

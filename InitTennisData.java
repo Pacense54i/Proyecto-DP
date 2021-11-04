@@ -29,9 +29,8 @@ public class InitTennisData {
          Zapatillas z6 = new Zapatillas ("UberSonic 4K", 41, 5.5);
          Zapatillas z7 = new Zapatillas ("Zoom GP Turbo", 41, 6);
          Zapatillas z8 = new Zapatillas ("CourtJam Bounce", 41, 3.5);
-
-
-
+         
+         
         //Instanciamos 8 tenistas: (Los parámetros están en el orden nombre, zapatillas, saque, resto, ranking, pais)
          Tenista t1 = new Tenista ("Novak Djokovic", z1, 90, 80, 1, "Serbia");
          Tenista t2 = new Tenista ("Ashleigh Barty", z3, 70, 80, 1, "Australia");
@@ -41,6 +40,7 @@ public class InitTennisData {
          Tenista t6 = new Tenista ("Alexander Zverev", z8, 59, 49.5, 4, "Alemania");
          Tenista t7 = new Tenista ("Aryna Sabalenka", z2, 67.5, 79.5, 2, "Bielorrusia");
          Tenista t8 = new Tenista ("Daniil Medvedev", z4, 79, 68, 2, "Rusia");
+         
          
          //A continuación se inscribirán a los 8 tenistas en el campeonato
         campeonato.inscribirJugadores(t1);
@@ -53,8 +53,9 @@ public class InitTennisData {
         campeonato.inscribirJugadores(t8);
     }
     
+
     private void cargarDatos2(Campeonato campeonato) {
-                //Instanciamos 8 zapatillas: (Los parámetros están en el orden: modelo, número, valor)
+        //Instanciamos 8 zapatillas: (Los parámetros están en el orden: modelo, número, valor)
         Zapatillas z1 = new Zapatillas ("Air Zoom Vapor Pro", 41, 5);
         Zapatillas z2 = new Zapatillas ("Court Vapor React", 41, 5);
         Zapatillas z3 = new Zapatillas ("Gel-Resolution 8 GS", 41, 4);
@@ -63,8 +64,7 @@ public class InitTennisData {
         Zapatillas z6 = new Zapatillas ("UberSonic 4K", 41, 5.5);
         Zapatillas z7 = new Zapatillas ("Zoom GP Turbo", 41, 6);
         Zapatillas z8 = new Zapatillas ("CourtJam Bounce", 41, 3.5);
-
-
+        
 
         //Instanciamos 8 tenistas: (Los parámetros están en el orden nombre, zapatillas, saque, resto, ranking, pais)
         Tenista t1 = new Tenista ("Novak Djokovic", z3, 90, 80, 1, "Serbia");
@@ -76,6 +76,7 @@ public class InitTennisData {
         Tenista t7 = new Tenista ("Aryna Sabalenka", z2, 67.5, 79.5, 2, "Bielorrusia");
         Tenista t8 = new Tenista ("Daniil Medvedev", z4, 79, 68, 2, "Rusia");
                 
+        
         //A continuación se inscribirán a los 8 tenistas en el campeonato
         campeonato.inscribirJugadores(t1);
         campeonato.inscribirJugadores(t2);
