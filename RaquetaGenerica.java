@@ -1,3 +1,5 @@
+import java.util.Map;
+import java.util.HashMap;
 
 /**
  * Write a description of class RaquetaGenerica here.
@@ -12,6 +14,10 @@ public class RaquetaGenerica implements InterfaceRaqueta
     private double longitud;
     private double tamanoDeLaCabeza;
     private String estiloDeEncordado;
+    
+    private Map <String, String > longitudPotencia = new HashMap<>();
+    private Map <String, String > tmCabControl = new HashMap<>();
+    private Map <String, String > pesoVelocidad = new HashMap<>();
     
     /**
      * Constructor de la Raqueta Generica.
@@ -151,4 +157,31 @@ public class RaquetaGenerica implements InterfaceRaqueta
         
         return cadena;
     }
+    
+    /**
+     * Se introduce los hashMaps con los diferentes valores segun las tablas proporcionadas por los profesores
+     * 
+     * Las raquetas con menos peso ofrecen una mayor velocidad, o las raquetas con una cabeza mayor ofrecen más potencia pero menos contro
+     */
+    public void iniciarHashMap()
+    {
+        longitudPotencia.put("680" , "2");
+        longitudPotencia.put("690" , "4");
+        longitudPotencia.put("700" , "6");
+        longitudPotencia.put("720" , "8");
+        longitudPotencia.put("740" , "10");
+        
+        tmCabControl.put("600","10");
+        tmCabControl.put("630","8");
+        tmCabControl.put("650","6");
+        tmCabControl.put("680","4");
+        tmCabControl.put("720","2");
+        
+        pesoVelocidad.put("220", "10");
+        pesoVelocidad.put("260", "8");
+        pesoVelocidad.put("300", "6");
+        pesoVelocidad.put("320", "4");
+        pesoVelocidad.put("340", "2");
+    }
+    
 }
