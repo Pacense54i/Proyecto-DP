@@ -209,7 +209,9 @@ public class RaquetaGenerica implements InterfaceRaqueta
     }
     
     /**
+     * Calcula la potencia de la Raqueta. Para ello obtiene del HashMap longitudPotencia la potencia correspondiente a su longitud
      * 
+     * @return (Double) devuelve la potencia correspondiente a su longuitud
      */
     public Double calcularPotencia()
     {
@@ -217,7 +219,9 @@ public class RaquetaGenerica implements InterfaceRaqueta
     }
     
     /**
+     * Calcula el control de la Raqueta. Para ello obtiene del HashMap tmCabControl el control correspondiente a su tamanoDeLaCabeza
      * 
+     * @return (Double) devuelve el control correspondiente a su tamanoDeLaCabeza
      */
     public Double calcularControl()
     {
@@ -225,7 +229,9 @@ public class RaquetaGenerica implements InterfaceRaqueta
     }
     
     /**
+     * Calcula la velocidad de la Raqueta. Para ello obtiene del HashMap pesoVelocidad la velocidad correspondiente a su peso
      * 
+     * @return (Double) devuelve la velocidad correspondiente a su peso 
      */
     public Double calcularVelocidad()
     {
