@@ -10,14 +10,18 @@ import java.util.HashMap;
 public class RaquetaGenerica implements InterfaceRaqueta
 {
     private String modelo;
-    private double peso;
-    private double longitud;
-    private double tamanoDeLaCabeza;
-    private String estiloDeEncordado;
+    private Double peso;
+    private Double longitud;
+    private Double tamanoDeLaCabeza;
     
-    private Map <String, String > longitudPotencia = new HashMap<>();
-    private Map <String, String > tmCabControl = new HashMap<>();
-    private Map <String, String > pesoVelocidad = new HashMap<>();
+    private Encordado estiloDeEncordado;
+    
+    Map <Double, Double > longitudPotencia = new HashMap<>();
+    Map <Double, Double > tmCabControl = new HashMap<>();
+    Map <Double, Double > pesoVelocidad = new HashMap<>();
+    
+    public final Double FACTOR1 = 1.5;
+    public final Double FACTOR2 = 1.2;
     
     /**
      * Constructor de la Raqueta Generica.
@@ -28,19 +32,27 @@ public class RaquetaGenerica implements InterfaceRaqueta
         peso=0.0;
         longitud=0.0;
         tamanoDeLaCabeza=0.0;
-        estiloDeEncordado="";
+        estiloDeEncordado= null; //preguntar si estaria bien
+        
+        longitudPotencia = new HashMap<>();
+        tmCabControl = new HashMap<>();
+        pesoVelocidad = new HashMap<>();
     }
     
     /**
      * Constructor parametrizado de la Raqueta Generica.
      */
-    public RaquetaGenerica(String model, double pes, double longi, double tamano, String estilo)
+    public RaquetaGenerica(String model, Double pes, Double longi, Double tamano, Encordado estilo)
     {
-        modelo = modelo;
-        peso = peso;
+        modelo = model;
+        peso = pes;
         longitud = longi;
         tamanoDeLaCabeza = tamano;
         estiloDeEncordado = estilo;
+        
+        longitudPotencia = new HashMap<>();
+        tmCabControl = new HashMap<>();
+        pesoVelocidad = new HashMap<>();
     }
     
     /**
@@ -68,7 +80,7 @@ public class RaquetaGenerica implements InterfaceRaqueta
      * 
      * @param double peso: peso de la Raqueta.
      */
-    public void setPeso (double peso)
+    public void setPeso (Double peso)
     {
         this.peso=peso;
     }
@@ -76,9 +88,9 @@ public class RaquetaGenerica implements InterfaceRaqueta
     /**
      * Devuelve el peso actual de la Raqueta
      * 
-     * @return devuelve el valor de la varible peso(double)
+     * @return devuelve el valor de la varible peso(Double)
      */
-    public double getPeso ()
+    public Double getPeso ()
     {
         return this.peso;
     }
@@ -86,9 +98,9 @@ public class RaquetaGenerica implements InterfaceRaqueta
     /**
      * Set longitud para especificar el longitud de la Raqueta
      * 
-     * @param double longitud: longitud de la Raqueta.
+     * @param Double longitud: longitud de la Raqueta.
      */
-     public void setLongitud (double longitud)
+     public void setLongitud (Double longitud)
     {
         this.longitud=longitud;
     }
@@ -98,7 +110,7 @@ public class RaquetaGenerica implements InterfaceRaqueta
      * 
      * @return devuelve el valor de la varible longitud(double)
      */
-    public double getLongitud()
+    public Double getLongitud()
     {
         return this.longitud;
     }
@@ -106,9 +118,9 @@ public class RaquetaGenerica implements InterfaceRaqueta
     /**
      * Set tamanoDeLaCabeza para especificar el tamanoDeLaCabeza de la Raqueta
      * 
-     * @param double tamanoDeLaCabeza: tamanoDeLaCabeza de la Raqueta.
+     * @param Double tamanoDeLaCabeza: tamanoDeLaCabeza de la Raqueta.
      */
-     public void setTamanoDeLaCabeza (double tamanoDeLaCabeza)
+     public void setTamanoDeLaCabeza (Double tamanoDeLaCabeza)
     {
         this.tamanoDeLaCabeza=tamanoDeLaCabeza;
     }
@@ -116,9 +128,9 @@ public class RaquetaGenerica implements InterfaceRaqueta
     /**
      * Devuelve la tamanoDeLaCabeza actual de la Raqueta
      * 
-     * @return devuelve el valor de la varible tamanoDeLaCabeza(double)
+     * @return devuelve el valor de la varible tamanoDeLaCabeza(Double)
      */
-    public double getTamanoDeLaCabeza()
+    public Double getTamanoDeLaCabeza()
     {
         return this.tamanoDeLaCabeza;
     }
@@ -126,21 +138,32 @@ public class RaquetaGenerica implements InterfaceRaqueta
     /**
      * Set estiloDeEncordado para especificar el estiloDeEncordado de la Raqueta
      * 
-     * @param String estiloDeEncordado: estiloDeEncordado de la Raqueta.
+     * @param Encordado (objeto de tipo ENUM) estiloDeEncordado: atributo estiloDeEncordado de la Raqueta.
      */
-    public void setEstiloDeEncordado (String estiloDeEncordado)
+    public void setEstiloDeEncordado (Encordado estiloDeEncordado)
     {
-        this.estiloDeEncordado=estiloDeEncordado;
+        this.estiloDeEncordado = estiloDeEncordado;
     }
     
     /**
-     * Devuelve la estiloDeEncordado actual de la Raqueta
+     * Devuelve el estiloDeEncordado actual de la Raqueta 
+     * Puede ser : ABIERTO o CERRADO
      * 
-     * @return devuelve el valor de la varible estiloDeEncordado(String)
+     * @return devuelve el tipo de encordado de la raqueta almacenado en la variable estiloDeEncordado de tipo Encordado (ENUM)
      */
     public String getEstiloDeEncordado()
     {
-        return this.estiloDeEncordado;
+        return estiloDeEncordado.getEstilo();
+    }
+    
+    /**
+     * Metodo usado para obtener el Encordado de la variable estiloDeEncordado de la clase RaquetaGenerica
+     * 
+     * @return devuelve el objeto Encordado(ENUM) de la variable estiloDeEncordado de la Raqueta
+     */
+    public Encordado getEncordado()
+    {
+        return estiloDeEncordado;
     }
     
     /**
@@ -153,7 +176,7 @@ public class RaquetaGenerica implements InterfaceRaqueta
     {
         String cadena =" Raqueta [" + 
         "Modelo=" + modelo + "," + "Peso=" + peso + "," + "Longitud=" + longitud + ","
-        + "tamanoDeLaCabeza=" + tamanoDeLaCabeza + "estiloDeEncordado=" + estiloDeEncordado + "]";
+        + "tamanoDeLaCabeza=" + tamanoDeLaCabeza + "estiloDeEncordado=" + estiloDeEncordado.toString() + "]";
         
         return cadena;
     }
@@ -165,23 +188,47 @@ public class RaquetaGenerica implements InterfaceRaqueta
      */
     public void iniciarHashMap()
     {
-        longitudPotencia.put("680" , "2");
-        longitudPotencia.put("690" , "4");
-        longitudPotencia.put("700" , "6");
-        longitudPotencia.put("720" , "8");
-        longitudPotencia.put("740" , "10");
+        longitudPotencia.put(680.0, 2.0);
+        longitudPotencia.put(690.0, 4.0);
+        longitudPotencia.put(700.0, 6.0);
+        longitudPotencia.put(720.0, 8.0);
+        longitudPotencia.put(740.0, 10.0);
         
-        tmCabControl.put("600","10");
-        tmCabControl.put("630","8");
-        tmCabControl.put("650","6");
-        tmCabControl.put("680","4");
-        tmCabControl.put("720","2");
+        tmCabControl.put(600.0,10.0);
+        tmCabControl.put(630.0,8.0);
+        tmCabControl.put(650.0,6.0);
+        tmCabControl.put(680.0,4.0);
+        tmCabControl.put(720.0,2.0);
         
-        pesoVelocidad.put("220", "10");
-        pesoVelocidad.put("260", "8");
-        pesoVelocidad.put("300", "6");
-        pesoVelocidad.put("320", "4");
-        pesoVelocidad.put("340", "2");
+        pesoVelocidad.put(220.0, 10.0);
+        pesoVelocidad.put(260.0, 8.0);
+        pesoVelocidad.put(300.0, 6.0);
+        pesoVelocidad.put(320.0, 4.0);
+        pesoVelocidad.put(340.0, 2.0);
+        
     }
     
+    /**
+     * 
+     */
+    public Double calcularPotencia()
+    {
+        return longitudPotencia.get( this.getLongitud() );
+    }
+    
+    /**
+     * 
+     */
+    public Double calcularControl()
+    {
+        return tmCabControl.get( this.getTamanoDeLaCabeza() );
+    }
+    
+    /**
+     * 
+     */
+    public Double calcularVelocidad()
+    {
+        return pesoVelocidad.get( this.getPeso() );
+    }
 }
