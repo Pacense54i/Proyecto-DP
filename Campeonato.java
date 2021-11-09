@@ -11,6 +11,10 @@ public class Campeonato
     private String nombre;
     private ArrayList <Tenista> competidores;
     private ArrayList <Tenista> eliminados;
+    
+    //LA LISTA DE RAQUETAS ES UN TREE SET
+    //LA LISTA DE ZAPATILLAS LA PONEMOS COMO UN ARRAYLIST
+        
 
     /**
      * Contructor de los objetos de la clase Campeonato

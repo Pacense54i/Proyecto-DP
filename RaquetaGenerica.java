@@ -34,6 +34,7 @@ public class RaquetaGenerica implements InterfaceRaqueta
         tamanoDeLaCabeza=0.0;
         estiloDeEncordado= null; //preguntar si estaria bien
         
+        
         longitudPotencia = new HashMap<>();
         tmCabControl = new HashMap<>();
         pesoVelocidad = new HashMap<>();

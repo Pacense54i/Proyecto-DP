@@ -17,6 +17,10 @@ public class Tenista
     private String nombre;
     private String pais;
     private Zapatillas zapatilla;
+    
+    private Double numPie;
+    private RaquetaGenerica raqueta;
+    
     // guardarPtoSaque es una variable creada para guardar 
     //los puntos que ha conseguido un tenista con su saque
     //Al ser una variable creada con ese proposito no es necesario mostrarla 
@@ -37,6 +41,9 @@ public class Tenista
         nombre = " ";
         pais = " ";
         zapatilla = new Zapatillas();
+        
+        numPie = 0.0;
+        raqueta = new RaquetaGenerica();
     }
     
     /**
