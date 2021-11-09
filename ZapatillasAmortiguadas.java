@@ -7,7 +7,7 @@
  */
 public class ZapatillasAmortiguadas extends Zapatillas
 {
-    // instance variables - replace the example below with your own
+    
     /**
      * Constructor for objects of class ZapatillasConAgarre
      */
@@ -19,9 +19,7 @@ public class ZapatillasAmortiguadas extends Zapatillas
     @Override
     public double calcularValorSaque()
     {
-        double v = super.calcularValorSaque();
-        v = v * 1.8;
-        return v;
+        return super.calcularValorSaque() * 1.8;
     }
     
     @Override

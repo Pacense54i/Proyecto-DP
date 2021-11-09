@@ -72,16 +72,12 @@ public class Zapatillas implements InterfaceZapatillas
     }
     
     public double calcularValorSaque()
-    {   
-        double ValorDeSaque;
-        ValorDeSaque= this.getValor() * 1.2;
-        return ValorDeSaque;
+    { 
+        return this.getValor() * 1.2;
     }
     
     public double calcularValorResto()
     {
-        double ValorDeResto;
-        ValorDeResto= this.getValor() * 1.3;
-        return ValorDeResto;
+        return this.getValor() * 1.3;
     }
 }
