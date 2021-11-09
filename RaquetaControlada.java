@@ -38,10 +38,10 @@ public class RaquetaControlada extends RaquetaGenerica
         
         //veo si es de tipo ABIERTO
         if(super.getEstiloDeEncordado().equals("ABIERTO")){
-            result = j * aux.getMultiplicadorDeControl(); //multiplicado por 2.0
+            result = j * aux.getMultiplicadorDeControl(); //multiplicado por 2.2
         }
         else{   //si no es de tipo ABIERTO
-            result = j * aux.getMultiplicadorDeControl(); //multiplicado por 1.8
+            result = j * aux.getMultiplicadorDeControl(); //multiplicado por 2.5
         }
       
         return result;
