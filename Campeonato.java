@@ -219,4 +219,5 @@ public class Campeonato
        t2.jugar(t1);    
     }
 
+    //VAMOS A NECESITAR UN METODO QUE INTRODUZCA LAS ZAPATILLAS Y LAS RAQUETAS EN SUS RESPECTIVAS LISTAS (X.ADD , Y.ADD)
 }
