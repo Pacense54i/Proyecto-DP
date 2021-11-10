@@ -95,9 +95,9 @@ public class Campeonato
                     
                     //muestro ganador y perdedor
                     System.out.println("  ## Gana este juego:" + 
-                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acomulados.");
+                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados.");
                     System.out.println("    ## Se elimina:" + 
-                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acomulados. Tenista eliminado num: " + 
+                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
                     t1.getOrdenEliminado());
                 }
                 else{
@@ -109,9 +109,9 @@ public class Campeonato
                     
                     //muestro ganador y perdedor
                     System.out.println("  ## Gana este juego:" + 
-                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acomulados.");
+                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados.");
                     System.out.println("    ## Se elimina:" + 
-                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acomulados. Tenista eliminado num: " + 
+                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
                     t2.getOrdenEliminado());
                 }
                 competidores.remove(tamanoLista); 
@@ -125,9 +125,9 @@ public class Campeonato
                     eliminados.sort( new ComparatorEliminados() ); //ordena la lista de eliminados de manera descendente
                     
                     System.out.println("  ## Gana este juego:" + 
-                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acomulados.");
+                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados.");
                     System.out.println("    ## Se elimina:" + 
-                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acomulados. Tenista eliminado num: " + 
+                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
                     t2.getOrdenEliminado());
                 }
                 else{
@@ -141,9 +141,9 @@ public class Campeonato
                     
                                         
                     System.out.println("  ## Gana este juego:" + 
-                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acomulados.");
+                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados.");
                     System.out.println("    ## Se elimina:" + 
-                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acomulados. Tenista eliminado num: " + 
+                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
                     t1.getOrdenEliminado());
                 }
                 competidores.remove(tamanoLista);
