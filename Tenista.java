@@ -18,7 +18,7 @@ public class Tenista
     private String pais;
     private Zapatillas zapatilla;
     
-    private Double numPie;
+    private double numPie;
     private RaquetaGenerica raqueta;
     
     // guardarPtoSaque es una variable creada para guardar 
@@ -51,7 +51,7 @@ public class Tenista
      * 
      * @param String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais  parametros introducidos para iniciar el constructor
      */
-    public Tenista (String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais)
+    public Tenista (String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais, double num, RaquetaGenerica r)
     {
         ordenEliminado = 0;
         saque = Saque;
@@ -62,6 +62,8 @@ public class Tenista
         nombre = Nombre;
         pais = Pais;
         zapatilla = z;
+        numPie = num;
+        raqueta = r;
     }
     
     /**
@@ -73,7 +75,7 @@ public class Tenista
         String cadena=" Tenista [" + 
         "Nombre=" + nombre + "," + "Saque=" + saque + "," + "Resto=" + resto + "," + "Ranking=" + ranking + "," +
         "Pais=" + pais + ","  + "]";
-        // zapatilla.mostrarZapatillas();
+        
         return cadena;
     }
     
@@ -267,6 +269,47 @@ public class Tenista
        return this.zapatilla;
     }
     
+    /**
+     * Set pie para especificar el numero de pie del Tenista
+     * 
+     * @param double pie: nuevo numero de pie para el Tenista
+     */
+    public void setNumPie(double pie )
+    {
+        this.numPie = pie;
+    }
+    
+    /**
+     * Devuelve el valor guardado en la variable numPie
+     * 
+     * @return double: devuelve el valor del atributo numPie del tenista
+     */
+    public double getNumPie()
+    {
+       return this.numPie;
+    }
+    
+    /**
+     * Set raq para especificar la raqueta del Tenista
+     * 
+     * @param RaquetaGenerica raq: nueva raqueta para el Tenista
+     */
+    public void setRaqueta(RaquetaGenerica raq)
+    {
+        this.raqueta = raq;
+    }
+    
+    /**
+     * Devuelve el valor guardado en la variable raqueta
+     * 
+     * @return RaquetaGenerica: devuelve la raqueta del tenista
+     */
+    public RaquetaGenerica getRaqueta()
+    {
+       return this.raqueta;
+    }
+    
+    
     
     /**
      * Devuelve el valor del saque del tenista con las zapatillas aux
@@ -347,8 +390,22 @@ public class Tenista
      */
     public void jugar(Tenista oponente)
     {
+
         sacar();
         oponente.restar(this);
+    }
+    
+    /**
+     * Cada tenista elige su zapatilla
+     * Cada tenista antes de jugar deberá elegir unas nuevas zapatillas, para ello: 
+     * recorrerá el listado zapatillasCampeonato y buscará las primeras zapatillas que tengan exactamente su mismo número de pie. 
+     * Cuando las encuentre, se las pondrá y las eliminará de zapatillasCampeonato. 
+     * Si no encuentra unas zapatillas de su número (o no quedan zapatillas disponibles), se quedará con las zapatillas que llevaba.
+     *
+     */
+    public void elegirZapatillas() 
+    {
+        
     }
 }
     

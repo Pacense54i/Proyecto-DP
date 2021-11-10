@@ -1,4 +1,8 @@
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.TreeSet;
+
+
 /**
  * Clase Campeonato la cual pone en funcionamiento el Campeonato
  * 
@@ -11,6 +15,9 @@ public class Campeonato
     private String nombre;
     private ArrayList <Tenista> competidores;
     private ArrayList <Tenista> eliminados;
+    
+    private ArrayList <Zapatillas> zapatillasCampeonato;
+    Set <RaquetaGenerica> raquetasCampeonato;
     
     //LA LISTA DE RAQUETAS ES UN TREE SET
     //LA LISTA DE ZAPATILLAS LA PONEMOS COMO UN ARRAYLIST
@@ -26,6 +33,9 @@ public class Campeonato
         nombre = " ";
         competidores = new ArrayList() ;
         eliminados = new ArrayList();
+        
+        zapatillasCampeonato = new ArrayList();
+        raquetasCampeonato = new TreeSet<>( new ComparatorRaquetaPotencia() );
     }
 
     /**
@@ -215,9 +225,42 @@ public class Campeonato
        t1.setPuntosAcumulados(0.0);
        t2.setPuntosAcumulados(0.0);
        
+       t1.elegirZapatillas();
+       t2.elegirZapatillas();
+       
        t1.jugar(t2);
        t2.jugar(t1);    
     }
 
-    //VAMOS A NECESITAR UN METODO QUE INTRODUZCA LAS ZAPATILLAS Y LAS RAQUETAS EN SUS RESPECTIVAS LISTAS (X.ADD , Y.ADD)
+    
+    /**
+     * 
+     */
+    public void introducirZapatillas(Zapatillas z)
+    {
+        zapatillasCampeonato.add(z);    
+    }
+    
+    /**
+     * 
+     */
+    public void introducirRaquetas(RaquetaGenerica r)
+    {
+        raquetasCampeonato.add(r);  
+    }
+    
+    /**
+     * 
+     */
+    public void asignarRaquetas()
+    {
+        RaquetaGenerica raquet = new RaquetaGenerica(); 
+        //cojo la raqueta del listado treeset raquetasCampeonato
+        
+        //obtengo el primer tenista de la lista de coompetidores
+        //se la asigno al tenista
+        
+        
+    }
+    
 }
