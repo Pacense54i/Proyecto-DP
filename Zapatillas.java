@@ -10,7 +10,7 @@ public class Zapatillas implements InterfaceZapatillas
     // instance variables - replace the example below with your own
     private String modelo;
     private double valor; //valor numérico del agarre o amortiguación de las zapatillas
-    private double numero;
+    private double numero; //de pie de ese modelo de zapatilla
     
     /**
      * Contructor de los objetos de la clase Zapatillas

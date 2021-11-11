@@ -25,7 +25,6 @@ public class ComparatorRaquetaPotencia implements Comparator<RaquetaGenerica>
                         else
                             return -1;
                 
-                
         }
         else if( r1.calcularPotencia().compareTo( r2.calcularPotencia() ) > 0)
                 return 1;

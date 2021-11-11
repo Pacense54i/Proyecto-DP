@@ -89,15 +89,31 @@ public interface InterfaceRaqueta
      * Muestra en pantalla los valores de la diferentes variables de la clase Zapatillas
      * 
      *Con @Override se sobreescribe el metodo toString de la clase Object
+     *@return devuelve una cadena (String) con lo que se quiere mostrar por pantalla
      */
     public String toString();
     
     /**
-     * Se introduce los hashMaps con los diferentes valores segun las tablas proporcionadas por los profesores
+     * Se introduce los valores de la tabla Longitud Potencia en un HashMap llamado longitudPotencia
      * 
-     * Las raquetas con menos peso ofrecen una mayor velocidad, o las raquetas con una cabeza mayor ofrecen más potencia pero menos control
+     * Las raquetas con mayor longitud ofrecen mayor potencia
      */
-    public void iniciarHashMap();
+    public void iniciarMapaLongitudPotencia();
+    
+    /**
+     * Se introduce los valores de la tabla Longitud Potencia en un HashMap llamado longitudPotencia
+     * 
+     * Las raquetas con una cabeza mayor ofrecen más potencia pero menos control
+     */
+    public void iniciarMapaTmCabControl();
+    
+    /**
+     * Se introduce los valores de la tabla Longitud Potencia en un HashMap llamado longitudPotencia
+     * 
+     * Las raquetas con menos peso ofrecen una mayor velocidad
+     */
+    public void iniciarMapaPesoVelocidad();
+    
     
     /**
      * Calcula la potencia de la Raqueta. Para ello obtiene del HashMap longitudPotencia la potencia correspondiente a su longitud

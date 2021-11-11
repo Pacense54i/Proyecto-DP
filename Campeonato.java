@@ -17,10 +17,7 @@ public class Campeonato
     private ArrayList <Tenista> eliminados;
     
     private ArrayList <Zapatillas> zapatillasCampeonato;
-    TreeSet <RaquetaGenerica> raquetasCampeonato;
-    
-    //LA LISTA DE RAQUETAS ES UN TREE SET
-    //LA LISTA DE ZAPATILLAS LA PONEMOS COMO UN ARRAYLIST
+    private TreeSet <RaquetaGenerica> raquetasCampeonato;
         
 
     /**
@@ -39,7 +36,7 @@ public class Campeonato
     }
 
     /**
-     * Muestra por pantalla la lista de competidores de un campeonato
+     * Muestra por pantalla cada tenista de la lista de competidores de un campeonato
      */
     public void mostrarCompetidores()
     {
@@ -53,7 +50,7 @@ public class Campeonato
     }
 
     /**
-     * Muestra por pantalla la lista de eliminados de un campeonato
+     * Muestra por pantalla cada tenista de la lista de eliminados de un campeonato
      */
     public void mostrarEliminados()
     {
@@ -72,7 +69,7 @@ public class Campeonato
      * Inscribe a los tenistas en la competicion
      * (añade tenistas a la lista de competidores)
      * 
-     * @param Tenista T: Tenista que se quiere añadir a la lista de competidores
+     * @param Tenista T: objeto de la clase Tenista que se quiere añadir a la lista de competidores
      */
     public void inscribirJugadores(Tenista T)
     {
@@ -82,8 +79,9 @@ public class Campeonato
     /**
      * Comprueba que tenista ha ganado el partido y hace lo correspondiente si el tenista ha ganado o ha perdido
      *
-     * @param  Tenistas t1 y t2 //RECORDATORIO:cambiar mas adelante
-     * auxNum = numero de veces que se ha jugado un partido
+     * @param  Tenistas t1 y t2 son los tenistas que estan jugando el partido, int tamanoLista es el valor del tamaño de la lista de competidores - 1,
+     * int i es usa variable que indica la posicion en la que se esta recorriendo el bucle, auxNum = numero de veces que se ha jugado un partido.
+     * 
      */
     
     //cada vez que añadamos un nuevo tenista a la lista de elominados tendremos que ordenar meterlo en orden descendiente
@@ -217,16 +215,28 @@ public class Campeonato
     
     /**
      * Pone en juego el partido
+     * pone los puntos acumulado de cada tenista a 0, posteriormente a cada tenista se le asigna una zapatilla y se ponen a jugar
+     * primero el primer tenista contra el segundo y despues al reves
      *
-     * @param  Tenistas t1 y t2: Tenistas que van a jugar el partido
+     * @param  Tenistas t1 y t2: parametros de tipo Tenistas que van a jugar el partido
      */
     public void juego(Tenista t1, Tenista t2)
     {
+       ArrayList <Zapatillas> auxZapatillasCampeonato = new ArrayList <Zapatillas> (zapatillasCampeonato); ///COPIA DE LA LISTA DE ZAPATILLAS
+       Zapatillas ZapatillaAux = new Zapatillas();  //ZAPATILLA AUXILIAR 
+       
+       //Se llama al metodo elegir zapatillas para que el tenista elija su zapatilla correspondiente
+       //este metodo devuelve una zapatilla para que despues sea eliminada de la lista de zapatillas
+       //esto se hace tanto con el tenista 1 como con el tenista 2
+       ZapatillaAux = t1.elegirZapatillas( auxZapatillasCampeonato );
+       auxZapatillasCampeonato.remove(ZapatillaAux);
+       
+       ZapatillaAux = t2.elegirZapatillas( auxZapatillasCampeonato );
+       auxZapatillasCampeonato.remove(ZapatillaAux);
+       
+       
        t1.setPuntosAcumulados(0.0);
        t2.setPuntosAcumulados(0.0);
-       
-       t1.elegirZapatillas();
-       t2.elegirZapatillas();
        
        t1.jugar(t2);
        t2.jugar(t1);    
@@ -282,5 +292,6 @@ public class Campeonato
         }
         
     }
+
     
 }

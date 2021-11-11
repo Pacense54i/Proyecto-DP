@@ -121,27 +121,34 @@ public class RaquetaGenerica implements InterfaceRaqueta
         return cadena;
     }
     
-    public void iniciarHashMap()
+    
+    public void iniciarMapaLongitudPotencia()
     {
         longitudPotencia.put(680.0, 2.0);
         longitudPotencia.put(690.0, 4.0);
         longitudPotencia.put(700.0, 6.0);
         longitudPotencia.put(720.0, 8.0);
         longitudPotencia.put(740.0, 10.0);
-        
+    }
+    
+    public void iniciarMapaTmCabControl()
+    {
         tmCabControl.put(600.0,10.0);
         tmCabControl.put(630.0,8.0);
         tmCabControl.put(650.0,6.0);
         tmCabControl.put(680.0,4.0);
         tmCabControl.put(720.0,2.0);
-        
+    }
+    
+    public void iniciarMapaPesoVelocidad()
+    {
         pesoVelocidad.put(220.0, 10.0);
         pesoVelocidad.put(260.0, 8.0);
         pesoVelocidad.put(300.0, 6.0);
         pesoVelocidad.put(320.0, 4.0);
         pesoVelocidad.put(340.0, 2.0);
-        
     }
+    
     
     public Double calcularPotencia()
     {

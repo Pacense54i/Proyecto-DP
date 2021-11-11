@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Clase Tenista la cual incluye los metodos get y set de cada atributo y otros modulos necesarios
@@ -18,17 +19,14 @@ public class Tenista
     private String pais;
     private Zapatillas zapatilla;
     
-    private double numPie;
+    private Double numPie;
     private RaquetaGenerica raqueta;
     
-    // guardarPtoSaque es una variable creada para guardar 
-    //los puntos que ha conseguido un tenista con su saque
-    //Al ser una variable creada con ese proposito no es necesario mostrarla 
-    //por pantalla en el metodo mostrarTenista
+    // guardarPtoSaque es una variable creada para guardar los puntos que ha conseguido un tenista con su saque
+    //Al ser una variable creada con ese proposito no es necesario mostrarla por pantalla en el metodo mostrarTenista
     /**
      * Contructor de los objetos de la clase Tenista
      */
-    
     public Tenista()
     {
         // initialise instance variables
@@ -51,7 +49,7 @@ public class Tenista
      * 
      * @param String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais  parametros introducidos para iniciar el constructor
      */
-    public Tenista (String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais, double num, RaquetaGenerica r)
+    public Tenista (String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais, Double num, RaquetaGenerica r)
     {
         ordenEliminado = 0;
         saque = Saque;
@@ -67,7 +65,7 @@ public class Tenista
     }
     
     /**
-     * Muestra por pantalla los valores de la variable de la clase Tenista
+     * Muestra por pantalla los valores de los atributos de la clase Tenista
      */
     @Override
     public String toString()
@@ -272,9 +270,9 @@ public class Tenista
     /**
      * Set pie para especificar el numero de pie del Tenista
      * 
-     * @param double pie: nuevo numero de pie para el Tenista
+     * @param Double pie: nuevo numero de pie para el Tenista
      */
-    public void setNumPie(double pie )
+    public void setNumPie(Double pie )
     {
         this.numPie = pie;
     }
@@ -282,9 +280,9 @@ public class Tenista
     /**
      * Devuelve el valor guardado en la variable numPie
      * 
-     * @return double: devuelve el valor del atributo numPie del tenista
+     * @return Double: devuelve el valor del atributo numPie del tenista
      */
-    public double getNumPie()
+    public Double getNumPie()
     {
        return this.numPie;
     }
@@ -332,7 +330,8 @@ public class Tenista
     }
     
     /**
-     * Poner la pelota en juego
+     * Poner la pelota en juego. 
+     * Incrementa los puntos Acomulados de cada tenista mediante la suma de sus puntos Acomulados mas el valor del saque calculado en el metodo calcularSaque()
      */
     public void sacar()
     {
@@ -392,22 +391,33 @@ public class Tenista
      */
     public void jugar(Tenista oponente)
     {
-
         sacar();
         oponente.restar(this);
     }
     
     /**
      * Cada tenista elige su zapatilla
+     * 
      * Cada tenista antes de jugar deberá elegir unas nuevas zapatillas, para ello: 
      * recorrerá el listado zapatillasCampeonato y buscará las primeras zapatillas que tengan exactamente su mismo número de pie. 
-     * Cuando las encuentre, se las pondrá y las eliminará de zapatillasCampeonato. 
-     * Si no encuentra unas zapatillas de su número (o no quedan zapatillas disponibles), se quedará con las zapatillas que llevaba.
+     * Cuando las encuentre, se las pondrá y devolvera la zapatilla que se ha puesto. 
+     * 
+     * @return devuelve un objeto de clase Zapatillas la cual se ha puesto el tenista y sera eliminada de la lista de Zapatillas de Campeonato
      *
      */
-    public void elegirZapatillas() 
+    public Zapatillas elegirZapatillas(ArrayList <Zapatillas> copia) 
     {
+        Zapatillas zapatillaElegida = new Zapatillas();
+        Zapatillas auxiliar = new Zapatillas();
         
+        for(int i = 0; i < copia.size(); i++){
+            auxiliar = copia.get(i);
+            if( this.getNumPie().compareTo(auxiliar.getNumero()) == 0 ){
+               zapatillaElegida = auxiliar;
+            }
+        }
+        
+        return zapatillaElegida; 
     }
     
     
