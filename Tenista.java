@@ -324,7 +324,7 @@ public class Tenista
         Zapatillas auxZapa = new Zapatillas();
         auxZapa = this.getZapatilla();
         
-        result =  this.getSaque() * auxZapa.calcularValorSaque();
+        result =  this.getSaque() * auxZapa.calcularValorSaque() * raqueta.calcularPotencia() * raqueta.calcularVelocidad();
         guardarPtoSaque = result;
         
         return result;
@@ -357,7 +357,7 @@ public class Tenista
         Zapatillas auxZapa = new Zapatillas();
         auxZapa = this.getZapatilla();
         
-        result =  this.getResto() * auxZapa.calcularValorResto();
+        result =  this.getResto() * auxZapa.calcularValorResto() * raqueta.calcularControl() * raqueta.calcularVelocidad();
         
         return result;
     }
@@ -407,6 +407,8 @@ public class Tenista
     {
         
     }
+    
+    
 }
     
     
