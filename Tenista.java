@@ -292,7 +292,7 @@ public class Tenista
     /**
      * Set raq para especificar la raqueta del Tenista
      * 
-     * @param RaquetaGenerica raq: nueva raqueta para el Tenista
+     * @param RaquetaGenerica raq: nueva raqueta para el Tenista.
      */
     public void setRaqueta(RaquetaGenerica raq)
     {
@@ -300,9 +300,9 @@ public class Tenista
     }
     
     /**
-     * Devuelve el valor guardado en la variable raqueta
+     * Devuelve el valor guardado en la variable raqueta.
      * 
-     * @return RaquetaGenerica: devuelve la raqueta del tenista
+     * @return RaquetaGenerica: devuelve la raqueta del tenista.
      */
     public RaquetaGenerica getRaqueta()
     {
@@ -315,7 +315,8 @@ public class Tenista
      * Devuelve el valor del saque del tenista con las zapatillas aux
      * 
      * @return devuelve la variable result(double) que contiene el valor de 
-     *          multiplicar los puntos de la variable saque por el valor del saque de la zapatilla
+     * multiplicar los puntos de la variable saque por el valor del saque de la zapatilla 
+     * por el valor de calcularControl y calcularVelocidad de la raqueta del tenista.
      */
     public double calcularSaque()
     {
@@ -348,7 +349,8 @@ public class Tenista
     /**
      * Devuelve el valor del resto del tenista con las zapatillas aux
      * 
-     * @return devuelve la variable result(double) que contiene el valor de multiplicar los puntos de la variable resto por el valor del resto
+     * @return devuelve la variable result(double) que contiene el valor de multiplicar los puntos de la variable resto por el valor del resto 
+     * por el valor de calcularControl y calcularVelocidad de la raqueta del tenista.
      */
     public double calcularResto()
     {
