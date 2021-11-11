@@ -17,7 +17,7 @@ public class Campeonato
     private ArrayList <Tenista> eliminados;
     
     private ArrayList <Zapatillas> zapatillasCampeonato;
-    Set <RaquetaGenerica> raquetasCampeonato;
+    TreeSet <RaquetaGenerica> raquetasCampeonato;
     
     //LA LISTA DE RAQUETAS ES UN TREE SET
     //LA LISTA DE ZAPATILLAS LA PONEMOS COMO UN ARRAYLIST
@@ -234,7 +234,9 @@ public class Campeonato
 
     
     /**
+     * Añade una nueva zapatilla a la lista de Zapatillas
      * 
+     * @param Zapatillas z: Zapatillas que quieres introducir en la lista de Zapatillas
      */
     public void introducirZapatillas(Zapatillas z)
     {
@@ -242,7 +244,9 @@ public class Campeonato
     }
     
     /**
+     * Añade una nueva RaquetasGenerica a la lista de Raquetas
      * 
+     * @param RaquetaGenerica r: Raqueta que quieres introducir en la lista de raquetas
      */
     public void introducirRaquetas(RaquetaGenerica r)
     {
@@ -250,17 +254,32 @@ public class Campeonato
     }
     
     /**
+     * Se asigna Raquetas a todos los tenitas del campeonato
      * 
+     * Se seleccionará una raqueta del listado raquetasCampeonato (según su orden) y se asignará dicha raqueta al primer tenista del listado de competidores.
+     * Así sucesivamente hasta que cada tenista tenga una raqueta para jugar. 
+     * Si no hay suficientes raquetas para todos los tenistas se suspenderá temporalmente el campeonato.
      */
     public void asignarRaquetas()
     {
         RaquetaGenerica raquet = new RaquetaGenerica(); 
-        //cojo la raqueta del listado treeset raquetasCampeonato
+        Tenista aux = new Tenista ();
         
-        //obtengo el primer tenista de la lista de coompetidores
-        //se la asigno al tenista
-        
-        //pollfirst
+        //se mira el numero de raquetas y el de tenistas en la competicion
+        if(raquetasCampeonato.size() < competidores.size() ){ //no hay suficientes raquetas para los competidores
+            System.out.println( "No hay suficientes raquetas para los tenistas inscritos en el campeonato por lo que el campeonato se suspende.");
+            //como no hemos dado exepciones no sabemos la manera de salirse del campeonato
+        }
+        else{ //el numero de raquetas es igual o mayor que el numero de comperidores del campeonato por lo que hay suficientes raquetas
+            for(int i = 0; i < competidores.size(); i++){
+                raquet = raquetasCampeonato.pollFirst(); //obtento la primera raqueta de la lista
+            
+                aux = competidores.get(i);//obtengo el primer tenista de la lista
+            
+                aux.setRaqueta(raquet);// le asigno la raqueta al tenista
+            
+            }
+        }
         
     }
     
