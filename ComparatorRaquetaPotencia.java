@@ -9,7 +9,7 @@ import java.util.Comparator;
 public class ComparatorRaquetaPotencia implements Comparator<RaquetaGenerica>
 {
     /**
-     * Compara los valores de la variable ordenEliminado entre el Tenista t1 y el Tenista t2
+     * Compara los valores de la variable Potencia (utilizando el método calcularPotencia) entre la RaquetaGenerica r1 y la RaquetaGenerica r2
      * 
      * @param RaquetaGenerica r1, RaquetaGenerica r2: dos variables Tenista  en la que se quieran comparar la variable ordenEliminado de ambos tenistas
      */
