@@ -260,6 +260,7 @@ public class Campeonato
         //obtengo el primer tenista de la lista de coompetidores
         //se la asigno al tenista
         
+        //pollfirst
         
     }
     
