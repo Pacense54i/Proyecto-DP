@@ -27,5 +27,18 @@ public class ZapatillasConAgarre extends Zapatillas
     {
         return super.calcularValorResto()* 1.7;
     }
-
+    
+    /**
+     * Muestra en pantalla los valores de la diferentes variables de la clase ZapatillasConAgarre
+     * 
+     * Con @Override se sobreescribe el metodo toString de la clase Zapatillas
+     * @return devuelve una cadena (String) con lo que se quiere mostrar por pantalla
+     */
+    @Override
+    public String toString()
+    {
+        String cadena ="       ZapatillasConAgarre [" + 
+        "Modelo=" + super.getModelo() + "," + "Numero=" + super.getNumero() + "," + "Valor " + super.getValor() + "," + "]";
+        return cadena;
+    }
 }

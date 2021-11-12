@@ -70,9 +70,9 @@ public class Tenista
     @Override
     public String toString()
     {
-        String cadena=" Tenista [" + 
+        String cadena="    ** Tenista [" + 
         "Nombre=" + nombre + "," + "Saque=" + saque + "," + "Resto=" + resto + "," + "Ranking=" + ranking + "," +
-        "Pais=" + pais + ","  + "]";
+        "Pais=" + pais + ","  + " numero pie=" + numPie + "]";
         
         return cadena;
     }
@@ -409,13 +409,21 @@ public class Tenista
     {
         Zapatillas zapatillaElegida = new Zapatillas();
         Zapatillas auxiliar = new Zapatillas();
+        boolean enc = false;
         
-        for(int i = 0; i < copia.size(); i++){
+        
+        for(int i = 0; i < copia.size() && !enc; i++){
             auxiliar = copia.get(i);
             if( this.getNumPie() == (auxiliar.getNumero()) ){
                zapatillaElegida = auxiliar;
+               enc = true;
+               System.out.println("       Zapatillas asignadas     :" + getZapatilla().toString() );
+            }
+            else{
+                zapatillaElegida = this.getZapatilla();
             }
         }
+        
         
         return zapatillaElegida; 
     }

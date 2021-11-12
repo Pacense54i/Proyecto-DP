@@ -73,14 +73,6 @@ public class InitTennisData {
 	
         
         //INTRODUCIMOS LAS ZAPATILLAS EN LA LISTA DE ZAPATILLAS
-        campeonato.introducirZapatillas(z1);
-        campeonato.introducirZapatillas(z2);
-        campeonato.introducirZapatillas(z3);
-        campeonato.introducirZapatillas(z4);
-        campeonato.introducirZapatillas(z5);
-        campeonato.introducirZapatillas(z6);
-        campeonato.introducirZapatillas(z7);
-        campeonato.introducirZapatillas(z8);
         campeonato.introducirZapatillas(z9);
         campeonato.introducirZapatillas(z10);
         campeonato.introducirZapatillas(z11);

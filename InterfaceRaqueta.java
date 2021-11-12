@@ -86,7 +86,7 @@ public interface InterfaceRaqueta
     public Encordado getEncordado();
     
     /**
-     * Muestra en pantalla los valores de la diferentes variables de la clase Zapatillas
+     * Muestra en pantalla los valores de la diferentes variables de la clase RaquetaGenerica
      * 
      *Con @Override se sobreescribe el metodo toString de la clase Object
      *@return devuelve una cadena (String) con lo que se quiere mostrar por pantalla
@@ -120,19 +120,19 @@ public interface InterfaceRaqueta
      * 
      * @return (Double) devuelve la potencia correspondiente a su longuitud
      */
-    public Double calcularPotencia();
+    public double calcularPotencia();
     
     /**
      * Calcula el control de la Raqueta. Para ello obtiene del HashMap tmCabControl el control correspondiente a su tamanoDeLaCabeza
      * 
      * @return (Double) devuelve el control correspondiente a su tamanoDeLaCabeza
      */
-    public Double calcularControl();
+    public double calcularControl();
     
     /**
      * Calcula la velocidad de la Raqueta. Para ello obtiene del HashMap pesoVelocidad la velocidad correspondiente a su peso
      * 
      * @return (Double) devuelve la velocidad correspondiente a su peso 
      */
-    public Double calcularVelocidad();
+    public double calcularVelocidad();
 }

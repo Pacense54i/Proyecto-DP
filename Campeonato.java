@@ -102,7 +102,7 @@ public class Campeonato
                     competidores.set(i,t2); //intercambia la posicion del tenista
                     
                     //muestro ganador y perdedor
-                    System.out.println("  ## Gana este juego:" + 
+                    System.out.println("    ## Gana este juego:" + 
                     t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados.");
                     System.out.println("    ## Se elimina:" + 
                     t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
@@ -116,7 +116,7 @@ public class Campeonato
                     eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
                     
                     //muestro ganador y perdedor
-                    System.out.println("  ## Gana este juego:" + 
+                    System.out.println("    ## Gana este juego:" + 
                     t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados.");
                     System.out.println("    ## Se elimina:" + 
                     t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
@@ -132,7 +132,7 @@ public class Campeonato
                     eliminados.add(t2);
                     eliminados.sort( new ComparatorEliminados() ); //ordena la lista de eliminados de manera descendente
                     
-                    System.out.println("  ## Gana este juego:" + 
+                    System.out.println("    ## Gana este juego:" + 
                     t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados.");
                     System.out.println("    ## Se elimina:" + 
                     t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
@@ -148,7 +148,7 @@ public class Campeonato
                     competidores.set(i,t2); //intercambia la posicion del tenista
                     
                                         
-                    System.out.println("  ## Gana este juego:" + 
+                    System.out.println("    ## Gana este juego:" + 
                     t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados.");
                     System.out.println("    ## Se elimina:" + 
                     t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
@@ -177,8 +177,12 @@ public class Campeonato
          * quedar un único tenista final que será el ganador de la 
          * competición.
         */
+        // raquetasCampeonato.toString();
         System.out.println("***** Inicio del campeonato: Campeonato de Extremadura *****");
-        System.out.println("**********Listado de competidores");
+        //Se le asignan raquetas a los tenistas
+        this.asignarRaquetas();
+        System.out.println("");
+        System.out.println("**** Listado de competidores");
         mostrarCompetidores();
         
             while (competidores.size() > 1){
@@ -191,10 +195,7 @@ public class Campeonato
                     t1 = competidores.get(i);
                
                     t2 = competidores.get(tamanoLista-1);
-                    //mostramos nombres de los tenistas
-                    System.out.println("    ## Tenista1 ---->>>:" + t1.getNombre());
-                    System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre());
-                    
+  
                     juego (t1,t2);
                        
                     auxNum++;
@@ -224,16 +225,29 @@ public class Campeonato
     {
        ArrayList <Zapatillas> auxZapatillasCampeonato = new ArrayList <Zapatillas> (zapatillasCampeonato); ///COPIA DE LA LISTA DE ZAPATILLAS
        Zapatillas ZapatillaAux = new Zapatillas();  //ZAPATILLA AUXILIAR 
+       Zapatillas ZapatillaAux2 = new Zapatillas();  //ZAPATILLA AUXILIAR 
        
        //Se llama al metodo elegir zapatillas para que el tenista elija su zapatilla correspondiente
        //este metodo devuelve una zapatilla para que despues sea eliminada de la lista de zapatillas
        //esto se hace tanto con el tenista 1 como con el tenista 2
        ZapatillaAux = t1.elegirZapatillas( auxZapatillasCampeonato );
+       t1.setZapatilla(ZapatillaAux);
        auxZapatillasCampeonato.remove(ZapatillaAux);
+       zapatillasCampeonato = auxZapatillasCampeonato;
        
-       ZapatillaAux = t2.elegirZapatillas( auxZapatillasCampeonato );
-       auxZapatillasCampeonato.remove(ZapatillaAux);
        
+       ZapatillaAux2 = t2.elegirZapatillas( auxZapatillasCampeonato ); 
+       t2.setZapatilla(ZapatillaAux2);
+       auxZapatillasCampeonato.remove(ZapatillaAux2);
+       zapatillasCampeonato = auxZapatillasCampeonato;
+       
+    
+       //mostramos los tenistas que van a jugar con sus zapatillas
+       System.out.println("    ## Tenista1 ---->>>:" + t1.getNombre());
+       // System.out.println("       Zapatillas asignadas     :" + t1.getZapatilla().toString() );
+                    
+       System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre());
+       // System.out.println("       Zapatillas asignadas     :" + t2.getZapatilla().toString() );
        
        t1.setPuntosAcumulados(0.0);
        t2.setPuntosAcumulados(0.0);
@@ -281,6 +295,7 @@ public class Campeonato
             //como no hemos dado exepciones no sabemos la manera de salirse del campeonato
         }
         else{ //el numero de raquetas es igual o mayor que el numero de comperidores del campeonato por lo que hay suficientes raquetas
+            System.out.println("***** Asignando raquetas a tenistas *****");
             for(int i = 0; i < competidores.size(); i++){
                 raquet = raquetasCampeonato.pollFirst(); //obtento la primera raqueta de la lista
             
@@ -288,8 +303,10 @@ public class Campeonato
             
                 aux.setRaqueta(raquet);// le asigno la raqueta al tenista
             
+                System.out.println(raquet.toString() + " asignada a  -->> " + aux.getNombre() );
             }
         }
+        
         
     }
 

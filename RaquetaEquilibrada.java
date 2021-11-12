@@ -73,7 +73,7 @@ public class RaquetaEquilibrada extends RaquetaGenerica
      * por el multiplicador de potencia de la clase Raqueta Equilibrada;
      */
     @Override
-    public Double calcularPotencia()
+    public double calcularPotencia()
     {
         return super.calcularPotencia() * this.getMultiplicadorPotencia();
     }
@@ -85,8 +85,27 @@ public class RaquetaEquilibrada extends RaquetaGenerica
      * por el multiplicador de control de la clase Raqueta Equilibrada;
      */
     @Override
-    public Double calcularControl()
+    public double calcularControl()
     {
         return super.calcularControl() * this.getMultiplicadorControl();
+    }
+    
+    /**
+     * Muestra en pantalla los valores de la diferentes variables de la clase RaquetaEquilibrada
+     * 
+     *Con @Override se sobreescribe el metodo toString de la clase RaquetaGenerica
+     *@return devuelve una cadena (String) con lo que se quiere mostrar por pantalla
+     */
+    @Override
+    public String toString()
+    {
+        String cadena1 ="  RaquetaEquilibrada "  + "(MultiplicadorDePotencia:" + this.multiplicadorPotencia + 
+        ")(MultiplicadorDeControl:" + this.getMultiplicadorControl() + ")";
+        String cadena2 ="\n     [modelo: " + super.getModelo();
+        String cadena3 ="\n     longuitud: " + super.getLongitud() + ",potencia asociada: " + calcularPotencia();
+        String cadena4 ="\n     tamaño: " + super.getTamanoDeLaCabeza() + ",control asociado: " + calcularControl();
+        String cadena5 ="\n     peso: " + super.getPeso() + ",velocidad asociada: " + calcularVelocidad() + "]";
+        
+        return cadena1 + cadena2 + cadena3 + cadena4 + cadena5;
     }
 }

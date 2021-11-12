@@ -28,7 +28,7 @@ public class RaquetaControlada extends RaquetaGenerica
      * @return Double result: resultado de las operaciones realizadas segun el tipo de encordado de la raqueta
      */
     @Override
-    public Double calcularControl()
+    public double calcularControl()
     {
         Encordado aux = null;
         Double result = 0.0;       
@@ -53,8 +53,26 @@ public class RaquetaControlada extends RaquetaGenerica
      * @reutrn se devuelve la velocidad obtenida supertipo Raqueta Generica multiplicada por la constante FACTOR2;
      */
     @Override
-    public Double calcularVelocidad()
+    public double calcularVelocidad()
     {
         return super.calcularVelocidad() * super.FACTOR2;
+    }
+    
+    /**
+     * Muestra en pantalla los valores de la diferentes variables de la clase RaquetaControlada
+     * 
+     *Con @Override se sobreescribe el metodo toString de la clase RaquetaGenerica
+     *@return devuelve una cadena (String) con lo que se quiere mostrar por pantalla
+     */
+    @Override
+    public String toString()
+    {
+        String cadena1 ="  RaquetaControlada " + super.getEncordado().toString();
+        String cadena2 ="\n     [modelo: " + super.getModelo();
+        String cadena3 ="\n     longuitud: " + super.getLongitud() + ",potencia asociada: " + calcularPotencia();
+        String cadena4 ="\n     tamaño: " + super.getTamanoDeLaCabeza() + ",control asociado: " + calcularControl();
+        String cadena5 ="\n     peso: " + super.getPeso() + ",velocidad asociada: " + calcularVelocidad() + "]";
+        
+        return cadena1 + cadena2 + cadena3 + cadena4 + cadena5;
     }
 }

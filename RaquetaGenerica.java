@@ -36,8 +36,13 @@ public class RaquetaGenerica implements InterfaceRaqueta
         
         
         longitudPotencia = new HashMap<>();
+        this.iniciarMapaLongitudPotencia();
+        
         tmCabControl = new HashMap<>();
+        this.iniciarMapaTmCabControl();
+        
         pesoVelocidad = new HashMap<>();
+        this.iniciarMapaPesoVelocidad();
     }
     
     /**
@@ -51,9 +56,15 @@ public class RaquetaGenerica implements InterfaceRaqueta
         tamanoDeLaCabeza = tamano;
         estiloDeEncordado = estilo;
         
+        
         longitudPotencia = new HashMap<>();
+        this.iniciarMapaLongitudPotencia();
+        
         tmCabControl = new HashMap<>();
+        this.iniciarMapaTmCabControl();
+        
         pesoVelocidad = new HashMap<>();
+        this.iniciarMapaPesoVelocidad();
     }
     
     public void setModelo (String modelo)
@@ -150,17 +161,17 @@ public class RaquetaGenerica implements InterfaceRaqueta
     }
     
     
-    public Double calcularPotencia()
+    public double calcularPotencia()
     {
-        return longitudPotencia.get( this.getLongitud() );
+        return longitudPotencia.get(this.getLongitud());
     }
     
-    public Double calcularControl()
+    public double calcularControl()
     {
         return tmCabControl.get( this.getTamanoDeLaCabeza() );
     }
     
-    public Double calcularVelocidad()
+    public double calcularVelocidad()
     {
         return pesoVelocidad.get( this.getPeso() );
     }

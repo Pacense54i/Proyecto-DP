@@ -15,18 +15,18 @@ public class ComparatorRaquetaPotencia implements Comparator<RaquetaGenerica>
      */
     public int compare(RaquetaGenerica r1, RaquetaGenerica r2)
     {
-        if(r1.calcularPotencia().compareTo( r2.calcularPotencia() ) == 0){
+        if(r1.calcularPotencia() == r2.calcularPotencia() ){
             
-                if(r1.getModelo().compareTo( r2.getModelo() ) == 0){
+                if(r1.getModelo().equals(r2.getModelo())  ){
                     return 0;
                 }
-                    else if( r1.getModelo().compareTo( r2.getModelo() ) > 0)
+                    else if( r1.getModelo().compareTo(r2.getModelo()) < 0 )
                             return 1;
                         else
                             return -1;
                 
         }
-        else if( r1.calcularPotencia().compareTo( r2.calcularPotencia() ) > 0)
+        else if( r1.calcularPotencia() < r2.calcularPotencia() )
                 return 1;
             else
                 return -1;

@@ -28,11 +28,13 @@ public class RaquetaPotente extends RaquetaGenerica
      * @return Double result: resultado de las operaciones realizadas segun el tipo de encordado de la raqueta
      */
     @Override
-    public Double calcularPotencia()
+    public double calcularPotencia()
     {
         Encordado aux = null;
         Double result = 0.0;       
-        Double j = super.calcularPotencia(); //obtengo la ponetencia
+        Double j = null;
+        
+        j = super.calcularPotencia(); //obtengo la ponetencia
         
         aux = super.getEncordado();     //obtengo el encordado de la raqueta
         
@@ -53,8 +55,27 @@ public class RaquetaPotente extends RaquetaGenerica
      * @reutrn se devuelve la velocidad obtenida supertipo Raqueta Generica multiplicada por la constante FACTOR1;
      */
     @Override
-    public Double calcularVelocidad()
+    public double calcularVelocidad()
     {
         return super.calcularVelocidad() * super.FACTOR1;
+    }
+    
+    
+    /**
+     * Muestra en pantalla los valores de la diferentes variables de la clase Raqueta Potente
+     * 
+     *Con @Override se sobreescribe el metodo toString de la clase RaquetaGenerica
+     *@return devuelve una cadena (String) con lo que se quiere mostrar por pantalla
+     */
+    @Override
+    public String toString()
+    {
+        String cadena1 ="  RaquetaPotente " + super.getEncordado().toString();
+        String cadena2 ="\n     [modelo: " + super.getModelo();
+        String cadena3 ="\n     longuitud: " + super.getLongitud() + ",potencia asociada: " + calcularPotencia();
+        String cadena4 ="\n     tamaño: " + super.getTamanoDeLaCabeza() + ",control asociado: " + calcularControl();
+        String cadena5 ="\n     peso: " + super.getPeso() + ",velocidad asociada: " + calcularVelocidad() + "]";
+        
+        return cadena1 + cadena2 + cadena3 + cadena4 + cadena5;
     }
 }
