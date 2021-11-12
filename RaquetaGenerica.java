@@ -36,13 +36,13 @@ public class RaquetaGenerica implements InterfaceRaqueta
         
         
         longitudPotencia = new HashMap<>();
-        this.iniciarMapaLongitudPotencia();
+        iniciarMapaLongitudPotencia();
         
         tmCabControl = new HashMap<>();
-        this.iniciarMapaTmCabControl();
+        iniciarMapaTmCabControl();
         
         pesoVelocidad = new HashMap<>();
-        this.iniciarMapaPesoVelocidad();
+        iniciarMapaPesoVelocidad();
     }
     
     /**
@@ -58,13 +58,13 @@ public class RaquetaGenerica implements InterfaceRaqueta
         
         
         longitudPotencia = new HashMap<>();
-        this.iniciarMapaLongitudPotencia();
+        iniciarMapaLongitudPotencia();
         
         tmCabControl = new HashMap<>();
-        this.iniciarMapaTmCabControl();
+        iniciarMapaTmCabControl();
         
         pesoVelocidad = new HashMap<>();
-        this.iniciarMapaPesoVelocidad();
+        iniciarMapaPesoVelocidad();
     }
     
     public void setModelo (String modelo)

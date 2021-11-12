@@ -38,7 +38,7 @@ public class Campeonato
     /**
      * Muestra por pantalla cada tenista de la lista de competidores de un campeonato
      */
-    public void mostrarCompetidores()
+    private void mostrarCompetidores()
     {
         Zapatillas z = new Zapatillas();
         
@@ -52,7 +52,7 @@ public class Campeonato
     /**
      * Muestra por pantalla cada tenista de la lista de eliminados de un campeonato
      */
-    public void mostrarEliminados()
+    private void mostrarEliminados()
     {
         Zapatillas z = new Zapatillas();
         
@@ -85,7 +85,7 @@ public class Campeonato
      */
     
     //cada vez que añadamos un nuevo tenista a la lista de elominados tendremos que ordenar meterlo en orden descendiente
-    public void comprobacionVictoria(Tenista t1,Tenista t2,int tamanoLista,int i,int auxNum)
+    private void comprobacionVictoria(Tenista t1,Tenista t2,int tamanoLista,int i,int auxNum)
     {
         
         if( t1.getPuntosAcumulados() == t2.getPuntosAcumulados() ){
@@ -221,7 +221,7 @@ public class Campeonato
      *
      * @param  Tenistas t1 y t2: parametros de tipo Tenistas que van a jugar el partido
      */
-    public void juego(Tenista t1, Tenista t2)
+    private void juego(Tenista t1, Tenista t2)
     {
        ArrayList <Zapatillas> auxZapatillasCampeonato = new ArrayList <Zapatillas> (zapatillasCampeonato); ///COPIA DE LA LISTA DE ZAPATILLAS
        Zapatillas ZapatillaAux = new Zapatillas();  //ZAPATILLA AUXILIAR 
@@ -244,10 +244,10 @@ public class Campeonato
     
        //mostramos los tenistas que van a jugar con sus zapatillas
        System.out.println("    ## Tenista1 ---->>>:" + t1.getNombre());
-       // System.out.println("       Zapatillas asignadas     :" + t1.getZapatilla().toString() );
+       
                     
        System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre());
-       // System.out.println("       Zapatillas asignadas     :" + t2.getZapatilla().toString() );
+       
        
        t1.setPuntosAcumulados(0.0);
        t2.setPuntosAcumulados(0.0);
@@ -284,7 +284,7 @@ public class Campeonato
      * Así sucesivamente hasta que cada tenista tenga una raqueta para jugar. 
      * Si no hay suficientes raquetas para todos los tenistas se suspenderá temporalmente el campeonato.
      */
-    public void asignarRaquetas()
+    private void asignarRaquetas()
     {
         RaquetaGenerica raquet = new RaquetaGenerica(); 
         Tenista aux = new Tenista ();

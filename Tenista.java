@@ -417,7 +417,7 @@ public class Tenista
             if( this.getNumPie() == (auxiliar.getNumero()) ){
                zapatillaElegida = auxiliar;
                enc = true;
-               System.out.println("       Zapatillas asignadas     :" + getZapatilla().toString() );
+               System.out.println("       Zapatillas asignadas: " + getZapatilla().toString() );
             }
             else{
                 zapatillaElegida = this.getZapatilla();
