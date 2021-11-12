@@ -32,7 +32,7 @@ public class RaquetaGenerica implements InterfaceRaqueta
         peso=0.0;
         longitud=0.0;
         tamanoDeLaCabeza=0.0;
-        estiloDeEncordado= null; //preguntar si estaria bien
+        estiloDeEncordado= null; 
         
         
         longitudPotencia = new HashMap<>();

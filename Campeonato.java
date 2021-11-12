@@ -230,24 +230,22 @@ public class Campeonato
        //Se llama al metodo elegir zapatillas para que el tenista elija su zapatilla correspondiente
        //este metodo devuelve una zapatilla para que despues sea eliminada de la lista de zapatillas
        //esto se hace tanto con el tenista 1 como con el tenista 2
+       
+       //mostramos los tenistas que van a jugar con sus zapatillas
+       System.out.println("    ## Tenista1 ---->>>:" + t1.getNombre());
        ZapatillaAux = t1.elegirZapatillas( auxZapatillasCampeonato );
        t1.setZapatilla(ZapatillaAux);
        auxZapatillasCampeonato.remove(ZapatillaAux);
        zapatillasCampeonato = auxZapatillasCampeonato;
        
-       
+       //mostramos los tenistas que van a jugar con sus zapatillas
+       System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre()); 
        ZapatillaAux2 = t2.elegirZapatillas( auxZapatillasCampeonato ); 
        t2.setZapatilla(ZapatillaAux2);
        auxZapatillasCampeonato.remove(ZapatillaAux2);
        zapatillasCampeonato = auxZapatillasCampeonato;
        
-    
-       //mostramos los tenistas que van a jugar con sus zapatillas
-       System.out.println("    ## Tenista1 ---->>>:" + t1.getNombre());
-       
-                    
-       System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre());
-       
+      
        
        t1.setPuntosAcumulados(0.0);
        t2.setPuntosAcumulados(0.0);
@@ -297,7 +295,7 @@ public class Campeonato
         else{ //el numero de raquetas es igual o mayor que el numero de comperidores del campeonato por lo que hay suficientes raquetas
             System.out.println("***** Asignando raquetas a tenistas *****");
             for(int i = 0; i < competidores.size(); i++){
-                raquet = raquetasCampeonato.pollFirst(); //obtento la primera raqueta de la lista
+                raquet = raquetasCampeonato.pollFirst(); //obtengo la primera raqueta de la lista
             
                 aux = competidores.get(i);//obtengo el primer tenista de la lista
             
