@@ -15,18 +15,16 @@ import org.junit.jupiter.api.Test;
 public class TennisDemo {
 
     public static void main(String[] args) {
-        /*Creación del campeonato
-        Instanciar una variable de tipo Campeonato;
+        //Creación del campeonato
+        //Instanciar una variable de tipo Campeonato;
         //Carga de datos iniciales del campeonato
-        Instanciar una variable de tipo InitTennisData pasando la variable instanciada de tipo campeonato como parámetro;
+        //Instanciar una variable de tipo InitTennisData pasando la variable instanciada de tipo campeonato como parámetro;
         //Llamada al método que inicia la simulación del campeonato
-        Llamar al método que hayáis definido en vuestra clase Campeonato en la variable instanciada de tipo campeonato para que realice el campeonato;
-        */
+        //Llamar al método que hayáis definido en vuestra clase Campeonato en la variable instanciada de tipo campeonato para que realice el campeonato;
         
-        // Campeonato c = new Campeonato();
-        // InitTennisData data = new InitTennisData();
-        // data.InitTennisData(c);
-        // c.competicion();
         
+        Campeonato c = new Campeonato();
+        InitTennisData data = new InitTennisData(c);
+        c.competicion();
     }
 }

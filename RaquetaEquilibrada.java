@@ -7,30 +7,18 @@
  */
 public class RaquetaEquilibrada extends RaquetaGenerica
 {
-    private Double multiplicadorPotencia;
-    private Double multiplicadorControl;
+    private double multiplicadorPotencia;
+    private double multiplicadorControl;
+    
     
     /**
      * Constructor for objects of class RaquetaEquilibrada
      * 
-     * @param String model, Double pes, Double longi, Double tamano, Encordado estilo son los parametros necesarios para 
-     * iniciar el constructor de la clase Raqueta Equilibrada el cual hace una llamada al super tipo Raqueta Generica
-     */
-    public RaquetaEquilibrada(String model, Double pes, Double longi, Double tamano, Encordado estilo)
-    {
-        super(model,pes,longi,tamano,estilo);
-        multiplicadorPotencia = 0.0; 
-        multiplicadorControl = 0.0;
-    }
-    
-    /**
-     * Constructor for objects of class RaquetaEquilibrada
-     * 
-     * @param String model, Double pes, Double longi, Double tamano, Encordado estilo, Double multiplicadorPotenci, Double multiplicadorContro
+     * @param String model, double pes, double longi, double tamano, Encordado estilo, double multiplicadorPotenci, double multiplicadorContro
      * son los parametros necesarios para iniciar el constructor 
      * de la clase Raqueta Equilibrada el cual hace una llamada al super tipo Raqueta Generica
      */
-    public RaquetaEquilibrada(String model, Double pes, Double longi, Double tamano, Encordado estilo, Double multiplicadorPotenci, Double multiplicadorContro)
+    public RaquetaEquilibrada(String model, double pes, double longi, double tamano, Encordado estilo, double multiplicadorPotenci, double multiplicadorContro)
     {
         super(model,pes,longi,tamano,estilo);
         multiplicadorPotencia = multiplicadorPotenci; 
@@ -40,9 +28,9 @@ public class RaquetaEquilibrada extends RaquetaGenerica
     /**
      * Set multiplicadorPotenci para especificar el multiplicadorPotencia de la Raqueta Equilibrada
      * 
-     * @param Double multiplicadorPotenci: introduce el valor introducido por parametro en la variable multiplicadorPotencia de la Raqueta.
+     * @param double multiplicadorPotenci: introduce el valor introducido por parametro en la variable multiplicadorPotencia de la Raqueta.
      */
-     public void setMultiplicadorPotencia (Double multiplicadorPotenci)
+     public void setMultiplicadorPotencia (double multiplicadorPotenci)
     {
         this.multiplicadorPotencia=multiplicadorPotenci;
     }
@@ -50,9 +38,9 @@ public class RaquetaEquilibrada extends RaquetaGenerica
     /**
      * Devuelve el multiplicadorPotencia actual de la Raqueta Equilibrada
      * 
-     * @return devuelve el valor del atributo multiplicadorPotencia(Double) de la clase Raqueta Equilibrada
+     * @return devuelve el valor del atributo multiplicadorPotencia(double) de la clase Raqueta Equilibrada
      */
-    public Double getMultiplicadorPotencia()
+    public double getMultiplicadorPotencia()
     {
         return this.multiplicadorPotencia;
     }
@@ -60,9 +48,9 @@ public class RaquetaEquilibrada extends RaquetaGenerica
     /**
      * Set multiplicadorContro para especificar el multiplicadorControl de la Raqueta Equilibrada
      * 
-     * @param Double multiplicadorContro: introduce el valor introducido por parametro en la variable multiplicadorControl de la Raqueta.
+     * @param double multiplicadorContro: introduce el valor introducido por parametro en la variable multiplicadorControl de la Raqueta.
      */
-     public void setMultiplicadorControl(Double multiplicadorContro)
+     public void setMultiplicadorControl(double multiplicadorContro)
     {
         this.multiplicadorControl=multiplicadorContro;
     }
@@ -70,9 +58,9 @@ public class RaquetaEquilibrada extends RaquetaGenerica
      /**
      * Devuelve el multiplicadorControl actual de la Raqueta Equilibrada
      * 
-     * @return devuelve el valor del atributo multiplicadorControl(Double) de la clase Raqueta Equilibrada
+     * @return devuelve el valor del atributo multiplicadorControl(double) de la clase Raqueta Equilibrada
      */
-    public Double getMultiplicadorControl()
+    public double getMultiplicadorControl()
     {
         return this.multiplicadorControl;
     }

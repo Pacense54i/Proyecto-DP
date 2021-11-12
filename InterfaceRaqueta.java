@@ -26,42 +26,42 @@ public interface InterfaceRaqueta
      * 
      * @param double peso: peso de la Raqueta.
      */
-    public void setPeso (Double peso);
+    public void setPeso (double peso);
     
      /**
      * Devuelve el peso actual de la Raqueta
      * 
-     * @return devuelve el valor de la varible peso(Double)
+     * @return devuelve el valor de la varible peso(double)
      */
-    public Double getPeso ();
+    public double getPeso ();
     
     /**
      * Set longitud para especificar el longitud de la Raqueta
      * 
-     * @param Double longitud: longitud de la Raqueta.
+     * @param double longitud: longitud de la Raqueta.
      */
-     public void setLongitud (Double longitud);
+     public void setLongitud (double longitud);
      
      /**
      * Devuelve la longitud actual de la Raqueta
      * 
      * @return devuelve el valor de la varible longitud(double)
      */
-    public Double getLongitud();
+    public double getLongitud();
     
     /**
      * Set tamanoDeLaCabeza para especificar el tamanoDeLaCabeza de la Raqueta
      * 
-     * @param Double tamanoDeLaCabeza: tamanoDeLaCabeza de la Raqueta.
+     * @param double tamanoDeLaCabeza: tamanoDeLaCabeza de la Raqueta.
      */
-     public void setTamanoDeLaCabeza (Double tamanoDeLaCabeza);
+     public void setTamanoDeLaCabeza (double tamanoDeLaCabeza);
      
      /**
      * Devuelve la tamanoDeLaCabeza actual de la Raqueta
      * 
-     * @return devuelve el valor de la varible tamanoDeLaCabeza(Double)
+     * @return devuelve el valor de la varible tamanoDeLaCabeza(double)
      */
-    public Double getTamanoDeLaCabeza();
+    public double getTamanoDeLaCabeza();
     
     /**
      * Set estiloDeEncordado para especificar el estiloDeEncordado de la Raqueta

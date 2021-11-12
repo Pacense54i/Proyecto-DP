@@ -19,7 +19,7 @@ public class Tenista
     private String pais;
     private Zapatillas zapatilla;
     
-    private Double numPie;
+    private double numPie;
     private RaquetaGenerica raqueta;
     
     // guardarPtoSaque es una variable creada para guardar los puntos que ha conseguido un tenista con su saque
@@ -49,7 +49,7 @@ public class Tenista
      * 
      * @param String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais  parametros introducidos para iniciar el constructor
      */
-    public Tenista (String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais, Double num, RaquetaGenerica r)
+    public Tenista (String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais, double num)
     {
         ordenEliminado = 0;
         saque = Saque;
@@ -61,7 +61,7 @@ public class Tenista
         pais = Pais;
         zapatilla = z;
         numPie = num;
-        raqueta = r;
+        raqueta = new RaquetaGenerica();
     }
     
     /**
@@ -270,9 +270,9 @@ public class Tenista
     /**
      * Set pie para especificar el numero de pie del Tenista
      * 
-     * @param Double pie: nuevo numero de pie para el Tenista
+     * @param double pie: nuevo numero de pie para el Tenista
      */
-    public void setNumPie(Double pie )
+    public void setNumPie(double pie )
     {
         this.numPie = pie;
     }
@@ -280,9 +280,9 @@ public class Tenista
     /**
      * Devuelve el valor guardado en la variable numPie
      * 
-     * @return Double: devuelve el valor del atributo numPie del tenista
+     * @return double: devuelve el valor del atributo numPie del tenista
      */
-    public Double getNumPie()
+    public double getNumPie()
     {
        return this.numPie;
     }
@@ -412,7 +412,7 @@ public class Tenista
         
         for(int i = 0; i < copia.size(); i++){
             auxiliar = copia.get(i);
-            if( this.getNumPie().compareTo(auxiliar.getNumero()) == 0 ){
+            if( this.getNumPie() == (auxiliar.getNumero()) ){
                zapatillaElegida = auxiliar;
             }
         }

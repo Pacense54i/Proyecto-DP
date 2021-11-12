@@ -13,7 +13,7 @@ public class RaquetaControlada extends RaquetaGenerica
      * @param String model, Double pes, Double longi, Double tamano, Encordado estilo son los parametros necesarios para 
      * iniciar el constructor de la clase Raqueta Controlada el cual hace una llamada al super tipo Raqueta Generica
      */
-    public RaquetaControlada(String model, Double pes, Double longi, Double tamano, Encordado estilo)
+    public RaquetaControlada(String model, double pes, double longi, double tamano, Encordado estilo)
     {
         super(model,pes,longi,tamano,estilo);
     }

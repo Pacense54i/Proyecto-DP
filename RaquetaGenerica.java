@@ -10,9 +10,9 @@ import java.util.HashMap;
 public class RaquetaGenerica implements InterfaceRaqueta
 {
     private String modelo;
-    private Double peso;
-    private Double longitud;
-    private Double tamanoDeLaCabeza;
+    private double peso;
+    private double longitud;
+    private double tamanoDeLaCabeza;
     
     private Encordado estiloDeEncordado;
     
@@ -20,8 +20,8 @@ public class RaquetaGenerica implements InterfaceRaqueta
     Map <Double, Double > tmCabControl = new HashMap<>();
     Map <Double, Double > pesoVelocidad = new HashMap<>();
     
-    public final Double FACTOR1 = 1.5;
-    public final Double FACTOR2 = 1.2;
+    public final double FACTOR1 = 1.5;
+    public final double FACTOR2 = 1.2;
     
     /**
      * Constructor de la Raqueta Generica.
@@ -43,7 +43,7 @@ public class RaquetaGenerica implements InterfaceRaqueta
     /**
      * Constructor parametrizado de la Raqueta Generica.
      */
-    public RaquetaGenerica(String model, Double pes, Double longi, Double tamano, Encordado estilo)
+    public RaquetaGenerica(String model, double pes, double longi, double tamano, Encordado estilo)
     {
         modelo = model;
         peso = pes;
@@ -66,32 +66,32 @@ public class RaquetaGenerica implements InterfaceRaqueta
         return this.modelo;
     }
     
-    public void setPeso (Double peso)
+    public void setPeso (double peso)
     {
         this.peso=peso;
     }
     
-    public Double getPeso ()
+    public double getPeso ()
     {
         return this.peso;
     }
     
-     public void setLongitud (Double longitud)
+     public void setLongitud (double longitud)
     {
         this.longitud=longitud;
     }
     
-    public Double getLongitud()
+    public double getLongitud()
     {
         return this.longitud;
     }
     
-     public void setTamanoDeLaCabeza (Double tamanoDeLaCabeza)
+     public void setTamanoDeLaCabeza (double tamanoDeLaCabeza)
     {
         this.tamanoDeLaCabeza=tamanoDeLaCabeza;
     }
     
-    public Double getTamanoDeLaCabeza()
+    public double getTamanoDeLaCabeza()
     {
         return this.tamanoDeLaCabeza;
     }
