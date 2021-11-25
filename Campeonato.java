@@ -18,12 +18,13 @@ public class Campeonato
     
     private ArrayList <Zapatillas> zapatillasCampeonato;
     private TreeSet <RaquetaGenerica> raquetasCampeonato;
+    private static Campeonato c=null;
         
 
     /**
      * Contructor de los objetos de la clase Campeonato
      */
-    public Campeonato()
+    private Campeonato()
     {
         // initialise instance variables
         // initialise instance variables
@@ -33,6 +34,13 @@ public class Campeonato
         
         zapatillasCampeonato = new ArrayList();
         raquetasCampeonato = new TreeSet<>( new ComparatorRaquetaPotencia() );
+    }
+    
+    public static Campeonato getInstancia(){
+        if (c==null){
+            return c= new Campeonato();
+        }
+        return c;
     }
 
     /**
@@ -233,14 +241,14 @@ public class Campeonato
        
        //mostramos los tenistas que van a jugar con sus zapatillas
        System.out.println("    ## Tenista1 ---->>>:" + t1.getNombre());
-       ZapatillaAux = t1.elegirZapatillas( auxZapatillasCampeonato );
+       //ZapatillaAux = t1.elegirZapatillas( auxZapatillasCampeonato );
        t1.setZapatilla(ZapatillaAux);
        auxZapatillasCampeonato.remove(ZapatillaAux);
        zapatillasCampeonato = auxZapatillasCampeonato;
        
        //mostramos los tenistas que van a jugar con sus zapatillas
        System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre()); 
-       ZapatillaAux2 = t2.elegirZapatillas( auxZapatillasCampeonato ); 
+       //ZapatillaAux2 = t2.elegirZapatillas( auxZapatillasCampeonato ); 
        t2.setZapatilla(ZapatillaAux2);
        auxZapatillasCampeonato.remove(ZapatillaAux2);
        zapatillasCampeonato = auxZapatillasCampeonato;
@@ -304,9 +312,36 @@ public class Campeonato
                 System.out.println(raquet.toString() + " asignada a  -->> " + aux.getNombre() );
             }
         }
-        
-        
+    
     }
 
     
+    
+    public Zapatillas buscarZapatillas(double numeroPie)
+    {      
+        boolean enc = false;
+        Zapatillas aux = new Zapatillas();
+        Tenista d;
+        int i=0;
+        
+        while (i<zapatillasCampeonato.size() && enc==false){
+              d = competidores.get(i);
+              if (d.getNumPie() == numeroPie){
+                  enc=true;
+                  aux = d.getZapatilla();
+                  zapatillasCampeonato.remove(i);
+              }
+              else{
+                  i++;
+              }
+        }
+        if(enc==false){
+            System.out.println("No existe ninguna Zapatilla que se corresponda con el número de pie del tenista.");
+        }
+        
+        return aux;
+    }
+    /*
+    Está hecho así por encima, que no se me ocurría otra cosa
+    */ 
 }

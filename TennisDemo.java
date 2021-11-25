@@ -23,8 +23,8 @@ public class TennisDemo {
         //Llamar al método que hayáis definido en vuestra clase Campeonato en la variable instanciada de tipo campeonato para que realice el campeonato;
         
         
-        Campeonato c = new Campeonato();
-        InitTennisData data = new InitTennisData(c);
+        Campeonato c = Campeonato.getInstancia();
+        InitTennisData data = new InitTennisData();
         c.competicion();
     }
 }

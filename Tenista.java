@@ -307,7 +307,10 @@ public class Tenista
        return this.raqueta;
     }
     
-    
+    public void RealizarInscripcion(){
+        Campeonato c = Campeonato.getInstancia();
+        c.inscribirJugadores(this);
+    }
     
     /**
      * Devuelve el valor del saque del tenista con las zapatillas aux
@@ -405,27 +408,26 @@ public class Tenista
      * @return devuelve un objeto de clase Zapatillas la cual se ha puesto el tenista y sera eliminada de la lista de Zapatillas de Campeonato
      *
      */
-    public Zapatillas elegirZapatillas(ArrayList <Zapatillas> copia) 
-    {
-        Zapatillas zapatillaElegida = new Zapatillas();
-        Zapatillas auxiliar = new Zapatillas();
-        boolean enc = false;
+    public Zapatillas elegirZapatillas() 
+    {   
+        Zapatillas aux = new Zapatillas();
+        Campeonato c = Campeonato.getInstancia();
+        aux = c.buscarZapatillas(this.getNumPie());
         
+        /*Búsqueda con -> while!!!!!!
+        Ya no debe tener parámetro el método porque podemos obtener el
+        campeonato.
+        Hay que hacer en la clase campeonato un módulo para buscar una zapatilla
+        con ese número de pie en la lista, pero además debe de devolver también si no ha
+        encontrado ninguna que coincida.
         
-        for(int i = 0; i < copia.size() && !enc; i++){
-            auxiliar = copia.get(i);
-            if( this.getNumPie() == (auxiliar.getNumero()) ){
-               zapatillaElegida = auxiliar;
-               enc = true;
-               System.out.println("       Zapatillas asignadas: " + getZapatilla().toString() );
-            }
-            else{
-                zapatillaElegida = this.getZapatilla();
-            }
-        }
+        Cuando hagamos una buśqueda, nunca debe de haber new's, nunca nunca nunca.
         
+        Le he puesto un tipo de datos int para evitar errores, el tipo de datos
+        claramente era Zapatillas jajajajaj.
+        */
         
-        return zapatillaElegida; 
+        return aux;
     }
     
     
