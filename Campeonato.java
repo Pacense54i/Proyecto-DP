@@ -241,14 +241,14 @@ public class Campeonato
        
        //mostramos los tenistas que van a jugar con sus zapatillas
        System.out.println("    ## Tenista1 ---->>>:" + t1.getNombre());
-       //ZapatillaAux = t1.elegirZapatillas( auxZapatillasCampeonato );
+       ZapatillaAux = t1.elegirZapatillas();
        t1.setZapatilla(ZapatillaAux);
        auxZapatillasCampeonato.remove(ZapatillaAux);
        zapatillasCampeonato = auxZapatillasCampeonato;
        
        //mostramos los tenistas que van a jugar con sus zapatillas
        System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre()); 
-       //ZapatillaAux2 = t2.elegirZapatillas( auxZapatillasCampeonato ); 
+       ZapatillaAux2 = t2.elegirZapatillas(); 
        t2.setZapatilla(ZapatillaAux2);
        auxZapatillasCampeonato.remove(ZapatillaAux2);
        zapatillasCampeonato = auxZapatillasCampeonato;
