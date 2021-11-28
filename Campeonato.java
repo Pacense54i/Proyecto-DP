@@ -325,23 +325,31 @@ public class Campeonato
         int i=0;
         
         while (i<zapatillasCampeonato.size() && enc==false){
-              d = competidores.get(i);
-              if (d.getNumPie() == numeroPie){
+              // d = competidores.get(i);
+              aux = zapatillasCampeonato.get(i);
+              // if (d.getNumPie() == numeroPie){
+              if (aux.getNumero() == numeroPie){
                   enc=true;
-                  aux = d.getZapatilla();
+                  System.out.println("       Zapatillas asignadas: " + aux.toString() );
+                  // aux = d.getZapatilla(); //ni hace falta
                   zapatillasCampeonato.remove(i);
               }
               else{
                   i++;
               }
         }
-        if(enc==false){
-            System.out.println("No existe ninguna Zapatilla que se corresponda con el número de pie del tenista.");
-        }
+        // if(enc==false){
+            // System.out.println("No existe ninguna Zapatilla que se corresponda con el número de pie del tenista.");
+        // }
         
         return aux;
     }
     /*
     Está hecho así por encima, que no se me ocurría otra cosa
     */ 
+   
+    //aqui hay un problema: Si el tenista no encuentra una zapatilla que es igual a su talla el tenista debe seguir con su zapatilla. 
+    // Idea que se me acaba de ocurrir para solucionarlo es hacer un metodo buscar zapatilla que busque en la lista de zapatillas si hay una zapatilla para el tenista
+    // devuelve true si la hay y false si no la hay y la idea es que en tenista este eso como condicion de entrada == true y si hay zapatilla 
+    // ENTONCES SOLO AHI el tenista se cambia de zapatilla
 }

@@ -426,6 +426,10 @@ public class Tenista
         Le he puesto un tipo de datos int para evitar errores, el tipo de datos
         claramente era Zapatillas jajajajaj.
         */
+       
+        //A.David: el metodo de buscar zapatillas te devuelve la zapatilla que se ha buscado para el tenista 
+        //el cual tiene un numero de pie y en base a eso se ha escogido la zapatilla 
+        
         
         return aux;
     }
