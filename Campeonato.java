@@ -38,7 +38,7 @@ public class Campeonato
     
     public static Campeonato getInstancia(){
         if (c==null){
-            return c= new Campeonato();
+            return c = new Campeonato();
         }
         return c;
     }
@@ -330,13 +330,13 @@ public class Campeonato
         int i = 0;
         
         while (i<zapatillasCampeonato.size() && enc==false){
-              // d = competidores.get(i);
+              // d = competidores.get(i);  //borrar
               aux = zapatillasCampeonato.get(i);
-              // if (d.getNumPie() == numeroPie){
+              // if (d.getNumPie() == numeroPie){ //borrar
               if (aux.getNumero() == numeroPie){
                   enc=true;
                   System.out.println("       Zapatillas asignadas: " + aux.toString() );
-                  // aux = d.getZapatilla(); //ni hace falta
+                  // aux = d.getZapatilla(); //borrar
                   zapatillasCampeonato.remove(i);
               }
               else{
@@ -345,17 +345,19 @@ public class Campeonato
         }
         if(enc==false){
             aux = null;
-            // System.out.println("No existe ninguna Zapatilla que se corresponda con el número de pie del tenista.");
+            // System.out.println("No existe ninguna Zapatilla que se corresponda con el número de pie del tenista.");  //borrar (no hay que mostrar nada)
         }
         
         return aux;
     }
-    /*
-    Está hecho así por encima, que no se me ocurría otra cosa
-    */ 
-   
-    //aqui hay un problema: Si el tenista no encuentra una zapatilla que es igual a su talla el tenista debe seguir con su zapatilla. 
-    // Idea que se me acaba de ocurrir para solucionarlo es hacer un metodo buscar zapatilla que busque en la lista de zapatillas si hay una zapatilla para el tenista
-    // devuelve true si la hay y false si no la hay y la idea es que en tenista este eso como condicion de entrada == true y si hay zapatilla 
-    // ENTONCES SOLO AHI el tenista se cambia de zapatilla
+    
+    
+    // Preguntas a Alvaro:
+    // ToString (fallo en requisito minimo)---- > para arreglar
+    // Como hacer las pruebas del Junit en el proyecto
+    // Preguntar si es mas correcto hacer:
+    // Campeonato c = c.getInstancia();
+    // c.modulo;
+    // o
+    // Campeonato.getInstancia().modulo
 }

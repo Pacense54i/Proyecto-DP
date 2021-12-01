@@ -396,6 +396,9 @@ public class Tenista
     {
         sacar();
         oponente.restar(this);
+        // golpear();
+        // cambiarRaqueta(oponente);
+        // cambiarRaqueta(this);
     }
     
     /**
@@ -412,8 +415,8 @@ public class Tenista
     {   
         Zapatillas aux = new Zapatillas();
         Campeonato c = Campeonato.getInstancia();
-        aux = c.buscarZapatillas(this.getNumPie());
-        
+        // aux = c.buscarZapatillas(this.getNumPie());   //preguntar
+        aux = Campeonato.getInstancia().buscarZapatillas(this.getNumPie());
         if( aux == null ){
             aux = getZapatilla();
         }
@@ -429,9 +432,6 @@ public class Tenista
         Le he puesto un tipo de datos int para evitar errores, el tipo de datos
         claramente era Zapatillas jajajajaj.
         */
-       
-        //A.David: el metodo de buscar zapatillas te devuelve la zapatilla que se ha buscado para el tenista 
-        //el cual tiene un numero de pie y en base a eso se ha escogido la zapatilla 
         
         
         return aux;
@@ -443,6 +443,22 @@ public class Tenista
      // */
     // public void realizarInscripcion(){
         // Campeonato.getInstancia().inscribirJugadores(this);    
+    // }
+    
+    // /**
+     // * 
+     // */
+    // public void golpear(){
+        
+    // }
+    
+    // /**
+     // * Los tenistas cambian sus raquetas.
+     // * La raqueta es cambiada por la primera raqueta disponible de la lista de raquetas de Campeonato
+     // * dicha raqueta se eliminara de la lista
+     // */
+    // public void cambiarRaqueta(Tenista t){
+        
     // }
     
 }
