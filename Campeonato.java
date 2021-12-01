@@ -18,7 +18,7 @@ public class Campeonato
     
     private ArrayList <Zapatillas> zapatillasCampeonato;
     private TreeSet <RaquetaGenerica> raquetasCampeonato;
-    private static Campeonato c=null;
+    private static Campeonato c = null;
         
 
     /**

@@ -435,6 +435,13 @@ public class Tenista
     }
     
     
+    /**
+     * Realiza la Inscripcion del tenista en el campeonato
+     */
+    public void realizarInscripcion(){
+        Campeonato.getInstancia().inscribirJugadores(this);    
+    }
+    
 }
     
     
