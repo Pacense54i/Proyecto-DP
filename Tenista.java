@@ -414,6 +414,9 @@ public class Tenista
         Campeonato c = Campeonato.getInstancia();
         aux = c.buscarZapatillas(this.getNumPie());
         
+        if( aux == null ){
+            aux = getZapatilla();
+        }
         /*Búsqueda con -> while!!!!!!
         Ya no debe tener parámetro el método porque podemos obtener el
         campeonato.
@@ -435,12 +438,12 @@ public class Tenista
     }
     
     
-    /**
-     * Realiza la Inscripcion del tenista en el campeonato
-     */
-    public void realizarInscripcion(){
-        Campeonato.getInstancia().inscribirJugadores(this);    
-    }
+    // /**
+     // * Realiza la Inscripcion del tenista en el campeonato
+     // */
+    // public void realizarInscripcion(){
+        // Campeonato.getInstancia().inscribirJugadores(this);    
+    // }
     
 }
     

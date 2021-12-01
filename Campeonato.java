@@ -316,13 +316,18 @@ public class Campeonato
     }
 
     
-    
+    /**
+     * Busca si hay una zapatilla disponible para el tenista segun su numero de pie.
+     * Si la hay es devuelta mediante return.
+     * Si no la hay el modulo devuelve null indicando asi que no hay una zapatilla en la lista de zapatillas con el mismo numero de pie que el tenista 
+     * por lo que el tenista debera de seguir usando su zapatilla
+     */
     public Zapatillas buscarZapatillas(double numeroPie)
     {      
         boolean enc = false;
         Zapatillas aux = new Zapatillas();
-        Tenista d;
-        int i=0;
+        // Tenista d;
+        int i = 0;
         
         while (i<zapatillasCampeonato.size() && enc==false){
               // d = competidores.get(i);
@@ -338,9 +343,10 @@ public class Campeonato
                   i++;
               }
         }
-        // if(enc==false){
+        if(enc==false){
+            aux = null;
             // System.out.println("No existe ninguna Zapatilla que se corresponda con el número de pie del tenista.");
-        // }
+        }
         
         return aux;
     }
