@@ -417,7 +417,9 @@ public class Tenista
         Campeonato c = Campeonato.getInstancia();
         // aux = c.buscarZapatillas(this.getNumPie());   //preguntar
         aux = Campeonato.getInstancia().buscarZapatillas(this.getNumPie());
-        if( aux == null ){
+        if( aux == null ){  
+            //si aux ha devuelto null entonce significa que no se encontro zapatilla para el 
+            //por ello se tiene que devolver en aux la misma zapatilla que el tenista tiene puesto
             aux = getZapatilla();
         }
         /*Búsqueda con -> while!!!!!!

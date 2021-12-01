@@ -343,6 +343,7 @@ public class Campeonato
                   i++;
               }
         }
+        // enc == false significa que no hay una zapatilla por lo que vamos a devolver null
         if(enc==false){
             aux = null;
             // System.out.println("No existe ninguna Zapatilla que se corresponda con el número de pie del tenista.");  //borrar (no hay que mostrar nada)
