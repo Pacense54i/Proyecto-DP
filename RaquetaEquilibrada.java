@@ -101,11 +101,7 @@ public class RaquetaEquilibrada extends RaquetaGenerica
     {
         String cadena1 ="  RaquetaEquilibrada "  + "(MultiplicadorDePotencia:" + this.multiplicadorPotencia + 
         ")(MultiplicadorDeControl:" + this.getMultiplicadorControl() + ")";
-        String cadena2 ="\n     [modelo: " + super.getModelo();
-        String cadena3 ="\n     longuitud: " + super.getLongitud() + ",potencia asociada: " + calcularPotencia();
-        String cadena4 ="\n     tamaño: " + super.getTamanoDeLaCabeza() + ",control asociado: " + calcularControl();
-        String cadena5 ="\n     peso: " + super.getPeso() + ",velocidad asociada: " + calcularVelocidad() + "]";
         
-        return cadena1 + cadena2 + cadena3 + cadena4 + cadena5;
+        return cadena1 + super.toString();
     }
 }

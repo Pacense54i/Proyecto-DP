@@ -67,12 +67,6 @@ public class RaquetaControlada extends RaquetaGenerica
     @Override
     public String toString()
     {
-        String cadena1 ="  RaquetaControlada " + super.getEncordado().toString();
-        String cadena2 ="\n     [modelo: " + super.getModelo();
-        String cadena3 ="\n     longuitud: " + super.getLongitud() + ",potencia asociada: " + calcularPotencia();
-        String cadena4 ="\n     tamaño: " + super.getTamanoDeLaCabeza() + ",control asociado: " + calcularControl();
-        String cadena5 ="\n     peso: " + super.getPeso() + ",velocidad asociada: " + calcularVelocidad() + "]";
-        
-        return cadena1 + cadena2 + cadena3 + cadena4 + cadena5;
+        return "  " + getClass().getName() + super.getEncordado().toString() + super.toString();
     }
 }

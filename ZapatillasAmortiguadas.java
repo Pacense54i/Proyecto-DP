@@ -37,8 +37,6 @@ public class ZapatillasAmortiguadas extends Zapatillas
     @Override
     public String toString()
     {
-        String cadena ="       ZapatillasAmortiguadas [" + 
-        "Modelo=" + super.getModelo() + "," + "Numero=" + super.getNumero() + "," + "Valor " + super.getValor() + "," + "]";
-        return cadena;
+        return "       " + getClass().getName() + super.toString();
     }
 }

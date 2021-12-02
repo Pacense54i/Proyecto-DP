@@ -125,11 +125,12 @@ public class RaquetaGenerica implements InterfaceRaqueta
     @Override
     public String toString()
     {
-        String cadena =" Raqueta [" + 
-        "Modelo=" + modelo + "," + "Peso=" + peso + "," + "Longitud=" + longitud + ","
-        + "tamanoDeLaCabeza=" + tamanoDeLaCabeza + "estiloDeEncordado=" + estiloDeEncordado.toString() + "]";
+        String cadena2 ="\n     [modelo: " + getModelo();
+        String cadena3 ="\n     longuitud: " + getLongitud() + ",potencia asociada: " + calcularPotencia();
+        String cadena4 ="\n     tamaño: " + getTamanoDeLaCabeza() + ",control asociado: " + calcularControl();
+        String cadena5 ="\n     peso: " + getPeso() + ",velocidad asociada: " + calcularVelocidad() + "]";
         
-        return cadena;
+        return cadena2 + cadena3 + cadena4 + cadena5;
     }
     
     

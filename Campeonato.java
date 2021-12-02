@@ -44,6 +44,16 @@ public class Campeonato
     }
 
     /**
+     * Devuelve la lista de Zapatillas
+     * 
+     * @return Arraylist: lista que contiene las zapatillas que proporciona el campeonato
+     */
+    public ArrayList getZapatillasCampeonato(){
+        return this.zapatillasCampeonato;
+    }
+    
+    
+    /**
      * Muestra por pantalla cada tenista de la lista de competidores de un campeonato
      */
     private void mostrarCompetidores()
@@ -231,29 +241,7 @@ public class Campeonato
      */
     private void juego(Tenista t1, Tenista t2)
     {
-       ArrayList <Zapatillas> auxZapatillasCampeonato = new ArrayList <Zapatillas> (zapatillasCampeonato); ///COPIA DE LA LISTA DE ZAPATILLAS
-       Zapatillas ZapatillaAux = new Zapatillas();  //ZAPATILLA AUXILIAR 
-       Zapatillas ZapatillaAux2 = new Zapatillas();  //ZAPATILLA AUXILIAR 
-       
-       //Se llama al metodo elegir zapatillas para que el tenista elija su zapatilla correspondiente
-       //este metodo devuelve una zapatilla para que despues sea eliminada de la lista de zapatillas
-       //esto se hace tanto con el tenista 1 como con el tenista 2
-       
-       //mostramos los tenistas que van a jugar con sus zapatillas
-       System.out.println("    ## Tenista1 ---->>>:" + t1.getNombre());
-       ZapatillaAux = t1.elegirZapatillas();
-       t1.setZapatilla(ZapatillaAux);
-       auxZapatillasCampeonato.remove(ZapatillaAux);
-       zapatillasCampeonato = auxZapatillasCampeonato;
-       
-       //mostramos los tenistas que van a jugar con sus zapatillas
-       System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre()); 
-       ZapatillaAux2 = t2.elegirZapatillas(); 
-       t2.setZapatilla(ZapatillaAux2);
-       auxZapatillasCampeonato.remove(ZapatillaAux2);
-       zapatillasCampeonato = auxZapatillasCampeonato;
-       
-      
+       cambiarZapatillas(t1,t2);
        
        t1.setPuntosAcumulados(0.0);
        t2.setPuntosAcumulados(0.0);
@@ -262,6 +250,24 @@ public class Campeonato
        t2.jugar(t1);    
     }
 
+    /**
+     *  Los dos Tenistas t1 y t2 se cambian de zapatillas eliminandose la zapatilla elegida de la lista de zapatillas disponible la zapatilla que se han puesto 
+     *  
+     *  @param Tenista t1, Tenista t2: objetos de clase tenista que se cambiaran de zapatillas
+     */
+    public void cambiarZapatillas(Tenista t1, Tenista t2)
+    {      
+       //mostramos los tenistas que van a jugar con sus zapatillas
+       System.out.println("    ## Tenista1 ---->>>:" + t1.getNombre());
+       //ejecuto elegir zapatilla y devuelvo la zapatilla que se ha puesto para elimonarla de la lista de Zapatillas
+       zapatillasCampeonato.remove(t1.elegirZapatillas());
+       
+       //mostramos los tenistas que van a jugar con sus zapatillas
+       System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre()); 
+       //ejecuto elegir zapatilla y devuelvo la zapatilla que se ha puesto para elimonarla de la lista de Zapatillas
+       zapatillasCampeonato.remove(t2.elegirZapatillas());  
+    }
+    
     
     /**
      * Añade una nueva zapatilla a la lista de Zapatillas
@@ -314,45 +320,7 @@ public class Campeonato
         }
     
     }
-
-    
-    /**
-     * Busca si hay una zapatilla disponible para el tenista segun su numero de pie.
-     * Si la hay es devuelta mediante return.
-     * Si no la hay el modulo devuelve null indicando asi que no hay una zapatilla en la lista de zapatillas con el mismo numero de pie que el tenista 
-     * por lo que el tenista debera de seguir usando su zapatilla
-     */
-    public Zapatillas buscarZapatillas(double numeroPie)
-    {      
-        boolean enc = false;
-        Zapatillas aux = new Zapatillas();
-        // Tenista d;
-        int i = 0;
         
-        while (i<zapatillasCampeonato.size() && enc==false){
-              // d = competidores.get(i);  //borrar
-              aux = zapatillasCampeonato.get(i);
-              // if (d.getNumPie() == numeroPie){ //borrar
-              if (aux.getNumero() == numeroPie){
-                  enc=true;
-                  System.out.println("       Zapatillas asignadas: " + aux.toString() );
-                  // aux = d.getZapatilla(); //borrar
-                  zapatillasCampeonato.remove(i);
-              }
-              else{
-                  i++;
-              }
-        }
-        // enc == false significa que no hay una zapatilla por lo que vamos a devolver null
-        if(enc==false){
-            aux = null;
-            // System.out.println("No existe ninguna Zapatilla que se corresponda con el número de pie del tenista.");  //borrar (no hay que mostrar nada)
-        }
-        
-        return aux;
-    }
-    
-    
     // Preguntas a Alvaro:
     // ToString (fallo en requisito minimo)---- > para arreglar
     // Como hacer las pruebas del Junit en el proyecto
@@ -361,4 +329,6 @@ public class Campeonato
     // c.modulo;
     // o
     // Campeonato.getInstancia().modulo
+    
+    //getClass().getname
 }

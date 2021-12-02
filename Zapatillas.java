@@ -66,8 +66,7 @@ public class Zapatillas implements InterfaceZapatillas
     @Override
     public String toString()
     {
-        String cadena ="       Zapatillas [" + 
-        "Modelo=" + modelo + "," + "Numero=" + numero + "," + "Valor " + valor + "," + "]";
+        String cadena ="  [" + "Modelo=" + modelo + "," + "Numero=" + numero + "," + "Valor " + valor + "," + "]";
         return cadena;
     }
     

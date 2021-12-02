@@ -408,35 +408,34 @@ public class Tenista
      * recorrerá el listado zapatillasCampeonato y buscará las primeras zapatillas que tengan exactamente su mismo número de pie. 
      * Cuando las encuentre, se las pondrá y devolvera la zapatilla que se ha puesto. 
      * 
-     * @return devuelve un objeto de clase Zapatillas la cual se ha puesto el tenista y sera eliminada de la lista de Zapatillas de Campeonato
+     * @return devuelve un objeto de clase Zapatillas la cual se ha puesto el tenista, es decir, devuelve la zapatilla que se ha puesto el tenista
      *
      */
     public Zapatillas elegirZapatillas() 
     {   
+        ArrayList <Zapatillas> listaZapatillas =  Campeonato.getInstancia().getZapatillasCampeonato();
         Zapatillas aux = new Zapatillas();
-        Campeonato c = Campeonato.getInstancia();
-        // aux = c.buscarZapatillas(this.getNumPie());   //preguntar
-        aux = Campeonato.getInstancia().buscarZapatillas(this.getNumPie());
-        if( aux == null ){  
-            //si aux ha devuelto null entonce significa que no se encontro zapatilla para el 
-            //por ello se tiene que devolver en aux la misma zapatilla que el tenista tiene puesto
-            aux = getZapatilla();
+        boolean enc = false;
+        int i = 0;
+        
+        while (i < listaZapatillas.size() && enc==false){
+              aux = listaZapatillas.get(i);
+              if (aux.getNumero() == numPie){
+                  setZapatilla(aux); //el tenista se pone la zapatilla
+                  enc=true;
+                  System.out.println("       Zapatillas asignadas: " + aux.toString() );
+              }
+              else{
+                  i++;
+              }
         }
-        /*Búsqueda con -> while!!!!!!
-        Ya no debe tener parámetro el método porque podemos obtener el
-        campeonato.
-        Hay que hacer en la clase campeonato un módulo para buscar una zapatilla
-        con ese número de pie en la lista, pero además debe de devolver también si no ha
-        encontrado ninguna que coincida.
+        // enc == false significa que no hay una zapatilla por lo que vamos a devolver null
+        if(enc==false){
+            aux = getZapatilla();
+            setZapatilla(aux); //el tenista se pone la zapatilla
+        }
         
-        Cuando hagamos una buśqueda, nunca debe de haber new's, nunca nunca nunca.
-        
-        Le he puesto un tipo de datos int para evitar errores, el tipo de datos
-        claramente era Zapatillas jajajajaj.
-        */
-        
-        
-        return aux;
+        return aux;  //devuelve la zapatilla que se ha puesto
     }
     
     
