@@ -413,13 +413,37 @@ public class Tenista
      */
     public Zapatillas elegirZapatillas() 
     {   
-        Campeonato c = Campeonato.getInstancia();
-        Zapatillas aux =  c.buscarZapatillas(this.getNumPie());       
-        if (aux != null){
-            this.setZapatilla(aux);
-            System.out.println("       Zapatillas asignadas:" + aux.toString()); 
+        ArrayList <Zapatillas> listaZapatillas =  Campeonato.getInstancia().getZapatillasCampeonato();
+        Zapatillas aux = new Zapatillas();
+        boolean enc = false;
+        int i = 0;
+        
+        while (i < listaZapatillas.size() && enc==false){
+              aux = listaZapatillas.get(i);
+              if (aux.getNumero() == numPie){
+                  setZapatilla(aux); //el tenista se pone la zapatilla
+                  enc=true;
+                  System.out.println("       Zapatillas asignadas: " + aux.toString() );
+              }
+              else{
+                  i++;
+              }
         }
-        return this.getZapatilla();
+        // enc == false significa que no hay una zapatilla por lo que vamos a devolver null
+        if(enc==false){
+            aux = getZapatilla();
+            setZapatilla(aux); //el tenista se pone la zapatilla
+        }
+        
+        return aux;  //devuelve la zapatilla que se ha puesto
+        
+        // Campeonato c = Campeonato.getInstancia();
+        // Zapatillas aux =  c.buscarZapatillas(this.getNumPie());       
+        // if (aux != null){
+            // this.setZapatilla(aux);
+            // System.out.println("       Zapatillas asignadas:" + aux.toString()); 
+        // }
+        // return this.getZapatilla();
     }
     //Traerse la instancia del campeonato.
         //Llamar al método del campeonato que dado el número de pié

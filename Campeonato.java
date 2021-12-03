@@ -321,21 +321,21 @@ public class Campeonato
         }
     }
     
-    public Zapatillas buscarZapatillas (double numPie){
-        boolean enc = false;
-        Zapatillas aux = null;
-        Iterator <Zapatillas> iterator = zapatillasCampeonato.iterator();
+    // public Zapatillas buscarZapatillas (double numPie){
+        // boolean enc = false;
+        // Zapatillas aux = null;
+        // Iterator <Zapatillas> iterator = zapatillasCampeonato.iterator();
         
-        while (iterator.hasNext() && enc==false){
-              Zapatillas z = (Zapatillas) iterator.next();
-              if (z.getNumero() == numPie){
-                  enc=true;
-                  iterator.remove();
-                  aux = z;
-              }
-        }
-        return aux;  //devuelve la zapatilla que se ha puesto
-    }
+        // while (iterator.hasNext() && enc==false){
+              // Zapatillas z = (Zapatillas) iterator.next();
+              // if (z.getNumero() == numPie){
+                  // enc=true;
+                  // iterator.remove();
+                  // aux = z;
+              // }
+        // }
+        // return aux;  //devuelve la zapatilla que se ha puesto
+    // }
     /* c.Juego();
      * ArrayList <Integer> lista = new Arraylist<Integer>();
      * boolean enc = false;
