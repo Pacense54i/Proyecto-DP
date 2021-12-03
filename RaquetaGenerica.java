@@ -16,6 +16,10 @@ public class RaquetaGenerica implements InterfaceRaqueta
     
     private Encordado estiloDeEncordado;
     
+    // Jose dice que deben ser estaticos pues si en un futuro
+    // cambias algo, sólo se cambiaría en una de las raquetas
+    // y no en todas.
+    // Le extraña mucho que no nos hayan dicho nada la verdad.
     Map <Double, Double > longitudPotencia = new HashMap<>();
     Map <Double, Double > tmCabControl = new HashMap<>();
     Map <Double, Double > pesoVelocidad = new HashMap<>();

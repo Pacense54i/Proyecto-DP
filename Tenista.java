@@ -413,31 +413,20 @@ public class Tenista
      */
     public Zapatillas elegirZapatillas() 
     {   
-        ArrayList <Zapatillas> listaZapatillas =  Campeonato.getInstancia().getZapatillasCampeonato();
-        Zapatillas aux = new Zapatillas();
-        boolean enc = false;
-        int i = 0;
-        
-        while (i < listaZapatillas.size() && enc==false){
-              aux = listaZapatillas.get(i);
-              if (aux.getNumero() == numPie){
-                  setZapatilla(aux); //el tenista se pone la zapatilla
-                  enc=true;
-                  System.out.println("       Zapatillas asignadas: " + aux.toString() );
-              }
-              else{
-                  i++;
-              }
+        Campeonato c = Campeonato.getInstancia();
+        Zapatillas aux =  c.buscarZapatillas(this.getNumPie());       
+        if (aux != null){
+            this.setZapatilla(aux);
+            System.out.println("       Zapatillas asignadas:" + aux.toString()); 
         }
-        // enc == false significa que no hay una zapatilla por lo que vamos a devolver null
-        if(enc==false){
-            aux = getZapatilla();
-            setZapatilla(aux); //el tenista se pone la zapatilla
-        }
-        
-        return aux;  //devuelve la zapatilla que se ha puesto
+        return this.getZapatilla();
     }
-    
+    //Traerse la instancia del campeonato.
+        //Llamar al método del campeonato que dado el número de pié
+        //Devuelve las zapatillas que sean de ese número y si no encuentra
+        //Ninguna de ese número, devuelve null
+        //Y aquí, si el método ese devuelve null no hace nada, sino
+        //Coloca las zapatillas devueltas al tenista de esta clase.
     
     // /**
      // * Realiza la Inscripcion del tenista en el campeonato

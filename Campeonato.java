@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.Iterator;
 
 
 /**
@@ -318,9 +319,34 @@ public class Campeonato
                 System.out.println(raquet.toString() + " asignada a  -->> " + aux.getNombre() );
             }
         }
-    
     }
+    
+    public Zapatillas buscarZapatillas (double numPie){
+        boolean enc = false;
+        Zapatillas aux = null;
+        Iterator <Zapatillas> iterator = zapatillasCampeonato.iterator();
         
+        while (iterator.hasNext() && enc==false){
+              Zapatillas z = (Zapatillas) iterator.next();
+              if (z.getNumero() == numPie){
+                  enc=true;
+                  iterator.remove();
+                  aux = z;
+              }
+        }
+        return aux;  //devuelve la zapatilla que se ha puesto
+    }
+    /* c.Juego();
+     * ArrayList <Integer> lista = new Arraylist<Integer>();
+     * boolean enc = false;
+     * Iterator <Integer> Iterator = lista.iterator();
+     * while(iterator.hastnext () && !enc)
+     *  Integer integer = (Integer) iterator.next();
+     *  if (integer == 100){
+     *      iterator.remove();
+     *      enc = true;
+         }
+    */
     // Preguntas a Alvaro:
     // ToString (fallo en requisito minimo)---- > para arreglar
     // Como hacer las pruebas del Junit en el proyecto
