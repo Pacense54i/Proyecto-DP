@@ -1,3 +1,5 @@
+import java.util.TreeSet;
+import java.util.Iterator;
 
 /**
  * Write a description of class TenistasVoladores here.
@@ -31,13 +33,30 @@ public class TenistasVoladores extends Tenista
     @Override
     public void golpear()
     {
+        double acumulados = 0.0;
+        RaquetaGenerica aux = super.getRaqueta();        
         
+        acumulados = super.getPuntosAcumulados() + aux.calcularPotencia() * 0.15 ;
+        
+        super.setPuntosAcumulados(acumulados);
     }
     
     @Override
     public void cambiarRaqueta(Tenista t)
     {
-    
+        Iterator <RaquetaGenerica> iterator = Campeonato.getInstancia().getRaquetasCampeonato().iterator();
+        boolean enc = false;
+        RaquetaGenerica r = t.getRaqueta();
+        while (iterator.hasNext() && enc==false)
+        {
+            RaquetaGenerica aux = (RaquetaGenerica) iterator.next();
+            if( aux.calcularVelocidad() > r.calcularVelocidad()){
+                enc=true;
+                iterator.remove();
+                super.setRaqueta(aux);
+            }
+            
+        }
     }
     
 }

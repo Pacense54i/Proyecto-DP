@@ -32,9 +32,12 @@ public class TenistasGolpeadores extends Tenista
     @Override
     public void golpear()
     {
-        int acomulados = 0;
+        double acumulados = 0.0;
+        RaquetaGenerica aux = super.getRaqueta();        
         
+        acumulados = super.getPuntosAcumulados() + aux.calcularVelocidad() * 0.10 ;
         
+        super.setPuntosAcumulados(acumulados);
     }
     
     @Override
