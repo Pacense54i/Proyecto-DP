@@ -53,6 +53,14 @@ public class Campeonato
         return this.zapatillasCampeonato;
     }
     
+    /**
+     * Devuelve el TreeSet raquetasCampeonato
+     * 
+     * @return TreeSet: arbol que contiene las raquetas que proporciona el campeonato
+     */
+    public TreeSet getRaquetasCampeonato(){
+        return this.raquetasCampeonato;
+    }
     
     /**
      * Muestra por pantalla cada tenista de la lista de competidores de un campeonato
@@ -336,7 +344,8 @@ public class Campeonato
         // }
         // return aux;  //devuelve la zapatilla que se ha puesto
     // }
-    /* c.Juego();
+    /*EJEMPLO ITERATOR
+     * c.Juego();
      * ArrayList <Integer> lista = new Arraylist<Integer>();
      * boolean enc = false;
      * Iterator <Integer> Iterator = lista.iterator();
@@ -347,14 +356,5 @@ public class Campeonato
      *      enc = true;
          }
     */
-    // Preguntas a Alvaro:
-    // ToString (fallo en requisito minimo)---- > para arreglar
-    // Como hacer las pruebas del Junit en el proyecto
-    // Preguntar si es mas correcto hacer:
-    // Campeonato c = c.getInstancia();
-    // c.modulo;
-    // o
-    // Campeonato.getInstancia().modulo
-    
-    //getClass().getname
+   
 }

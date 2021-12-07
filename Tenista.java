@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.TreeSet;
 
 /**
  * Clase Tenista la cual incluye los metodos get y set de cada atributo y otros modulos necesarios
@@ -396,9 +397,9 @@ public class Tenista
     {
         sacar();
         oponente.restar(this);
-        // golpear();
-        // cambiarRaqueta(oponente);
-        // cambiarRaqueta(this);
+        golpear();
+        cambiarRaqueta(oponente);
+        cambiarRaqueta(this);
     }
     
     /**
@@ -413,6 +414,7 @@ public class Tenista
      */
     public Zapatillas elegirZapatillas() 
     {   
+        //poner iterator NO OLVIDAR
         ArrayList <Zapatillas> listaZapatillas =  Campeonato.getInstancia().getZapatillasCampeonato();
         Zapatillas aux = new Zapatillas();
         boolean enc = false;
@@ -452,28 +454,38 @@ public class Tenista
         //Y aquí, si el método ese devuelve null no hace nada, sino
         //Coloca las zapatillas devueltas al tenista de esta clase.
     
-    // /**
-     // * Realiza la Inscripcion del tenista en el campeonato
-     // */
-    // public void realizarInscripcion(){
-        // Campeonato.getInstancia().inscribirJugadores(this);    
-    // }
+    /**
+     * Realiza la Inscripcion del tenista en el campeonato
+     */
+    public void realizarInscripcion()
+    {
+        Campeonato.getInstancia().inscribirJugadores(this);    
+    }
     
-    // /**
-     // * 
-     // */
-    // public void golpear(){
+    /**
+     * Este modulo no tiene una implementación por defecto. 
+     * Su implementación dependerá de cada subclase (Tenista golpeador y volador)
+     */
+    public void golpear()
+    {
         
-    // }
+    }
     
-    // /**
-     // * Los tenistas cambian sus raquetas.
-     // * La raqueta es cambiada por la primera raqueta disponible de la lista de raquetas de Campeonato
-     // * dicha raqueta se eliminara de la lista
-     // */
-    // public void cambiarRaqueta(Tenista t){
+    /**
+     * Los tenistas cambian sus raquetas.
+     * La raqueta es cambiada por la primera raqueta disponible de la lista de raquetas de Campeonato
+     * dicha raqueta se eliminara de la lista
+     */
+    public void cambiarRaqueta(Tenista t)
+    {
+        TreeSet <RaquetaGenerica> listaRaquetas = Campeonato.getInstancia().getRaquetasCampeonato();
+        RaquetaGenerica aux = null; 
         
-    // }
+        aux = listaRaquetas.pollFirst();
+        
+        setRaqueta(aux);
+        
+    }
     
 }
     
