@@ -7,7 +7,7 @@ import java.util.TreeSet;
  * @author (Carlos Garcia Sanchez, Sergio Jimenez Macias, Alfonso David Recio Calderon) 
  * @version (1.0)
  */
-public class Tenista
+public abstract class Tenista
 {
     // instance variables - replace the example below with your own
     private int ordenEliminado;
@@ -337,7 +337,7 @@ public class Tenista
      * Poner la pelota en juego. 
      * Incrementa los puntos Acomulados de cada tenista mediante la suma de sus puntos Acomulados mas el valor del saque calculado en el metodo calcularSaque()
      */
-    public void sacar()
+    public final void sacar()
     {
         double increment;
         increment = 0;
@@ -372,7 +372,7 @@ public class Tenista
      * 
      * @param Tenista oponente: Tenista con el que se quiere comparar el valor de saque
      */
-    public void restar(Tenista oponente)
+    public final void restar(Tenista oponente)
     {
         double incrementar;
         double resto;
@@ -393,7 +393,7 @@ public class Tenista
      * 
      * @param Tenista oponente: Tenista contra el que se quiere jugar el partido
      */
-    public void jugar(Tenista oponente)
+    public final void jugar(Tenista oponente)
     {
         sacar();
         oponente.restar(this);
@@ -466,17 +466,14 @@ public class Tenista
      * Este modulo no tiene una implementación por defecto. 
      * Su implementación dependerá de cada subclase (Tenista golpeador y volador)
      */
-    public void golpear()
-    {
-        
-    }
+    public abstract void golpear(); 
     
     /**
      * Los tenistas cambian sus raquetas.
      * La raqueta es cambiada por la primera raqueta disponible de la lista de raquetas de Campeonato
      * dicha raqueta se eliminara de la lista
      */
-    public void cambiarRaqueta(Tenista t)
+    public void cambiarRaqueta(Tenista t) //gancho
     {
         TreeSet <RaquetaGenerica> listaRaquetas = Campeonato.getInstancia().getRaquetasCampeonato();
         RaquetaGenerica aux = null; 

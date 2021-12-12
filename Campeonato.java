@@ -185,15 +185,27 @@ public class Campeonato
         }
     }
     
+    /**
+     * Muestra por pantalla los mensajes de inicio de la competicion, asigna las raquetas a los tenistas y muestra el listado de competidores
+     */
+    private void inicioDelCampeonato()
+    {
+        System.out.println("***** Inicio del campeonato: Campeonato de Extremadura *****");
+        //Se le asignan raquetas a los tenistas
+        this.asignarRaquetas();
+        System.out.println("");
+        System.out.println("**** Listado de competidores");
+        mostrarCompetidores();        
+    }
     
     /**
      * Pone en juego la competicion y comprueba la condicion de victoria
      */
     public void competicion()
     {
-        Tenista t1 = new Tenista();
-        Tenista t2 = new Tenista();
-        Tenista ganador = new Tenista();
+        Tenista t1 = null;
+        Tenista t2 = null;
+        
         int tamanoLista;
         int ronda = 1;
         int juego = 0;
@@ -204,13 +216,8 @@ public class Campeonato
          * quedar un único tenista final que será el ganador de la 
          * competición.
         */
-        // raquetasCampeonato.toString();
-        System.out.println("***** Inicio del campeonato: Campeonato de Extremadura *****");
-        //Se le asignan raquetas a los tenistas
-        this.asignarRaquetas();
-        System.out.println("");
-        System.out.println("**** Listado de competidores");
-        mostrarCompetidores();
+        
+        inicioDelCampeonato();
         
             while (competidores.size() > 1){
                 System.out.println("***** Ronda---->>>: " + ronda);
@@ -234,11 +241,23 @@ public class Campeonato
                 ronda++;
                 juego = 0;
             }
+            
+        mostrarResultados();
+        
+    }
+    
+    
+    /**
+     * Muestra por pantalla los resultados de la competicion. 
+     * Concretamente te muestra cual es el ganador y la lista de eliminados
+     */
+    private void mostrarResultados()
+    {
         System.out.println("---->>>>  Gana la competición:");
         mostrarCompetidores();
         System.out.println("<<<<----");
         
-        mostrarEliminados();
+        mostrarEliminados();    
     }
     
     /**
@@ -308,7 +327,7 @@ public class Campeonato
     private void asignarRaquetas()
     {
         RaquetaGenerica raquet = new RaquetaGenerica(); 
-        Tenista aux = new Tenista ();
+        Tenista aux = null;
         
         //se mira el numero de raquetas y el de tenistas en la competicion
         if(raquetasCampeonato.size() < competidores.size() ){ //no hay suficientes raquetas para los competidores

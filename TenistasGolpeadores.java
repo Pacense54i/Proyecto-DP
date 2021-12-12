@@ -29,7 +29,6 @@ public class TenistasGolpeadores extends Tenista
         return super.toString();
     }
     
-    @Override
     public void golpear()
     {
         double acumulados = 0.0;
@@ -38,12 +37,6 @@ public class TenistasGolpeadores extends Tenista
         acumulados = super.getPuntosAcumulados() + aux.calcularVelocidad() * 0.10 ;
         
         super.setPuntosAcumulados(acumulados);
-    }
-    
-    @Override
-    public void cambiarRaqueta(Tenista t)
-    {
-        
     }
     
     

@@ -33,25 +33,25 @@ public class InitTennisData {
 
 
     //Instanciamos 8 tenistas: (Los parámetros están en el orden nombre, zapatillas, saque, resto, ranking, pais y número de pie)
-    Tenista t1 = new Tenista("Novak Djokovic", z1, 90, 80, 1, "Serbia", 42);
-    Tenista t2 = new Tenista("Ashleigh Barty", z2, 70, 80, 1, "Australia", 40);
-    Tenista t3 = new Tenista("Stefanos Tsitsipas", z7, 55, 48, 3, "Grecia", 43);
-    Tenista t4 = new Tenista("Karolina Pliskova", z5, 67, 68.5, 3, "Rep Checa", 39);
-    Tenista t5 = new Tenista("Elina Svitolina", z6, 55.5, 68.5, 4, "Ucrania", 40);
-    Tenista t6 = new Tenista("Alexander Zverev", z8, 59, 49.5, 4, "Alemania", 42);
-    Tenista t7 = new Tenista("Aryna Sabalenka", z3, 67.5, 79.5, 2, "Bielorrusia", 40);
-    Tenista t8 = new Tenista("Daniil Medvedev", z4, 79, 68, 2, "Rusia", 42);
+    // Tenista t1 = new Tenista("Novak Djokovic", z1, 90, 80, 1, "Serbia", 42);
+    // Tenista t2 = new Tenista("Ashleigh Barty", z2, 70, 80, 1, "Australia", 40);
+    // Tenista t3 = new Tenista("Stefanos Tsitsipas", z7, 55, 48, 3, "Grecia", 43);
+    // Tenista t4 = new Tenista("Karolina Pliskova", z5, 67, 68.5, 3, "Rep Checa", 39);
+    // Tenista t5 = new Tenista("Elina Svitolina", z6, 55.5, 68.5, 4, "Ucrania", 40);
+    // Tenista t6 = new Tenista("Alexander Zverev", z8, 59, 49.5, 4, "Alemania", 42);
+    // Tenista t7 = new Tenista("Aryna Sabalenka", z3, 67.5, 79.5, 2, "Bielorrusia", 40);
+    // Tenista t8 = new Tenista("Daniil Medvedev", z4, 79, 68, 2, "Rusia", 42);
          
     //A continuación se inscribirán a los 8 tenistas en el campeonato
     Campeonato c = Campeonato.getInstancia();
-       c.inscribirJugadores(t1);
-       c.inscribirJugadores(t2);
-       c.inscribirJugadores(t3);
-       c.inscribirJugadores(t4);
-       c.inscribirJugadores(t5);
-       c.inscribirJugadores(t6);
-       c.inscribirJugadores(t7);
-       c.inscribirJugadores(t8);
+       // c.inscribirJugadores(t1);
+       // c.inscribirJugadores(t2);
+       // c.inscribirJugadores(t3);
+       // c.inscribirJugadores(t4);
+       // c.inscribirJugadores(t5);
+       // c.inscribirJugadores(t6);
+       // c.inscribirJugadores(t7);
+       // c.inscribirJugadores(t8);
        
        
        //RealizarInscripcion

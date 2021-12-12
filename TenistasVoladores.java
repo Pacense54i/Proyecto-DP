@@ -30,7 +30,6 @@ public class TenistasVoladores extends Tenista
         return super.toString();
     }
     
-    @Override
     public void golpear()
     {
         double acumulados = 0.0;
