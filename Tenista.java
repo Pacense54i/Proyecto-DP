@@ -308,11 +308,6 @@ public abstract class Tenista
        return this.raqueta;
     }
     
-    public void RealizarInscripcion(){
-        Campeonato c = Campeonato.getInstancia();
-        c.inscribirJugadores(this);
-    }
-    
     /**
      * Devuelve el valor del saque del tenista con las zapatillas aux
      * 

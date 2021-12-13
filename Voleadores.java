@@ -7,13 +7,13 @@ import java.util.Iterator;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TenistasVoladores extends Tenista
+public class Voleadores extends Tenista
 {
 
     /**
      * Constructor for objects of class TenistasVoladores
      */
-    public TenistasVoladores(String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais, double num)
+    public Voleadores(String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais, double num)
     {
         super(Nombre,z,Saque,Resto,Ranking,Pais,num);
     }
