@@ -393,8 +393,7 @@ public abstract class Tenista
         sacar();
         oponente.restar(this);
         golpear();
-        cambiarRaqueta(oponente);
-        cambiarRaqueta(this);
+        cambiarRaqueta();
     }
     
     /**
@@ -468,7 +467,7 @@ public abstract class Tenista
      * La raqueta es cambiada por la primera raqueta disponible de la lista de raquetas de Campeonato
      * dicha raqueta se eliminara de la lista
      */
-    public void cambiarRaqueta(Tenista t) //gancho
+    public void cambiarRaqueta() //gancho
     {
         TreeSet <RaquetaGenerica> listaRaquetas = Campeonato.getInstancia().getRaquetasCampeonato();
         RaquetaGenerica aux = null; 

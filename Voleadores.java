@@ -41,11 +41,11 @@ public class Voleadores extends Tenista
     }
     
     @Override
-    public void cambiarRaqueta(Tenista t)
+    public void cambiarRaqueta()
     {
         Iterator <RaquetaGenerica> iterator = Campeonato.getInstancia().getRaquetasCampeonato().iterator();
         boolean enc = false;
-        RaquetaGenerica r = t.getRaqueta();
+        RaquetaGenerica r = super.getRaqueta();
         while (iterator.hasNext() && enc==false)
         {
             RaquetaGenerica aux = (RaquetaGenerica) iterator.next();
