@@ -109,6 +109,7 @@ public class Campeonato
           System.out.println(r);
         }        
     }
+    
     /**
      * Inscribe a los tenistas en la competicion
      * (añade tenistas a la lista de competidores)

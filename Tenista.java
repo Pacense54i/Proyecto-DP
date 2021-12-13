@@ -477,6 +477,8 @@ public abstract class Tenista
         
         setRaqueta(aux);
         
+        System.out.println("       " + getNombre() + "cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
+                + aux.calcularVelocidad());
     }
     
 }
