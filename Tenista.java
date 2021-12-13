@@ -71,7 +71,7 @@ public abstract class Tenista
     @Override
     public String toString()
     {
-        String cadena="    ** Tenista [" + 
+        String cadena="    ** Tenista (" + getClass().getName() + ") [" + 
         "Nombre=" + nombre + "," + "Saque=" + saque + "," + "Resto=" + resto + "," + "Ranking=" + ranking + "," +
         "Pais=" + pais + ","  + " numero pie=" + numPie + "]";
         

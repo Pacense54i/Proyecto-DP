@@ -68,11 +68,14 @@ public class Campeonato
     private void mostrarCompetidores()
     {
         Zapatillas z = new Zapatillas();
+        RaquetaGenerica r = null;
         
         for(Tenista t: competidores){
           System.out.println(t);
           z = t.getZapatilla();
           System.out.println(z);
+          r = t.getRaqueta();
+          System.out.println("    " + r);
         }        
     }
 
@@ -82,6 +85,7 @@ public class Campeonato
     private void mostrarEliminados()
     {
         Zapatillas z = new Zapatillas();
+        RaquetaGenerica r = null;
         
         System.out.println("**********Listado de eliminados");
        
@@ -89,9 +93,22 @@ public class Campeonato
           System.out.println(t);
           z = t.getZapatilla();
           System.out.println(z);
+          r = t.getRaqueta();
+          System.out.println("    " + r);
         }        
     }
     
+    /**
+     * Muestra por pantalla las raquetas del listado de raquetas de la clase campeonato
+     */
+    private void mostrarRaquetasDisponibles()
+    {
+        System.out.println("**********Listado de raquetas disponibles:");
+       
+        for(RaquetaGenerica r: raquetasCampeonato){
+          System.out.println(r);
+        }        
+    }
     /**
      * Inscribe a los tenistas en la competicion
      * (añade tenistas a la lista de competidores)
@@ -186,7 +203,7 @@ public class Campeonato
     }
     
     /**
-     * Muestra por pantalla los mensajes de inicio de la competicion, asigna las raquetas a los tenistas y muestra el listado de competidores
+     * Muestra por pantalla los mensajes de inicio de la competicion, asigna las raquetas a los tenistas y muestra el listado de competidores y de raquetas disponibles
      */
     private void inicioDelCampeonato()
     {
@@ -195,7 +212,8 @@ public class Campeonato
         this.asignarRaquetas();
         System.out.println("");
         System.out.println("**** Listado de competidores");
-        mostrarCompetidores();        
+        mostrarCompetidores(); 
+        mostrarRaquetasDisponibles();
     }
     
     /**
@@ -286,12 +304,12 @@ public class Campeonato
     public void cambiarZapatillas(Tenista t1, Tenista t2)
     {      
        //mostramos los tenistas que van a jugar con sus zapatillas
-       System.out.println("    ## Tenista1 ---->>>:" + t1.getNombre());
+       System.out.println("    ## Tenista1  (" + t1.getClass().getName() + ")---->>>:" + t1.getNombre());
        //ejecuto elegir zapatilla y devuelvo la zapatilla que se ha puesto para elimonarla de la lista de Zapatillas
        zapatillasCampeonato.remove(t1.elegirZapatillas());
        
        //mostramos los tenistas que van a jugar con sus zapatillas
-       System.out.println("    ## Tenista2 ---->>>:" + t2.getNombre()); 
+       System.out.println("    ## Tenista2  (" + t2.getClass().getName() + ")---->>>:" + t2.getNombre()); 
        //ejecuto elegir zapatilla y devuelvo la zapatilla que se ha puesto para elimonarla de la lista de Zapatillas
        zapatillasCampeonato.remove(t2.elegirZapatillas());  
     }
