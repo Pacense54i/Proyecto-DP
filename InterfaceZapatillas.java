@@ -2,6 +2,8 @@
 /**
  * Write a description of class InterfaceZapatillas here.
  * 
+ * Interface en que incluye los metodos set, get y toString de cada atributo de la clase Zapatillas
+ * 
  * @author (your name) 
  * @version (a version number or a date)
  */
@@ -57,19 +59,4 @@ public interface InterfaceZapatillas
      */
     public String toString ();
     
-    /**
-     * Devolve el valor de saque de las zapatillas
-     * 
-     * @return double resto: si el tipo de la zapatilla es amortiguacion la variable resto es multiplicado por 2 
-     *                       si no duevuelve 0 
-     */
-    public double calcularValorSaque();
-    
-    /**
-     * Devolve el valor de resto de las zapatillas
-     * 
-     * @return  double resto: si el tipo de la zapatilla es agarre la variable resto es multiplicado por 1,5
-     *                       si no duevuelve 0 
-     */
-    public double calcularValorResto();
 }

@@ -5,7 +5,7 @@
  * @author (Carlos Garcia Sanchez, Sergio Jimenez Macias, Alfonso David Recio Calderon) 
  * @version (1.0)
  */
-public class Zapatillas implements InterfaceZapatillas
+public class Zapatillas implements InterfaceZapatillas, InterfaceZapatillas2
 {
     // instance variables - replace the example below with your own
     private String modelo;

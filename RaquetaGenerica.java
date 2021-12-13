@@ -7,7 +7,7 @@ import java.util.HashMap;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class RaquetaGenerica implements InterfaceRaqueta
+public class RaquetaGenerica implements InterfaceRaqueta, InterfaceRaqueta2
 {
     private String modelo;
     private double peso;
