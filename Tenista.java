@@ -316,7 +316,7 @@ public abstract class Tenista
      * multiplicar los puntos de la variable saque por el valor del saque de la zapatilla 
      * por el valor de calcularControl y calcularVelocidad de la raqueta del tenista.
      */
-    public double calcularSaque()
+    private double calcularSaque()
     {
         double result;
         result = 0;
@@ -333,7 +333,7 @@ public abstract class Tenista
      * Poner la pelota en juego. 
      * Incrementa los puntos Acomulados de cada tenista mediante la suma de sus puntos Acomulados mas el valor del saque calculado en el metodo calcularSaque()
      */
-    public final void sacar()
+    private final void sacar()
     {
         double increment;
         increment = 0;
@@ -351,7 +351,7 @@ public abstract class Tenista
      * @return devuelve la variable result(double) que contiene el valor de multiplicar los puntos de la variable resto por el valor del resto 
      * por el valor de calcularControl y calcularVelocidad de la raqueta del tenista.
      */
-    public double calcularResto()
+    private double calcularResto()
     {
         double result;
         result = 0;
@@ -368,7 +368,7 @@ public abstract class Tenista
      * 
      * @param Tenista oponente: Tenista con el que se quiere comparar el valor de saque
      */
-    public final void restar(Tenista oponente)
+    private final void restar(Tenista oponente)
     {
         double incrementar;
         double resto;

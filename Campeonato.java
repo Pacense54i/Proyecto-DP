@@ -381,7 +381,7 @@ public class Campeonato
      *  
      *  @param Tenista t1, Tenista t2: objetos de clase tenista que se cambiaran de zapatillas
      */
-    public void cambiarZapatillas(Tenista t1, Tenista t2) throws IOException
+    private void cambiarZapatillas(Tenista t1, Tenista t2) throws IOException
     {      
        //mostramos los tenistas que van a jugar con sus zapatillas
        System.out.println("    ## Tenista1  (" + t1.getClass().getName() + ")---->>>:" + t1.getNombre());

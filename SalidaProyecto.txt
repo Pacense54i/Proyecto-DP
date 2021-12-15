@@ -217,7 +217,7 @@
      ## Tenista2  (Voleadores)---->>>:Daniil Medvedev
         Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=Babolat Jet Tere,Numero=42.0,Valor 5.5,]
         Novak Djokovic cambia su raqueta por: RaquetaEquilibrada modelo =Prince Hornet 100 Velocidad = 10.0
-        Daniil Medvedevcambia su raqueta por: RaquetaPotente modelo =Wilson Energy XL Velocidad = 12.0
+        Daniil Medvedev cambia su raqueta por: RaquetaPotente modelo =Wilson Energy XL Velocidad = 12.0
      ## Gana este juego:Novak Djokovic con: 194784.19999999998 puntos acumulados.
      ## Se elimina:Daniil Medvedev con: 101361.95999999998 puntos acumulados. Tenista eliminado num: 1
 
@@ -227,14 +227,14 @@
      ## Tenista2  (Voleadores)---->>>:Aryna Sabalenka
         Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=Lotto Mirage,Numero=40.0,Valor 6.0,]
         Ashleigh Barty cambia su raqueta por: RaquetaControlada modelo =Prince Force Ti OS Velocidad = 2.4
-        Aryna Sabalenkacambia su raqueta por: RaquetaPotente modelo =Wilson Blade Velocidad = 12.0
+        Aryna Sabalenka cambia su raqueta por: RaquetaPotente modelo =Wilson Blade Velocidad = 12.0
      ## Gana este juego:Aryna Sabalenka con: 179389.8 puntos acumulados.    ## Se elimina:Ashleigh Barty con: 72576.4 puntos acumulados. Tenista eliminado num: 2
 
     ### Juego ----------->>>: 2
      ## Tenista1  (Voleadores)---->>>:Stefanos Tsitsipas
      ## Tenista2  (Golpeadores)---->>>:Alexander Zverev
         Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=Wilson Rush,Numero=42.0,Valor 3.5,]
-        Stefanos Tsitsipascambia su raqueta por: RaquetaEquilibrada modelo =Wilson Pro Staff Velocidad = 10.0
+        Stefanos Tsitsipas cambia su raqueta por: RaquetaEquilibrada modelo =Wilson Pro Staff Velocidad = 10.0
         Alexander Zverev cambia su raqueta por: RaquetaControlada modelo =Head Prestige Pro Velocidad = 2.4
      ## Gana este juego:Stefanos Tsitsipas con: 127280.4 puntos acumulados.
      ## Se elimina:Alexander Zverev con: 77076.912 puntos acumulados. Tenista eliminado num: 3
@@ -243,7 +243,7 @@
      ## Tenista1  (Voleadores)---->>>:Karolina Pliskova
      ## Tenista2  (Golpeadores)---->>>:Elina Svitolina
         Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=K-Swiss Hypercourt,Numero=40.0,Valor 5.0,]
-        Karolina Pliskovacambia su raqueta por: RaquetaControlada modelo =Wilson Silver Velocidad = 12.0
+        Karolina Pliskova cambia su raqueta por: RaquetaControlada modelo =Wilson Silver Velocidad = 12.0
         Elina Svitolina cambia su raqueta por: RaquetaControlada modelo =Babolat Drive Velocidad = 2.4
      ## Gana este juego:Karolina Pliskova con: 86413.152 puntos acumulados.
      ## Se elimina:Elina Svitolina con: 38362.00000000001 puntos acumulados. Tenista eliminado num: 4
@@ -255,7 +255,7 @@
         Zapatillas asignadas:        ZapatillasConAgarre  [Modelo=Asics Gel-Game,Numero=42.0,Valor 4.5,]
      ## Tenista2  (Voleadores)---->>>:Karolina Pliskova
         Novak Djokovic cambia su raqueta por: RaquetaControlada modelo =Dunlop Nitro Velocidad = 2.4
-        Karolina Pliskovacambia su raqueta por: RaquetaPotente modelo =Babolat Boost Drive Velocidad = 15.0
+        Karolina Pliskova cambia su raqueta por: RaquetaPotente modelo =Babolat Boost Drive Velocidad = 15.0
      ## Gana este juego:Novak Djokovic con: 96337.0 puntos acumulados.
      ## Se elimina:Karolina Pliskova con: 83516.35200000001 puntos acumulados. Tenista eliminado num: 5
 
@@ -263,7 +263,7 @@
      ## Tenista1  (Voleadores)---->>>:Aryna Sabalenka
         Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=Head Revolt,Numero=40.0,Valor 5.0,]
      ## Tenista2  (Voleadores)---->>>:Stefanos Tsitsipas
-        Stefanos Tsitsipascambia su raqueta por: RaquetaPotente modelo =Head Radical Velocidad = 12.0
+        Stefanos Tsitsipas cambia su raqueta por: RaquetaPotente modelo =Head Radical Velocidad = 12.0
      ## Gana este juego:Stefanos Tsitsipas con: 108150.75 puntos acumulados.    ## Se elimina:Aryna Sabalenka con: 94789.2 puntos acumulados. Tenista eliminado num: 6
 
 ***** Ronda---->>>: 3
