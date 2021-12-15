@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.TreeSet;
+import java.io.IOException;
 
 /**
  * Clase Tenista la cual incluye los metodos get y set de cada atributo y otros modulos necesarios
@@ -388,7 +389,7 @@ public abstract class Tenista
      * 
      * @param Tenista oponente: Tenista contra el que se quiere jugar el partido
      */
-    public final void jugar(Tenista oponente)
+    public final void jugar(Tenista oponente) throws IOException
     {
         sacar();
         oponente.restar(this);
@@ -406,7 +407,7 @@ public abstract class Tenista
      * @return devuelve un objeto de clase Zapatillas la cual se ha puesto el tenista, es decir, devuelve la zapatilla que se ha puesto el tenista
      *
      */
-    public Zapatillas elegirZapatillas() 
+    public Zapatillas elegirZapatillas() throws IOException
     {   
         //poner iterator NO OLVIDAR
         //ArrayList <Zapatillas> listaZapatillas =  Campeonato.getInstancia().getZapatillasCampeonato();
@@ -421,6 +422,7 @@ public abstract class Tenista
                   setZapatilla(aux); //el tenista se pone la zapatilla
                   enc=true;
                   System.out.println("       Zapatillas asignadas: " + aux.toString() );
+                  Campeonato.getInstancia().getFichero().write("\n        Zapatillas asignadas: " + aux.toString() );
               }
               else{
                   i++;
@@ -452,7 +454,7 @@ public abstract class Tenista
     /**
      * Realiza la Inscripcion del tenista en el campeonato
      */
-    public void realizarInscripcion()
+    public void realizarInscripcion() throws IOException
     {
         Campeonato.getInstancia().inscribirJugadores(this);    
     }
@@ -468,7 +470,7 @@ public abstract class Tenista
      * La raqueta es cambiada por la primera raqueta disponible de la lista de raquetas de Campeonato
      * dicha raqueta se eliminara de la lista
      */
-    public void cambiarRaqueta() //gancho
+    public void cambiarRaqueta() throws IOException //gancho
     {
         TreeSet <RaquetaGenerica> listaRaquetas = Campeonato.getInstancia().getRaquetasCampeonato();
         RaquetaGenerica aux = null; 
@@ -477,8 +479,11 @@ public abstract class Tenista
         
         setRaqueta(aux);
         
-        System.out.println("       " + getNombre() + "cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
-                + aux.calcularVelocidad());
+        System.out.println("       " + getNombre() + " cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
+        + aux.calcularVelocidad());
+        
+        Campeonato.getInstancia().getFichero().write("\n        " + getNombre() + " cambia su raqueta por: " + aux.getClass().getName() 
+        + " modelo =" + aux.getModelo() + " Velocidad = " + aux.calcularVelocidad());
     }
     
 }

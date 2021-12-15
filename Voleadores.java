@@ -1,5 +1,6 @@
 import java.util.TreeSet;
 import java.util.Iterator;
+import java.io.IOException;
 
 /**
  * Write a description of class TenistasVoladores here.
@@ -41,7 +42,7 @@ public class Voleadores extends Tenista
     }
     
     @Override
-    public void cambiarRaqueta()
+    public void cambiarRaqueta() throws IOException
     {
         Iterator <RaquetaGenerica> iterator = Campeonato.getInstancia().getRaquetasCampeonato().iterator();
         boolean enc = false;
@@ -53,7 +54,10 @@ public class Voleadores extends Tenista
                 enc=true;
                 iterator.remove();
                 super.setRaqueta(aux);
-                System.out.println("       " + super.getNombre() + "cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
+                System.out.println("       " + super.getNombre() + " cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
+                + aux.calcularVelocidad());
+                
+                Campeonato.getInstancia().getFichero().write("\n        " + super.getNombre() + " cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
                 + aux.calcularVelocidad());
             }
             

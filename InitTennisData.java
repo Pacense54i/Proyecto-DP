@@ -3,6 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.io.IOException;
 
 /**
  * Clase que carga los datos con los que simular un campeonato de tenis
@@ -12,14 +13,14 @@ import org.junit.jupiter.api.Test;
  */
 public class InitTennisData {
 
-     public InitTennisData(Campeonato campeonato) {
+     public InitTennisData(Campeonato campeonato) throws IOException {
     //Descomentar la carga de datos que se quiera probar
         cargarDatos1(campeonato);//Produce la salida Salida1_EC3
     //cargarDatos2(campeonato);/Produce la salida Salida2_EC3
         
     }
     
-    private void cargarDatos1(Campeonato campeonato) {
+    private void cargarDatos1(Campeonato campeonato) throws IOException {
 
                 //Instanciamos 8 zapatillas: (Los parámetros están en el orden: tipo, modelo, número y valor)
         Zapatillas  z1 = new ZapatillasAmortiguadas("Air Zoom Vapor Pro", 42,  5);
@@ -146,7 +147,7 @@ public class InitTennisData {
         
     }
     
-    private void cargarDatos2(Campeonato campeonato) {
+    private void cargarDatos2(Campeonato campeonato) throws IOException {
             //Instanciamos 8 zapatillas: (Los parámetros están en el orden: modelo, número, tipo valor)
              Zapatillas  z1 = new  ZapatillasAmortiguadas("Air Zoom Vapor Pro", 42,  5);
             Zapatillas  z2 = new  ZapatillasConAgarre("Court Vapor React", 40,  5);
