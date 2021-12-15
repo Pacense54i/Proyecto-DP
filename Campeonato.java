@@ -30,7 +30,7 @@ public class Campeonato
     /**
      * Contructor de los objetos de la clase Campeonato
      */
-    private Campeonato() throws  IOException
+    private Campeonato() throws IOException
     {
         // initialise instance variables
         // initialise instance variables
