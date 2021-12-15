@@ -409,8 +409,6 @@ public abstract class Tenista
      */
     public Zapatillas elegirZapatillas() throws IOException
     {   
-        //poner iterator NO OLVIDAR
-        //ArrayList <Zapatillas> listaZapatillas =  Campeonato.getInstancia().getZapatillasCampeonato();
         ArrayList <Zapatillas> listaZapatillas = new ArrayList <Zapatillas> (Campeonato.getInstancia().getZapatillasCampeonato()); ///COPIA DE LA LISTA DE ZAPATILLAS
         Zapatillas aux = new Zapatillas();
         boolean enc = false;

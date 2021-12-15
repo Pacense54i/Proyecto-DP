@@ -279,6 +279,13 @@ public class Campeonato
         fichero.write("***** Inicio del campeonato: Campeonato de Extremadura *****");
         //Se le asignan raquetas a los tenistas
         this.asignarRaquetas();
+        
+        // try{
+               // asignarRaquetas();
+           // }
+           // catch(IOException e){
+               // System.out.println(e);
+           // }
         System.out.println("");
         fichero.write("\n");
         
@@ -306,6 +313,7 @@ public class Campeonato
          * competición.
         */
         
+       
         inicioDelCampeonato();
         
             while (competidores.size() > 1){
@@ -336,6 +344,14 @@ public class Campeonato
             }
             
         mostrarResultados();
+        
+        // try{
+               // asignarRaquetas();
+           // }
+           // catch(IOException e){
+               // System.out.println(e);
+           // }
+        
         fichero.close();
     }
     
@@ -433,11 +449,11 @@ public class Campeonato
         
         //se mira el numero de raquetas y el de tenistas en la competicion
         if(raquetasCampeonato.size() < competidores.size() ){ //no hay suficientes raquetas para los competidores
-            System.out.println( "No hay suficientes raquetas para los tenistas inscritos en el campeonato por lo que el campeonato se suspende.");
-            
-            fichero.write("\nNo hay suficientes raquetas para los tenistas inscritos en el campeonato por lo que el campeonato se suspende.");
+            fichero.write("\n java.io.IOException: No hay suficientes raquetas para los tenistas inscritos en el campeonato por lo que el campeonato se suspende.");
             fichero.write("\n");
-            //como no hemos dado exepciones no sabemos la manera de salirse del campeonato
+            
+            throw new IOException("No hay suficientes raquetas para los tenistas inscritos en el campeonato por lo que el campeonato se suspende.");
+            
         }
         else{ //el numero de raquetas es igual o mayor que el numero de comperidores del campeonato por lo que hay suficientes raquetas
             System.out.println("***** Asignando raquetas a tenistas *****");
