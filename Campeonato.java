@@ -279,13 +279,6 @@ public class Campeonato
         fichero.write("***** Inicio del campeonato: Campeonato de Extremadura *****");
         //Se le asignan raquetas a los tenistas
         this.asignarRaquetas();
-        
-        // try{
-               // asignarRaquetas();
-           // }
-           // catch(IOException e){
-               // System.out.println(e);
-           // }
         System.out.println("");
         fichero.write("\n");
         
@@ -345,12 +338,12 @@ public class Campeonato
             
         mostrarResultados();
         
-        // try{
-               // asignarRaquetas();
-           // }
-           // catch(IOException e){
-               // System.out.println(e);
-           // }
+        try{
+               comprobarRaquetasSuficientes();
+           }
+           catch(IOException e){
+               System.out.println(e);
+           }
         
         fichero.close();
     }
@@ -448,14 +441,7 @@ public class Campeonato
         Tenista aux = null;
         
         //se mira el numero de raquetas y el de tenistas en la competicion
-        if(raquetasCampeonato.size() < competidores.size() ){ //no hay suficientes raquetas para los competidores
-            fichero.write("\n java.io.IOException: No hay suficientes raquetas para los tenistas inscritos en el campeonato por lo que el campeonato se suspende.");
-            fichero.write("\n");
-            
-            throw new IOException("No hay suficientes raquetas para los tenistas inscritos en el campeonato por lo que el campeonato se suspende.");
-            
-        }
-        else{ //el numero de raquetas es igual o mayor que el numero de comperidores del campeonato por lo que hay suficientes raquetas
+        if(!comprobarRaquetasSuficientes()){ 
             System.out.println("***** Asignando raquetas a tenistas *****");
             
             fichero.write("\n***** Asignando raquetas a tenistas *****");
@@ -476,6 +462,28 @@ public class Campeonato
         }
     }
     
+    /**
+     * Comprueba si hay raquetas suficientes para dar a los tenistas
+     * 
+     * @return boolean: devuelve true si hay raquetas sucicientes o false si no hay raquetas suficientes para todos los tenistas
+     * @throws IOException si no hay raquetas suficientes para los tenistas
+     */
+    private boolean comprobarRaquetasSuficientes() throws IOException
+    {
+        boolean aux = false;
+        
+        if(raquetasCampeonato.size() < competidores.size() ){ //no hay suficientes raquetas para los competidores
+            aux = true;
+            fichero.write("\n java.io.IOException: No hay suficientes raquetas para los tenistas inscritos en el campeonato por lo que EL CAMPEONATO SE SUSPENDE.");
+            fichero.write("\n");
+            fichero.close();
+            
+            throw new IOException("No hay suficientes raquetas para los tenistas inscritos en el campeonato por lo que el campeonato se suspende.");
+            
+        }
+        
+        return aux;
+    }
     // public Zapatillas buscarZapatillas (double numPie){
         // boolean enc = false;
         // Zapatillas aux = null;

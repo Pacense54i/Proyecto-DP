@@ -263,6 +263,7 @@
      ## Tenista1  (Voleadores)---->>>:Aryna Sabalenka
         Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=Head Revolt,Numero=40.0,Valor 5.0,]
      ## Tenista2  (Voleadores)---->>>:Stefanos Tsitsipas
+       Aryna Sabalenka no cambia su raqueta
         Stefanos Tsitsipas cambia su raqueta por: RaquetaPotente modelo =Head Radical Velocidad = 12.0
      ## Gana este juego:Stefanos Tsitsipas con: 108150.75 puntos acumulados.    ## Se elimina:Aryna Sabalenka con: 94789.2 puntos acumulados. Tenista eliminado num: 6
 
@@ -273,6 +274,7 @@
         Zapatillas asignadas:        ZapatillasConAgarre  [Modelo=Asics Solution,Numero=42.0,Valor 3.0,]
      ## Tenista2  (Voleadores)---->>>:Stefanos Tsitsipas
         Novak Djokovic cambia su raqueta por: RaquetaPotente modelo =Yonex Vcore Velocidad = 9.0
+       Stefanos Tsitsipas no cambia su raqueta
      ## Gana este juego:Novak Djokovic con: 34862.64000000001 puntos acumulados.
      ## Se elimina:Stefanos Tsitsipas con: 30442.199999999997 puntos acumulados. Tenista eliminado num: 7
 
