@@ -88,6 +88,12 @@
      tamaño: 680.0,control asociado: 10.0
      peso: 300.0,velocidad asociada: 7.199999999999999]
 
+      RaquetaControlada(Encordado:CERRADO)(Multiplicador de Potencia:1.8)(Multiplicador de Control:2.5)
+     [modelo: Pure Aero
+     longuitud: 680.0,potencia asociada: 2.0
+     tamaño: 720.0,control asociado: 5.0
+     peso: 340.0,velocidad asociada: 2.4]
+
 
 ***** Ronda---->>>: 1
 
@@ -116,51 +122,47 @@
     ### Juego ----------->>>: 0
      ## Tenista1  (Golpeadores)---->>>:Novak Djokovic
      ## Tenista2  (Voleadores)---->>>:Aryna Sabalenka
-        Zapatillas asignadas:        ZapatillasConAgarre  [Modelo=CourtJam Bounce,Numero=42.0,Valor 3.5,]
-        Zapatillas asignadas:        ZapatillasConAgarre  [Modelo=CourtJam Bounce,Numero=42.0,Valor 3.5,]
-        Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=UberSonic 4k,Numero=40.0,Valor 6.0,]
-        Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=UberSonic 4k,Numero=40.0,Valor 6.0,]
-***** Asignando raquetas a tenistas *****
+        Novak Djokovic cambia su raqueta por: RaquetaControlada modelo =Pure Aero Velocidad = 2.4
+       Aryna Sabalenka no cambia su raqueta
+     ## Gana este juego:Aryna Sabalenka con: 335521.5 puntos acumulados.    ## Se elimina:Novak Djokovic con: 12248.099999999999 puntos acumulados. Tenista eliminado num: 3
 
-  RaquetaEquilibrada (MultiplicadorDePotencia:6.0)(MultiplicadorDeControl:3.0)
-     [modelo: Prince TT Bandit
-     longuitud: 680.0,potencia asociada: 12.0
-     tamaño: 680.0,control asociado: 12.0
-     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Novak Djokovic
+---->>>>  Gana la competición:
+**** Listado de competidores
 
-  RaquetaEquilibrada (MultiplicadorDePotencia:2.5)(MultiplicadorDeControl:4.0)
+    ** Tenista (Voleadores) [Nombre=Aryna Sabalenka,Saque=67.5,Resto=79.5,Ranking=2,Pais=Bielorrusia, numero pie=40.0]
+       ZapatillasAmortiguadas  [Modelo=UberSonic 4k,Numero=40.0,Valor 6.0,]
+       RaquetaEquilibrada (MultiplicadorDePotencia:2.5)(MultiplicadorDeControl:4.0)
      [modelo: Prince Hornet 100
      longuitud: 690.0,potencia asociada: 10.0
      tamaño: 600.0,control asociado: 40.0
-     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Aryna Sabalenka
+     peso: 220.0,velocidad asociada: 10.0]
 
-  RaquetaControlada(Encordado:CERRADO)(Multiplicador de Potencia:1.8)(Multiplicador de Control:2.5)
-     [modelo: Babolat Drive
-     longuitud: 740.0,potencia asociada: 10.0
-     tamaño: 600.0,control asociado: 25.0
-     peso: 340.0,velocidad asociada: 2.4] asignada a  -->> Novak Djokovic
+<<<<----
 
-  RaquetaPotente(Encordado:ABIERTO)(Multiplicador de Potencia:2.0)(Multiplicador de Control:2.2)
+**********Listado de eliminados
+
+    ** Tenista (Golpeadores) [Nombre=Novak Djokovic,Saque=90.0,Resto=80.0,Ranking=1,Pais=Serbia, numero pie=42.0]
+       ZapatillasConAgarre  [Modelo=CourtJam Bounce,Numero=42.0,Valor 3.5,]
+      RaquetaControlada(Encordado:CERRADO)(Multiplicador de Potencia:1.8)(Multiplicador de Control:2.5)
+     [modelo: Pure Aero
+     longuitud: 680.0,potencia asociada: 2.0
+     tamaño: 720.0,control asociado: 5.0
+     peso: 340.0,velocidad asociada: 2.4]
+
+    ** Tenista (Golpeadores) [Nombre=Novak Djokovic,Saque=90.0,Resto=80.0,Ranking=1,Pais=Serbia, numero pie=42.0]
+       ZapatillasConAgarre  [Modelo=CourtJam Bounce,Numero=42.0,Valor 3.5,]
+      RaquetaControlada(Encordado:CERRADO)(Multiplicador de Potencia:1.8)(Multiplicador de Control:2.5)
+     [modelo: TFlash 300
+     longuitud: 680.0,potencia asociada: 2.0
+     tamaño: 680.0,control asociado: 10.0
+     peso: 300.0,velocidad asociada: 7.199999999999999]
+
+    ** Tenista (Voleadores) [Nombre=Aryna Sabalenka,Saque=67.5,Resto=79.5,Ranking=2,Pais=Bielorrusia, numero pie=40.0]
+       ZapatillasAmortiguadas  [Modelo=UberSonic 4k,Numero=40.0,Valor 6.0,]
+      RaquetaPotente(Encordado:ABIERTO)(Multiplicador de Potencia:2.0)(Multiplicador de Control:2.2)
      [modelo: Head Radical
      longuitud: 680.0,potencia asociada: 4.0
      tamaño: 680.0,control asociado: 4.0
-     peso: 260.0,velocidad asociada: 12.0] asignada a  -->> Aryna Sabalenka
-***** Inicio del campeonato: Campeonato de Extremadura *****
-***** Asignando raquetas a tenistas *****
+     peso: 260.0,velocidad asociada: 12.0]
 
-  RaquetaEquilibrada (MultiplicadorDePotencia:6.0)(MultiplicadorDeControl:3.0)
-     [modelo: Prince TT Bandit
-     longuitud: 680.0,potencia asociada: 12.0
-     tamaño: 680.0,control asociado: 12.0
-     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Novak Djokovic
-
-  RaquetaEquilibrada (MultiplicadorDePotencia:2.5)(MultiplicadorDeControl:4.0)
-     [modelo: Prince Hornet 100
-     longuitud: 690.0,potencia asociada: 10.0
-     tamaño: 600.0,control asociado: 40.0
-     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Aryna Sabalenka
-
-  RaquetaControlada(Encordado:CERRADO)(Multiplicador de Potencia:1.8)(Multiplicador de Control:2.5)
-     [modelo: Babolat Drive
-     longuitud: 740.0,potencia asociada: 10.0
-     
+ java.io.IOException: No hay suficientes raquetas para los tenistas inscritos en el campeonato por lo que EL CAMPEONATO SE SUSPENDE.

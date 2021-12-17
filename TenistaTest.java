@@ -134,12 +134,10 @@ public class TenistaTest
     @Test
     public void ElegirZapatillaTest() throws java.io.IOException
     {
-        // assertEquals(z1, t1.getZapatilla());
-        // assertEquals(z2, t2.getZapatilla());
         t1.elegirZapatillas();
-        assertSame(t1.getZapatilla(), t1.elegirZapatillas());
+        assertSame(z3, t1.getZapatilla());
         t2.elegirZapatillas();
-        assertSame(t2.getZapatilla(), t2.elegirZapatillas());
+        assertSame(z4, t1.getZapatilla());
     }
 
     
