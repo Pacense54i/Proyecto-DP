@@ -68,10 +68,12 @@ public class TenistaTest
         r2 = new RaquetaControlada("Babolat Drive", 340, 740, 600, Encordado.CERRADO);
         r3 = new RaquetaEquilibrada("Prince Hornet 100", 220, 690, 600, Encordado.CERRADO,2.5,4);
         r4 = new RaquetaPotente("Yonex Vcore", 300, 680, 650, Encordado.CERRADO);
+        
         z1 = new ZapatillasAmortiguadas("Air Zoom Vapor Pro", 42, 5);
         z2 = new ZapatillasConAgarre("Vapor Lite", 42, 3);
         z3 = new ZapatillasConAgarre("CourtJam Bounce", 42, 3.5);
         z4 = new ZapatillasAmortiguadas("UberSonic 4k", 40, 6);
+        
         t1 = new Golpeadores("Novak Djokovic", z1, 90, 80, 1, "Serbia", 42);
         t2 = new Voleadores("Aryna Sabalenka" , z2, 67.5, 79.5, 2, "Bielorrusia", 40);
         t1.setRaqueta(r1);
@@ -125,18 +127,24 @@ public class TenistaTest
         // t1.cambiarRaqueta();
         // assertEquals(r3, t1.getRaqueta());
         // t2.cambiarRaqueta();
-        // assertEquals(r4, t2.getRaqueta());
+        //
+        //assertEquals(r4, t2.getRaqueta());
     }
 
     @Test
     public void ElegirZapatillaTest() throws java.io.IOException
     {
-        assertEquals(z1, t1.getZapatilla());
-        assertEquals(z2, t2.getZapatilla());
-        assertEquals(z3, t1.elegirZapatillas());
-        assertEquals(z4, t2.elegirZapatillas());
+        // assertEquals(z1, t1.getZapatilla());
+        // assertEquals(z2, t2.getZapatilla());
+        t1.elegirZapatillas();
+        assertSame(t1.getZapatilla(), t1.elegirZapatillas());
+        t2.elegirZapatillas();
+        assertSame(t2.getZapatilla(), t2.elegirZapatillas());
     }
+
+    
 }
+
 
 
 

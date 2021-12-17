@@ -345,6 +345,7 @@ public class Campeonato
                System.out.println(e);
            }
         
+           TenistaGanador();
         fichero.close();
     }
     
@@ -364,7 +365,7 @@ public class Campeonato
         fichero.write("\n<<<<----");
         fichero.write("\n");
         
-        mostrarEliminados();    
+        mostrarEliminados();  
     }
     
     /**
@@ -521,7 +522,7 @@ public class Campeonato
        Tenista aux = null;
        //como se ha acabado el campeonato solo queda un tenista en la lista que estara en la posicion 0 de la lista competidores   
        aux = competidores.get(0);     
-        
+       
        return aux;
    }
 }
