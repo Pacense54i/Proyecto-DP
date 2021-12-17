@@ -1,0 +1,166 @@
+
+***** Asignando raquetas a tenistas *****
+
+  RaquetaEquilibrada (MultiplicadorDePotencia:6.0)(MultiplicadorDeControl:3.0)
+     [modelo: Prince TT Bandit
+     longuitud: 680.0,potencia asociada: 12.0
+     tamaño: 680.0,control asociado: 12.0
+     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Novak Djokovic
+
+  RaquetaEquilibrada (MultiplicadorDePotencia:2.5)(MultiplicadorDeControl:4.0)
+     [modelo: Prince Hornet 100
+     longuitud: 690.0,potencia asociada: 10.0
+     tamaño: 600.0,control asociado: 40.0
+     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Aryna Sabalenka
+***** Inicio del campeonato: Campeonato de Extremadura *****
+***** Asignando raquetas a tenistas *****
+
+  RaquetaEquilibrada (MultiplicadorDePotencia:6.0)(MultiplicadorDeControl:3.0)
+     [modelo: Prince TT Bandit
+     longuitud: 680.0,potencia asociada: 12.0
+     tamaño: 680.0,control asociado: 12.0
+     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Novak Djokovic
+
+  RaquetaEquilibrada (MultiplicadorDePotencia:2.5)(MultiplicadorDeControl:4.0)
+     [modelo: Prince Hornet 100
+     longuitud: 690.0,potencia asociada: 10.0
+     tamaño: 600.0,control asociado: 40.0
+     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Aryna Sabalenka
+
+  RaquetaControlada(Encordado:CERRADO)(Multiplicador de Potencia:1.8)(Multiplicador de Control:2.5)
+     [modelo: Babolat Drive
+     longuitud: 740.0,potencia asociada: 10.0
+     tamaño: 600.0,control asociado: 25.0
+     peso: 340.0,velocidad asociada: 2.4] asignada a  -->> Novak Djokovic
+
+  RaquetaPotente(Encordado:ABIERTO)(Multiplicador de Potencia:2.0)(Multiplicador de Control:2.2)
+     [modelo: Head Radical
+     longuitud: 680.0,potencia asociada: 4.0
+     tamaño: 680.0,control asociado: 4.0
+     peso: 260.0,velocidad asociada: 12.0] asignada a  -->> Aryna Sabalenka
+
+
+**** Listado de competidores
+
+    ** Tenista (Golpeadores) [Nombre=Novak Djokovic,Saque=90.0,Resto=80.0,Ranking=1,Pais=Serbia, numero pie=42.0]
+       ZapatillasAmortiguadas  [Modelo=Air Zoom Vapor Pro,Numero=42.0,Valor 5.0,]
+       RaquetaEquilibrada (MultiplicadorDePotencia:6.0)(MultiplicadorDeControl:3.0)
+     [modelo: Prince TT Bandit
+     longuitud: 680.0,potencia asociada: 12.0
+     tamaño: 680.0,control asociado: 12.0
+     peso: 220.0,velocidad asociada: 10.0]
+
+    ** Tenista (Voleadores) [Nombre=Aryna Sabalenka,Saque=67.5,Resto=79.5,Ranking=2,Pais=Bielorrusia, numero pie=40.0]
+       ZapatillasConAgarre  [Modelo=Vapor Lite,Numero=42.0,Valor 3.0,]
+       RaquetaEquilibrada (MultiplicadorDePotencia:2.5)(MultiplicadorDeControl:4.0)
+     [modelo: Prince Hornet 100
+     longuitud: 690.0,potencia asociada: 10.0
+     tamaño: 600.0,control asociado: 40.0
+     peso: 220.0,velocidad asociada: 10.0]
+
+    ** Tenista (Golpeadores) [Nombre=Novak Djokovic,Saque=90.0,Resto=80.0,Ranking=1,Pais=Serbia, numero pie=42.0]
+       ZapatillasAmortiguadas  [Modelo=Air Zoom Vapor Pro,Numero=42.0,Valor 5.0,]
+       RaquetaControlada(Encordado:CERRADO)(Multiplicador de Potencia:1.8)(Multiplicador de Control:2.5)
+     [modelo: Babolat Drive
+     longuitud: 740.0,potencia asociada: 10.0
+     tamaño: 600.0,control asociado: 25.0
+     peso: 340.0,velocidad asociada: 2.4]
+
+    ** Tenista (Voleadores) [Nombre=Aryna Sabalenka,Saque=67.5,Resto=79.5,Ranking=2,Pais=Bielorrusia, numero pie=40.0]
+       ZapatillasConAgarre  [Modelo=Vapor Lite,Numero=42.0,Valor 3.0,]
+       RaquetaPotente(Encordado:ABIERTO)(Multiplicador de Potencia:2.0)(Multiplicador de Control:2.2)
+     [modelo: Head Radical
+     longuitud: 680.0,potencia asociada: 4.0
+     tamaño: 680.0,control asociado: 4.0
+     peso: 260.0,velocidad asociada: 12.0]
+
+**********Listado de raquetas disponibles:
+
+      RaquetaPotente(Encordado:CERRADO)(Multiplicador de Potencia:1.8)(Multiplicador de Control:2.5)
+     [modelo: Yonex Vcore
+     longuitud: 680.0,potencia asociada: 3.6
+     tamaño: 650.0,control asociado: 6.0
+     peso: 300.0,velocidad asociada: 9.0]
+
+      RaquetaControlada(Encordado:CERRADO)(Multiplicador de Potencia:1.8)(Multiplicador de Control:2.5)
+     [modelo: TFlash 300
+     longuitud: 680.0,potencia asociada: 2.0
+     tamaño: 680.0,control asociado: 10.0
+     peso: 300.0,velocidad asociada: 7.199999999999999]
+
+
+***** Ronda---->>>: 1
+
+    ### Juego ----------->>>: 0
+     ## Tenista1  (Golpeadores)---->>>:Novak Djokovic
+        Zapatillas asignadas:        ZapatillasConAgarre  [Modelo=CourtJam Bounce,Numero=42.0,Valor 3.5,]
+     ## Tenista2  (Voleadores)---->>>:Aryna Sabalenka
+        Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=UberSonic 4k,Numero=40.0,Valor 6.0,]
+        Novak Djokovic cambia su raqueta por: RaquetaPotente modelo =Yonex Vcore Velocidad = 9.0
+       Aryna Sabalenka no cambia su raqueta
+     ## Gana este juego:Novak Djokovic con: 45361.0 puntos acumulados.
+     ## Se elimina:Aryna Sabalenka con: 41990.99999999999 puntos acumulados. Tenista eliminado num: 1
+
+    ### Juego ----------->>>: 1
+     ## Tenista1  (Voleadores)---->>>:Aryna Sabalenka
+        Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=UberSonic 4k,Numero=40.0,Valor 6.0,]
+     ## Tenista2  (Golpeadores)---->>>:Novak Djokovic
+        Zapatillas asignadas:        ZapatillasConAgarre  [Modelo=CourtJam Bounce,Numero=42.0,Valor 3.5,]
+       Aryna Sabalenka no cambia su raqueta
+        Novak Djokovic cambia su raqueta por: RaquetaControlada modelo =TFlash 300 Velocidad = 7.199999999999999
+     ## Gana este juego:Aryna Sabalenka con: 335521.5 puntos acumulados.
+     ## Se elimina:Novak Djokovic con: 9072.24 puntos acumulados. Tenista eliminado num: 2
+
+***** Ronda---->>>: 2
+
+    ### Juego ----------->>>: 0
+     ## Tenista1  (Golpeadores)---->>>:Novak Djokovic
+     ## Tenista2  (Voleadores)---->>>:Aryna Sabalenka
+        Zapatillas asignadas:        ZapatillasConAgarre  [Modelo=CourtJam Bounce,Numero=42.0,Valor 3.5,]
+        Zapatillas asignadas:        ZapatillasConAgarre  [Modelo=CourtJam Bounce,Numero=42.0,Valor 3.5,]
+        Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=UberSonic 4k,Numero=40.0,Valor 6.0,]
+        Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=UberSonic 4k,Numero=40.0,Valor 6.0,]
+***** Asignando raquetas a tenistas *****
+
+  RaquetaEquilibrada (MultiplicadorDePotencia:6.0)(MultiplicadorDeControl:3.0)
+     [modelo: Prince TT Bandit
+     longuitud: 680.0,potencia asociada: 12.0
+     tamaño: 680.0,control asociado: 12.0
+     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Novak Djokovic
+
+  RaquetaEquilibrada (MultiplicadorDePotencia:2.5)(MultiplicadorDeControl:4.0)
+     [modelo: Prince Hornet 100
+     longuitud: 690.0,potencia asociada: 10.0
+     tamaño: 600.0,control asociado: 40.0
+     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Aryna Sabalenka
+
+  RaquetaControlada(Encordado:CERRADO)(Multiplicador de Potencia:1.8)(Multiplicador de Control:2.5)
+     [modelo: Babolat Drive
+     longuitud: 740.0,potencia asociada: 10.0
+     tamaño: 600.0,control asociado: 25.0
+     peso: 340.0,velocidad asociada: 2.4] asignada a  -->> Novak Djokovic
+
+  RaquetaPotente(Encordado:ABIERTO)(Multiplicador de Potencia:2.0)(Multiplicador de Control:2.2)
+     [modelo: Head Radical
+     longuitud: 680.0,potencia asociada: 4.0
+     tamaño: 680.0,control asociado: 4.0
+     peso: 260.0,velocidad asociada: 12.0] asignada a  -->> Aryna Sabalenka
+***** Inicio del campeonato: Campeonato de Extremadura *****
+***** Asignando raquetas a tenistas *****
+
+  RaquetaEquilibrada (MultiplicadorDePotencia:6.0)(MultiplicadorDeControl:3.0)
+     [modelo: Prince TT Bandit
+     longuitud: 680.0,potencia asociada: 12.0
+     tamaño: 680.0,control asociado: 12.0
+     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Novak Djokovic
+
+  RaquetaEquilibrada (MultiplicadorDePotencia:2.5)(MultiplicadorDeControl:4.0)
+     [modelo: Prince Hornet 100
+     longuitud: 690.0,potencia asociada: 10.0
+     tamaño: 600.0,control asociado: 40.0
+     peso: 220.0,velocidad asociada: 10.0] asignada a  -->> Aryna Sabalenka
+
+  RaquetaControlada(Encordado:CERRADO)(Multiplicador de Potencia:1.8)(Multiplicador de Control:2.5)
+     [modelo: Babolat Drive
+     longuitud: 740.0,potencia asociada: 10.0
+     

@@ -17,8 +17,8 @@ public class CampeonatoTest
     private RaquetaControlada r2;
     private RaquetaEquilibrada r3;
     private RaquetaPotente r4;
-    // private RaquetaControlada r5;
-    // private RaquetaEquilibrada r6;
+    private RaquetaControlada r5;
+    private RaquetaEquilibrada r6;
     // private RaquetaPotente r7;
     private ZapatillasAmortiguadas z1;
     private ZapatillasConAgarre z2;
@@ -74,8 +74,8 @@ public class CampeonatoTest
         r2 = new RaquetaControlada("Babolat Drive", 340, 740, 600, Encordado.CERRADO);
         r3 = new RaquetaEquilibrada("Prince Hornet 100", 220, 690, 600, Encordado.CERRADO,2.5,4);
         r4 = new RaquetaPotente("Yonex Vcore", 300, 680, 650, Encordado.CERRADO);
-        // r5 = new RaquetaControlada("TFlash 300", 300, 680, 680, Encordado.CERRADO);
-        // r6 = new  RaquetaEquilibrada("Prince TT Bandit", 220, 680, 680, Encordado.CERRADO, 6, 3);
+        r5 = new RaquetaControlada("TFlash 300", 300, 680, 680, Encordado.CERRADO);
+        r6 = new  RaquetaEquilibrada("Prince TT Bandit", 220, 680, 680, Encordado.CERRADO, 6, 3);
         
         
         z1 = new ZapatillasAmortiguadas("Air Zoom Vapor Pro", 42, 5);
@@ -99,8 +99,8 @@ public class CampeonatoTest
         c1.introducirRaquetas(r2);
         c1.introducirRaquetas(r3);
         c1.introducirRaquetas(r4);
-        // c1.introducirRaquetas(r5);
-        // c1.introducirRaquetas(r6);
+        c1.introducirRaquetas(r5);
+        c1.introducirRaquetas(r6);
         
         
         
@@ -120,6 +120,8 @@ public class CampeonatoTest
         r2 = null;
         r3 = null;
         r4 = null;
+        r5 = null;
+        r6 = null;
         z1 = null;
         z2 = null;
         z3 = null;
@@ -134,8 +136,8 @@ public class CampeonatoTest
     public void asignarRaquetasTest() throws java.io.IOException
     {
         c1.asignarRaquetas();
-        assertSame(r3, t1.getRaqueta());
-        assertSame(r2, t2.getRaqueta());
+        assertSame(r6, t1.getRaqueta());
+        assertSame(r3, t2.getRaqueta());
     }
     
     @Test
@@ -144,8 +146,8 @@ public class CampeonatoTest
         assertEquals(0.0, t1.getPuntosAcumulados(), 0.1);
         assertEquals(0.0, t2.getPuntosAcumulados(), 0.1);
         c1.competicion();
-        assertEquals(67503.4, t1.getPuntosAcumulados(), 0.1);
-        assertEquals(20996.7, t2.getPuntosAcumulados(), 0.1);
+        assertEquals(45361.0, t1.getPuntosAcumulados(), 0.1);
+        assertEquals(335521.5, t2.getPuntosAcumulados(), 0.1); 
     }
 }
 

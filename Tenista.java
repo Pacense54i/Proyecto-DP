@@ -471,7 +471,7 @@ public abstract class Tenista
     public void cambiarRaqueta() throws IOException //gancho
     {
         TreeSet <RaquetaGenerica> listaRaquetas = Campeonato.getInstancia().getRaquetasCampeonato();
-        RaquetaGenerica aux = null; 
+        RaquetaGenerica aux = new RaquetaGenerica(); 
         
         aux = listaRaquetas.pollFirst();
         
