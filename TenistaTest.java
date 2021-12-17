@@ -125,9 +125,9 @@ public class TenistaTest
         t2.golpear();
         assertEquals(37458.6, t2.getPuntosAcumulados(), 0.1);
         // t1.cambiarRaqueta();
-        // assertEquals(r3, t1.getRaqueta());
+        // assertSame(r4, t1.getRaqueta());
         // t2.cambiarRaqueta();
-        //assertEquals(r4, t2.getRaqueta());
+        // assertSame(r3, t2.getRaqueta());
     }
 
     @Test
