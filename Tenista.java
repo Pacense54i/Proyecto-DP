@@ -333,7 +333,7 @@ public abstract class Tenista
      * Poner la pelota en juego. 
      * Incrementa los puntos Acomulados de cada tenista mediante la suma de sus puntos Acomulados mas el valor del saque calculado en el metodo calcularSaque()
      */
-    private final void sacar()
+    public final void sacar()
     {
         double increment;
         increment = 0;
@@ -368,7 +368,7 @@ public abstract class Tenista
      * 
      * @param Tenista oponente: Tenista con el que se quiere comparar el valor de saque
      */
-    private final void restar(Tenista oponente)
+    public final void restar(Tenista oponente)
     {
         double incrementar;
         double resto;
@@ -483,7 +483,15 @@ public abstract class Tenista
         Campeonato.getInstancia().getFichero().write("\n        " + getNombre() + " cambia su raqueta por: " + aux.getClass().getName() 
         + " modelo =" + aux.getModelo() + " Velocidad = " + aux.calcularVelocidad());
     }
-    
+    // t1.setRaqueta(r1);
+        // t2.setRaqueta(r2);
+    // t1.setRaqueta(r1);
+        // t1.sacar();
+        // t2.sacar();
+        // t2.restar(t1);
+        // t1.restar(t2);
+        // t1.golpear();
+        // t2.golpear();
 }
     
     
