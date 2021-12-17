@@ -483,15 +483,6 @@ public abstract class Tenista
         Campeonato.getInstancia().getFichero().write("\n        " + getNombre() + " cambia su raqueta por: " + aux.getClass().getName() 
         + " modelo =" + aux.getModelo() + " Velocidad = " + aux.calcularVelocidad());
     }
-    // t1.setRaqueta(r1);
-        // t2.setRaqueta(r2);
-    // t1.setRaqueta(r1);
-        // t1.sacar();
-        // t2.sacar();
-        // t2.restar(t1);
-        // t1.restar(t2);
-        // t1.golpear();
-        // t2.golpear();
 }
     
     

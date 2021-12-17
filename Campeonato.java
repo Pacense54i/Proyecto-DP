@@ -435,7 +435,7 @@ public class Campeonato
      * Así sucesivamente hasta que cada tenista tenga una raqueta para jugar. 
      * Si no hay suficientes raquetas para todos los tenistas se suspenderá temporalmente el campeonato.
      */
-    private void asignarRaquetas() throws IOException
+    public void asignarRaquetas() throws IOException
     {
         RaquetaGenerica raquet = new RaquetaGenerica(); 
         Tenista aux = null;
@@ -511,5 +511,17 @@ public class Campeonato
      *      enc = true;
          }
     */
-   
+    
+   /**
+    * Metodo creado por y para su uso en las pruebas de jUnit de la clase campeonato.
+    * Este metodo te devuelve el tenista que hay en la lista de competidores. Esto facilita mucho la comprobacion del funcionamiento del modulo competicion
+    */
+   public Tenista TenistaGanador()
+   {
+       Tenista aux = null;
+       //como se ha acabado el campeonato solo queda un tenista en la lista que estara en la posicion 0 de la lista competidores   
+       aux = competidores.get(0);     
+        
+       return aux;
+   }
 }
