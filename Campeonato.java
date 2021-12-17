@@ -398,14 +398,19 @@ public class Campeonato
        fichero.write("\n     ## Tenista1  (" + t1.getClass().getName() + ")---->>>:" + t1.getNombre());
        
        //ejecuto elegir zapatilla y devuelvo la zapatilla que se ha puesto para elimonarla de la lista de Zapatillas
-       zapatillasCampeonato.remove(t1.elegirZapatillas());
+       Zapatillas aux = null;
+       aux = t1.elegirZapatillas();
+       zapatillasCampeonato.remove(aux);
+       fichero.write("\n        Zapatillas asignadas: " + aux.toString());
        
        //mostramos los tenistas que van a jugar con sus zapatillas
        System.out.println("    ## Tenista2  (" + t2.getClass().getName() + ")---->>>:" + t2.getNombre()); 
        fichero.write("\n     ## Tenista2  (" + t2.getClass().getName() + ")---->>>:" + t2.getNombre());
        
        //ejecuto elegir zapatilla y devuelvo la zapatilla que se ha puesto para elimonarla de la lista de Zapatillas
-       zapatillasCampeonato.remove(t2.elegirZapatillas());  
+       aux = t2.elegirZapatillas();
+       zapatillasCampeonato.remove(aux); 
+       fichero.write("\n        Zapatillas asignadas: " + aux.toString());
     }
     
     

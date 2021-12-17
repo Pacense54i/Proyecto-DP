@@ -121,7 +121,9 @@
 
     ### Juego ----------->>>: 0
      ## Tenista1  (Golpeadores)---->>>:Novak Djokovic
+        Zapatillas asignadas:        ZapatillasConAgarre  [Modelo=CourtJam Bounce,Numero=42.0,Valor 3.5,]
      ## Tenista2  (Voleadores)---->>>:Aryna Sabalenka
+        Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=UberSonic 4k,Numero=40.0,Valor 6.0,]
         Novak Djokovic cambia su raqueta por: RaquetaControlada modelo =Pure Aero Velocidad = 2.4
        Aryna Sabalenka no cambia su raqueta
      ## Gana este juego:Aryna Sabalenka con: 335521.5 puntos acumulados.    ## Se elimina:Novak Djokovic con: 12248.099999999999 puntos acumulados. Tenista eliminado num: 3

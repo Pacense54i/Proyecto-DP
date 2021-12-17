@@ -127,17 +127,21 @@ public class TenistaTest
         // t1.cambiarRaqueta();
         // assertEquals(r3, t1.getRaqueta());
         // t2.cambiarRaqueta();
-        //
         //assertEquals(r4, t2.getRaqueta());
     }
 
     @Test
     public void ElegirZapatillaTest() throws java.io.IOException
     {
+        ZapatillasConAgarre  z5 = new ZapatillasConAgarre("Court Vapor React", 40,  5);
+        ZapatillasAmortiguadas  z6 = new ZapatillasAmortiguadas("Zoom GP Turbo", 43, 3.5);
+        c1.introducirZapatillas(z5);
+        c1.introducirZapatillas(z6);
+        
         t1.elegirZapatillas();
         assertSame(z3, t1.getZapatilla());
         t2.elegirZapatillas();
-        assertSame(z4, t1.getZapatilla());
+        assertSame(z4, t2.getZapatilla());
     }
 
     

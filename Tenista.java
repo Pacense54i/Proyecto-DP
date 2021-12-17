@@ -420,7 +420,7 @@ public abstract class Tenista
                   setZapatilla(aux); //el tenista se pone la zapatilla
                   enc=true;
                   System.out.println("       Zapatillas asignadas: " + aux.toString() );
-                  Campeonato.getInstancia().getFichero().write("\n        Zapatillas asignadas: " + aux.toString() );
+                  //Campeonato.getInstancia().getFichero().write("\n        Zapatillas asignadas: " + aux.toString());
               }
               else{
                   i++;
