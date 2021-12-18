@@ -25,30 +25,6 @@ public class TenistaTest
     private Golpeadores t1;
     private Voleadores t2;
     private Campeonato c1;
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     /**
      * Default constructor for test class TenistaTest
