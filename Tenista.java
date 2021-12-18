@@ -480,8 +480,8 @@ public abstract class Tenista
         System.out.println("       " + getNombre() + " cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
         + aux.calcularVelocidad());
         
-        Campeonato.getInstancia().getFichero().write("\n        " + getNombre() + " cambia su raqueta por: " + aux.getClass().getName() 
-        + " modelo =" + aux.getModelo() + " Velocidad = " + aux.calcularVelocidad());
+        //Campeonato.getInstancia().getFichero().write("\n        " + getNombre() + " cambia su raqueta por: " + aux.getClass().getName() 
+        //+ " modelo =" + aux.getModelo() + " Velocidad = " + aux.calcularVelocidad());
     }
 }
     

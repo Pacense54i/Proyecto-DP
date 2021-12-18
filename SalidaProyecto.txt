@@ -104,6 +104,7 @@
         Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=UberSonic 4k,Numero=40.0,Valor 6.0,]
         Novak Djokovic cambia su raqueta por: RaquetaPotente modelo =Yonex Vcore Velocidad = 9.0
        Aryna Sabalenka no cambia su raqueta
+        Aryna Sabalenka cambia su raqueta por: RaquetaPotente modelo =Head Radical Velocidad = 12.0
      ## Gana este juego:Novak Djokovic con: 45361.0 puntos acumulados.
      ## Se elimina:Aryna Sabalenka con: 41990.99999999999 puntos acumulados. Tenista eliminado num: 1
 
@@ -113,6 +114,7 @@
      ## Tenista2  (Golpeadores)---->>>:Novak Djokovic
         Zapatillas asignadas:        ZapatillasConAgarre  [Modelo=CourtJam Bounce,Numero=42.0,Valor 3.5,]
        Aryna Sabalenka no cambia su raqueta
+        Aryna Sabalenka cambia su raqueta por: RaquetaEquilibrada modelo =Prince Hornet 100 Velocidad = 10.0
         Novak Djokovic cambia su raqueta por: RaquetaControlada modelo =TFlash 300 Velocidad = 7.199999999999999
      ## Gana este juego:Aryna Sabalenka con: 335521.5 puntos acumulados.
      ## Se elimina:Novak Djokovic con: 9072.24 puntos acumulados. Tenista eliminado num: 2
@@ -126,6 +128,7 @@
         Zapatillas asignadas:        ZapatillasAmortiguadas  [Modelo=UberSonic 4k,Numero=40.0,Valor 6.0,]
         Novak Djokovic cambia su raqueta por: RaquetaControlada modelo =Pure Aero Velocidad = 2.4
        Aryna Sabalenka no cambia su raqueta
+        Aryna Sabalenka cambia su raqueta por: RaquetaEquilibrada modelo =Prince Hornet 100 Velocidad = 10.0
      ## Gana este juego:Aryna Sabalenka con: 335521.5 puntos acumulados.    ## Se elimina:Novak Djokovic con: 12248.099999999999 puntos acumulados. Tenista eliminado num: 3
 
 ---->>>>  Gana la competición:

@@ -383,7 +383,9 @@ public class Campeonato
        t2.setPuntosAcumulados(0.0);
        
        t1.jugar(t2);
-       t2.jugar(t1);    
+       salidaCambiarRaqueta(t1);
+       t2.jugar(t1);  
+       salidaCambiarRaqueta(t2);      
     }
 
     /**
@@ -413,6 +415,16 @@ public class Campeonato
        fichero.write("\n        Zapatillas asignadas: " + aux.toString());
     }
     
+    /**
+     * Este modulo se encarga de escribir en el fichero de salida el cambio de raqueta de cada tenista
+     * Modulo hecho para mostrar el cambio de raqueta del tenista en la clase Campeonato despues de hacer la llamada a jugar
+     */
+    private void salidaCambiarRaqueta(Tenista t) throws IOException
+    {
+      RaquetaGenerica aux = t.getRaqueta();
+       fichero.write("\n        " + t.getNombre() + " cambia su raqueta por: " + aux.getClass().getName() 
+        + " modelo =" + aux.getModelo() + " Velocidad = " + aux.calcularVelocidad());  
+    }
     
     /**
      * Añade una nueva zapatilla a la lista de Zapatillas

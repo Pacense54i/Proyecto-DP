@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.util.TreeSet;
 
 /**
  * The test class TenistaTest.
@@ -124,10 +125,6 @@ public class TenistaTest
         assertEquals(71617.2, t1.getPuntosAcumulados(), 0.1);
         t2.golpear();
         assertEquals(37458.6, t2.getPuntosAcumulados(), 0.1);
-        // t1.cambiarRaqueta();
-        // assertSame(r4, t1.getRaqueta());
-        // t2.cambiarRaqueta();
-        // assertSame(r3, t2.getRaqueta());
     }
 
     @Test
@@ -143,9 +140,30 @@ public class TenistaTest
         t2.elegirZapatillas();
         assertSame(z4, t2.getZapatilla());
     }
-
     
+    /**
+     * En esta prueba hemos obtenido el primer elemento del treeSet para compararlo despues por la raqueta obtenida por el tenista.
+     * Se hace esto asi dado que el tenista obtiene la raqueta del treeSet por lo que al ejecutar cambiarRaqueta deberia de apuntar al miso sitio que la primera raqueta del treeSet
+     */
+    @Test
+    public void cambiarRaquetaTest() throws java.io.IOException
+    {
+        TreeSet <RaquetaGenerica> listaRaquetas = c1.getRaquetasCampeonato();
+        RaquetaGenerica aux = new RaquetaGenerica();
+        aux = listaRaquetas.first();
+        
+        t1.cambiarRaqueta();
+        assertSame(aux, t1.getRaqueta());
+        
+        aux = listaRaquetas.first();
+        
+        t2.cambiarRaqueta();
+        assertSame(aux, t2.getRaqueta());
+        
+        aux = null;
+    }
 }
+
 
 
 

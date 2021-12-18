@@ -57,8 +57,8 @@ public class Voleadores extends Tenista
                 System.out.println("       " + super.getNombre() + " cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
                 + aux.calcularVelocidad());
                 
-                Campeonato.getInstancia().getFichero().write("\n        " + super.getNombre() + " cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
-                + aux.calcularVelocidad());
+                //Campeonato.getInstancia().getFichero().write("\n        " + super.getNombre() + " cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
+                //+ aux.calcularVelocidad());
             }
         }
         
