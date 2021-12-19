@@ -68,6 +68,9 @@ public abstract class Tenista
     
     /**
      * Muestra por pantalla los valores de los atributos de la clase Tenista
+     * 
+     * Con @Override se sobreescribe el metodo toString de la clase Object
+     * @return devuelve una cadena (String) con lo que se quiere mostrar por pantalla
      */
     @Override
     public String toString()
@@ -410,7 +413,7 @@ public abstract class Tenista
     public Zapatillas elegirZapatillas() throws IOException
     {   
         ArrayList <Zapatillas> listaZapatillas = new ArrayList <Zapatillas> (Campeonato.getInstancia().getZapatillasCampeonato()); ///COPIA DE LA LISTA DE ZAPATILLAS
-        Zapatillas aux = new Zapatillas();
+        Zapatillas aux = null;
         boolean enc = false;
         int i = 0;
         

@@ -14,6 +14,9 @@ public enum Encordado
     private Double multiplicadorDePotencia;
     private Double multiplicadorDeControl;
     
+    /**
+     * 
+     */
     Encordado(String estiloDeEncordado, Double mulPotencia, Double mulControl)
     {
         estilo = estiloDeEncordado;
@@ -21,21 +24,42 @@ public enum Encordado
         multiplicadorDeControl = mulControl;
     }
     
+    /**
+     * Devuelve el String almacenado en el atributo Estilo 
+     * 
+     * @return String estilo: devuelve el estilo del encordado
+     */
     public String getEstilo()
     {
         return this.estilo;  
     }
     
+    /**
+     * Devuelve el valor guardado en el atributo multiplicadorDePotencia
+     * 
+     * @return Double multiplicadorDePotencia: devuelve el multiplicadorDePotencia asociado a tipo de estilo del encordado dado que este valor es diferente segun el estilo del encordado
+     */
     public Double getMultiplicadorDePotencia()
     {
         return this.multiplicadorDePotencia;
     }
     
+    /**
+     * Devuelve el valor guardado en el atributo multiplicadorDeControl
+     * 
+     * @return Double multiplicadorDeControl: devuelve el multiplicadorDeControl asociado a tipo de estilo del encordado dado que este valor es diferente segun el estilo del encordado
+     */
     public Double getMultiplicadorDeControl()
     {
         return this.multiplicadorDeControl;
     }
     
+    /**
+     * Muestra en pantalla los valores del tipo ENUM encordado
+     * 
+     *Con @Override se sobreescribe el metodo toString de la clase Object
+     *@return devuelve una cadena (String) con lo que se quiere mostrar por pantalla
+     */
     @Override
     public String toString()
     {

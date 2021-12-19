@@ -34,12 +34,12 @@ public class Campeonato
     {
         // initialise instance variables
         // initialise instance variables
-        nombre = " ";
+        nombre = " Campeonato de Extremadura ";
         competidores = new ArrayList() ;
         eliminados = new ArrayList();
         
-        zapatillasCampeonato = new ArrayList();
-        raquetasCampeonato = new TreeSet<>( new ComparatorRaquetaPotencia() );
+        zapatillasCampeonato = new ArrayList<Zapatillas>();
+        raquetasCampeonato = new TreeSet<RaquetaGenerica>( new ComparatorRaquetaPotencia() );
         
         fichero = new BufferedWriter(new FileWriter("SalidaProyecto.txt"));
     }
@@ -52,6 +52,26 @@ public class Campeonato
         return c;
     }
 
+    /**
+     * Set name para especificar el nombre del campeonato
+     * 
+     * @param String name: almacena el String name en la variable nombre de la clase campeonato
+     */
+    public void setNombre(String name)
+    {
+        this.nombre = name;
+    }
+    
+    /**
+     * Devuelve el valor guardado en la variable nombre de la clase Campeonato
+     * 
+     * @return String nombre: nombre que tiene el Campeonato
+     */
+    public String getNombre()
+    {
+        return this.nombre;
+    }
+    
     /**
      * Devuelve la lista de Zapatillas
      * 
@@ -110,7 +130,7 @@ public class Campeonato
      */
     private void mostrarEliminados() throws IOException
     {
-        Zapatillas z = new Zapatillas();
+        Zapatillas z = null;
         RaquetaGenerica r = null;
         
         System.out.println("**********Listado de eliminados");
@@ -275,7 +295,7 @@ public class Campeonato
      */
     private void inicioDelCampeonato() throws IOException
     {
-        System.out.println("***** Inicio del campeonato: Campeonato de Extremadura *****");
+        System.out.println("***** Inicio del campeonato: " + getNombre() + " *****");
         fichero.write("***** Inicio del campeonato: Campeonato de Extremadura *****");
         //Se le asignan raquetas a los tenistas
         this.asignarRaquetas();

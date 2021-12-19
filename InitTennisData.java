@@ -247,7 +247,7 @@ public class InitTennisData {
             Campeonato.getInstancia().introducirRaquetas(r6);
             Campeonato.getInstancia().introducirRaquetas(r7);
             Campeonato.getInstancia().introducirRaquetas(r8);
-            Campeonato.getInstancia().introducirRaquetas(r1);
+            Campeonato.getInstancia().introducirRaquetas(r9);
             Campeonato.getInstancia().introducirRaquetas(r10);
             Campeonato.getInstancia().introducirRaquetas(r11);
             Campeonato.getInstancia().introducirRaquetas(r12);

@@ -29,6 +29,9 @@ public class Golpeadores extends Tenista
         return super.toString();
     }
     
+    /**
+     * El tenista incrementa sus puntos acumulados en un 10% de la velocidad que alcanza su raqueta
+     */
     public void golpear()
     {
         double acumulados = 0.0;

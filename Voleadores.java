@@ -31,6 +31,9 @@ public class Voleadores extends Tenista
         return super.toString();
     }
     
+    /**
+     * El tenista incrementa sus puntos acumulados en un 15% de la potencia de su raqueta.
+     */
     public void golpear()
     {
         double acumulados = 0.0;
@@ -41,6 +44,13 @@ public class Voleadores extends Tenista
         super.setPuntosAcumulados(acumulados);
     }
     
+    /**
+     * El tenista cambian su raqueta .
+     * Para ello, obtiene  la primera raqueta disponible (de las que lista de Raquetas de la clase Campeonato) que tenga una velocidad mayor a la suya 
+     * y cambiará su raqueta por dicha raqueta eliminando tambien la raqueta de la lista de Raquetas de la clase Campeonato
+     * 
+     * Con @Override se sobreescribe el metodo toString de la clase Tenista
+     */
     @Override
     public void cambiarRaqueta() throws IOException
     {
