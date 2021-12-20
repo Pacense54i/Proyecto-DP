@@ -16,7 +16,6 @@ import java.io.IOException;
  */
 public class Campeonato
 {
-    // instance variables - replace the example below with your own
     private String nombre;
     private ArrayList <Tenista> competidores;
     private ArrayList <Tenista> eliminados;
@@ -102,9 +101,8 @@ public class Campeonato
      */
     private void mostrarCompetidores() throws IOException
     {
-        Zapatillas z = null;
+        iZapatillas z = null;
         RaquetaGenerica r = null;
-        //InterfaceRaqueta r = null;
         
         System.out.println("**** Listado de competidores");
         fichero.write("\n**** Listado de competidores");
@@ -129,7 +127,7 @@ public class Campeonato
      */
     private void mostrarEliminados() throws IOException
     {
-        Zapatillas z = null;
+        iZapatillas z = null;
         RaquetaGenerica r = null;
         
         System.out.println("**********Listado de eliminados");
@@ -406,7 +404,7 @@ public class Campeonato
        fichero.write("\n     ## Tenista1  (" + t1.getClass().getName() + ")---->>>:" + t1.getNombre());
        
        //ejecuto elegir zapatilla y devuelvo la zapatilla que se ha puesto para elimonarla de la lista de Zapatillas
-       Zapatillas aux = null;
+       iZapatillas aux = null;
        aux = t1.elegirZapatillas();
        zapatillasCampeonato.remove(aux);
        fichero.write("\n        Zapatillas asignadas: " + aux.toString());
@@ -427,7 +425,7 @@ public class Campeonato
      */
     private void salidaCambiarRaqueta(Tenista t) throws IOException
     {
-      RaquetaGenerica aux = t.getRaqueta();
+      Raqueta aux = t.getRaqueta();
        fichero.write("\n        " + t.getNombre() + " cambia su raqueta por: " + aux.getClass().getName() 
         + " modelo =" + aux.getModelo() + " Velocidad = " + aux.calcularVelocidad());  
     }
@@ -508,32 +506,4 @@ public class Campeonato
         
         return aux;
     }
-    // public Zapatillas buscarZapatillas (double numPie){
-        // boolean enc = false;
-        // Zapatillas aux = null;
-        // Iterator <Zapatillas> iterator = zapatillasCampeonato.iterator();
-        
-        // while (iterator.hasNext() && enc==false){
-              // Zapatillas z = (Zapatillas) iterator.next();
-              // if (z.getNumero() == numPie){
-                  // enc=true;
-                  // iterator.remove();
-                  // aux = z;
-              // }
-        // }
-        // return aux;  //devuelve la zapatilla que se ha puesto
-    // }
-    /*EJEMPLO ITERATOR
-     * c.Juego();
-     * ArrayList <Integer> lista = new Arraylist<Integer>();
-     * boolean enc = false;
-     * Iterator <Integer> Iterator = lista.iterator();
-     * while(iterator.hastnext () && !enc)
-     *  Integer integer = (Integer) iterator.next();
-     *  if (integer == 100){
-     *      iterator.remove();
-     *      enc = true;
-         }
-    */
-    
 }

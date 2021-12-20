@@ -53,6 +53,9 @@ public class ZapatillasTest
         z4 = null;
     }
 
+    /**
+     * Prueba del modulo calcularValorSaque
+     */
     @Test
     public void calcularValorSaqueTest()
     {
@@ -62,6 +65,9 @@ public class ZapatillasTest
         assertEquals(6.48, z4.calcularValorSaque(), 0.1);
     }
     
+    /**
+     * Prueba del modulo calcularValorResto
+     */
     @Test
     public void calcularValorRestoTest()
     {

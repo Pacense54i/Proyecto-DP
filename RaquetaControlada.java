@@ -17,7 +17,7 @@ public class RaquetaControlada extends RaquetaGenerica
     {
         super(model,pes,longi,tamano,estilo);
     }
-    
+        
     /**
      * Calcula el control de la Raqueta Controlada dependiendo si tenemos un tipo de Raqueta Controlada con Encordado ABIERTO o CERRADO.
      * Para ello sobreescribe el metodo calcularPotencia() del supertipo RaquetaGenerica

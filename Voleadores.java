@@ -14,7 +14,7 @@ public class Voleadores extends Tenista
     /**
      * Constructor for objects of class TenistasVoladores
      */
-    public Voleadores(String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais, double num)
+    public Voleadores(String Nombre, iZapatillas z, double Saque, double Resto, int Ranking, String Pais, double num)
     {
         super(Nombre,z,Saque,Resto,Ranking,Pais,num);
     }
@@ -55,9 +55,6 @@ public class Voleadores extends Tenista
                 super.setRaqueta(aux);
                 System.out.println("       " + super.getNombre() + " cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
                 + aux.calcularVelocidad());
-                
-                //Campeonato.getInstancia().getFichero().write("\n        " + super.getNombre() + " cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
-                //+ aux.calcularVelocidad());
             }
         }
         

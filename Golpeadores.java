@@ -8,17 +8,14 @@
 public class Golpeadores extends Tenista
 {
     
-
     /**
      * Constructor for objects of class TenistasGolpeadores
      */
-    public Golpeadores(String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais, double num)
+    public Golpeadores(String Nombre, iZapatillas z, double Saque, double Resto, int Ranking, String Pais, double num)
     {
         super(Nombre,z,Saque,Resto,Ranking,Pais,num);
     }
 
-    
-    
     /**
      * El tenista incrementa sus puntos acumulados en un 10% de la velocidad que alcanza su raqueta
      */
@@ -31,6 +28,4 @@ public class Golpeadores extends Tenista
         
         super.setPuntosAcumulados(acumulados);
     }
-    
-    
 }

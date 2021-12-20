@@ -19,7 +19,7 @@ public abstract class Tenista
     private double guardarPtoSaque; 
     private String nombre;
     private String pais;
-    private Zapatillas zapatilla;
+    private iZapatillas zapatilla;
     
     private double numPie;
     private RaquetaGenerica raqueta;
@@ -51,7 +51,7 @@ public abstract class Tenista
      * 
      * @param String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais  parametros introducidos para iniciar el constructor
      */
-    public Tenista (String Nombre, Zapatillas z, double Saque, double Resto, int Ranking, String Pais, double num)
+    public Tenista (String Nombre, iZapatillas z, double Saque, double Resto, int Ranking, String Pais, double num)
     {
         ordenEliminado = 0;
         saque = Saque;
@@ -255,9 +255,9 @@ public abstract class Tenista
     /**
      * Set calzado para especificar la zapatilla del Tenista
      * 
-     * @param Zapatillas calzado: nueva zapatilla para el Tenista
+     * @param iZapatillas calzado: nueva zapatilla para el Tenista
      */
-    public void setZapatilla(Zapatillas calzado)
+    public void setZapatilla(iZapatillas calzado)
     {
         this.zapatilla = calzado;
     }
@@ -265,9 +265,9 @@ public abstract class Tenista
     /**
      * Devuelve el valor guardado en la variable zapatilla
      * 
-     * @return Zapatilla: devuelve la zapatilla del tenista
+     * @return iZapatilla: devuelve la zapatilla del tenista
      */
-    public Zapatillas getZapatilla()
+    public iZapatillas getZapatilla()
     {
        return this.zapatilla;
     }
@@ -323,7 +323,7 @@ public abstract class Tenista
     {
         double result;
         result = 0;
-        Zapatillas auxZapa = new Zapatillas();
+        iZapatillas auxZapa = new Zapatillas();
         auxZapa = this.getZapatilla();
         
         result =  this.getSaque() * auxZapa.calcularValorSaque() * raqueta.calcularPotencia() * raqueta.calcularVelocidad();
@@ -358,7 +358,7 @@ public abstract class Tenista
     {
         double result;
         result = 0;
-        Zapatillas auxZapa = new Zapatillas();
+        iZapatillas auxZapa = new Zapatillas();
         auxZapa = this.getZapatilla();
         
         result =  this.getResto() * auxZapa.calcularValorResto() * raqueta.calcularControl() * raqueta.calcularVelocidad();
@@ -407,13 +407,13 @@ public abstract class Tenista
      * recorrerá el listado zapatillasCampeonato y buscará las primeras zapatillas que tengan exactamente su mismo número de pie. 
      * Cuando las encuentre, se las pondrá y devolvera la zapatilla que se ha puesto. 
      * 
-     * @return devuelve un objeto de clase Zapatillas la cual se ha puesto el tenista, es decir, devuelve la zapatilla que se ha puesto el tenista
+     * @return devuelve un objeto de clase iZapatillas la cual se ha puesto el tenista, es decir, devuelve la zapatilla que se ha puesto el tenista
      *
      */
-    public Zapatillas elegirZapatillas() throws IOException
+    public iZapatillas elegirZapatillas() throws IOException
     {   
         ArrayList <Zapatillas> listaZapatillas = new ArrayList <Zapatillas> (Campeonato.getInstancia().getZapatillasCampeonato()); ///COPIA DE LA LISTA DE ZAPATILLAS
-        Zapatillas aux = null;
+        iZapatillas aux = null;
         boolean enc = false;
         int i = 0;
         
@@ -423,7 +423,6 @@ public abstract class Tenista
                   setZapatilla(aux); //el tenista se pone la zapatilla
                   enc=true;
                   System.out.println("       Zapatillas asignadas: " + aux.toString() );
-                  //Campeonato.getInstancia().getFichero().write("\n        Zapatillas asignadas: " + aux.toString());
               }
               else{
                   i++;
@@ -436,21 +435,8 @@ public abstract class Tenista
         }
         
         return aux;  //devuelve la zapatilla que se ha puesto
-        
-        // Campeonato c = Campeonato.getInstancia();
-        // Zapatillas aux =  c.buscarZapatillas(this.getNumPie());       
-        // if (aux != null){
-            // this.setZapatilla(aux);
-            // System.out.println("       Zapatillas asignadas:" + aux.toString()); 
-        // }
-        // return this.getZapatilla();
     }
-    //Traerse la instancia del campeonato.
-        //Llamar al método del campeonato que dado el número de pié
-        //Devuelve las zapatillas que sean de ese número y si no encuentra
-        //Ninguna de ese número, devuelve null
-        //Y aquí, si el método ese devuelve null no hace nada, sino
-        //Coloca las zapatillas devueltas al tenista de esta clase.
+    
     
     /**
      * Realiza la Inscripcion del tenista en el campeonato
@@ -482,9 +468,6 @@ public abstract class Tenista
         
         System.out.println("       " + getNombre() + " cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
         + aux.calcularVelocidad());
-        
-        //Campeonato.getInstancia().getFichero().write("\n        " + getNombre() + " cambia su raqueta por: " + aux.getClass().getName() 
-        //+ " modelo =" + aux.getModelo() + " Velocidad = " + aux.calcularVelocidad());
     }
 }
     

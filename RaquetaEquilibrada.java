@@ -99,8 +99,8 @@ public class RaquetaEquilibrada extends RaquetaGenerica
     @Override
     public String toString()
     {
-        String cadena1 ="  " + getClass().getName() + " "  + "(MultiplicadorDePotencia:" + this.multiplicadorPotencia + 
-        ")(MultiplicadorDeControl:" + this.getMultiplicadorControl() + ")";
+        String cadena1 ="  " + getClass().getName() + " "  + "(MultiplicadorDePotencia:" + this.multiplicadorPotencia
+        + ")(MultiplicadorDeControl:" + this.getMultiplicadorControl() + ")";
         
         return cadena1 + super.toString();
     }
