@@ -132,7 +132,6 @@ public class CampeonatoTest
         c1 = null;
     }
 
-    
     @Test
     public void asignarRaquetasTest() throws java.io.IOException
     {
@@ -147,7 +146,6 @@ public class CampeonatoTest
         c1.competicion();
         assertEquals(9072.24, t1.getPuntosAcumulados(), 0.1);
         assertEquals(41990.9, t2.getPuntosAcumulados(), 0.1);
-        
     }
 }
 
