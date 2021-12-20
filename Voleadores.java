@@ -62,6 +62,7 @@ public class Voleadores extends Tenista
             System.out.println("       " + super.getNombre() + " no cambia su raqueta");
             Campeonato.getInstancia().getFichero().write("\n       " + super.getNombre() + " no cambia su raqueta");
         }
+        
     }
     
 }

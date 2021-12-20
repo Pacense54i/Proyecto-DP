@@ -420,8 +420,8 @@ public class Campeonato
     private void salidaCambiarRaqueta(Tenista t) throws IOException
     {
       Raqueta aux = t.getRaqueta();
-       fichero.write("\n        " + t.getNombre() + " cambia su raqueta por: " + aux.getClass().getName() 
-        + " modelo =" + aux.getModelo() + " Velocidad = " + aux.calcularVelocidad());  
+      fichero.write("\n        " + t.getNombre() + " cambia su raqueta por: " + aux.getClass().getName() 
+      + " modelo =" + aux.getModelo() + " Velocidad = " + aux.calcularVelocidad());  
     }
     
     /**
