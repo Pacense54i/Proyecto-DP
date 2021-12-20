@@ -20,9 +20,9 @@ public class RaquetaGenerica implements InterfaceRaqueta, InterfaceRaqueta2
     // cambias algo, sólo se cambiaría en una de las raquetas
     // y no en todas.
     // Le extraña mucho que no nos hayan dicho nada la verdad.
-    Map <Double, Double > longitudPotencia = new HashMap<>();
-    Map <Double, Double > tmCabControl = new HashMap<>();
-    Map <Double, Double > pesoVelocidad = new HashMap<>();
+    static Map <Double, Double > longitudPotencia;
+    static Map <Double, Double > tmCabControl;
+    static Map <Double, Double > pesoVelocidad;
     
     public final double FACTOR1 = 1.5;
     public final double FACTOR2 = 1.2;

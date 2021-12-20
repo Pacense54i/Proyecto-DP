@@ -15,7 +15,7 @@ public enum Encordado
     private Double multiplicadorDeControl;
     
     /**
-     * 
+     * Constructor del tipo ENUM Encordado
      */
     Encordado(String estiloDeEncordado, Double mulPotencia, Double mulControl)
     {

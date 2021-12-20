@@ -115,6 +115,7 @@ public class TenistaTest
         assertSame(z3, t1.getZapatilla());
         t2.elegirZapatillas();
         assertSame(z4, t2.getZapatilla());
+
     }
     
     /**
@@ -139,6 +140,7 @@ public class TenistaTest
         aux = null;
     }
 }
+
 
 
 

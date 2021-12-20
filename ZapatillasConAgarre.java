@@ -16,11 +16,6 @@ public class ZapatillasConAgarre extends Zapatillas
         super(model,number,value);
     }
     
-    @Override
-    public double calcularValorSaque()
-    {
-        return super.calcularValorSaque();
-    }
     
     @Override
     public double calcularValorResto()

@@ -19,17 +19,6 @@ public class Voleadores extends Tenista
         super(Nombre,z,Saque,Resto,Ranking,Pais,num);
     }
 
-    /**
-     * Muestra en pantalla los valores de la diferentes variables de la clase TenistasVoladores
-     * 
-     *Con @Override se sobreescribe el metodo toString de la clase Tenista
-     *@return devuelve una cadena (String) con lo que se quiere mostrar por pantalla
-     */
-    @Override
-    public String toString()
-    {
-        return super.toString();
-    }
     
     /**
      * El tenista incrementa sus puntos acumulados en un 15% de la potencia de su raqueta.

@@ -22,11 +22,6 @@ public class ZapatillasAmortiguadas extends Zapatillas
         return super.calcularValorSaque() * 1.8;
     }
     
-    @Override
-    public double calcularValorResto()
-    {
-        return super.calcularValorResto();
-    }
 
     /**
      * Muestra en pantalla los valores de la diferentes variables de la clase ZapatillasAmortiguadas

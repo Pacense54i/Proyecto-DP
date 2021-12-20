@@ -32,8 +32,6 @@ public class Campeonato
      */
     private Campeonato() throws IOException
     {
-        // initialise instance variables
-        // initialise instance variables
         nombre = " Campeonato de Extremadura ";
         competidores = new ArrayList() ;
         eliminados = new ArrayList();
@@ -104,8 +102,9 @@ public class Campeonato
      */
     private void mostrarCompetidores() throws IOException
     {
-        Zapatillas z = new Zapatillas();
+        Zapatillas z = null;
         RaquetaGenerica r = null;
+        //InterfaceRaqueta r = null;
         
         System.out.println("**** Listado de competidores");
         fichero.write("\n**** Listado de competidores");
@@ -187,6 +186,44 @@ public class Campeonato
     }
     
     /**
+     * Modulo que se encarga de insertar al tenista que ha perdido de la lista de eliminados
+     * 
+     * @param Tenista t: tenista que ha perdido el partido. Int auxNum:a uxNum = numero de veces que se ha jugado un partido.
+     */
+    private void eliminarTenista(Tenista t, int auxNum)
+    {
+        t.setOrdenEliminado(auxNum);
+        eliminados.add(t);
+        eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
+    }
+    
+    /**
+     * Se muestra pòr pantalla quien ha ganado el juego
+     * 
+     * @param Tenista t: ganador del juego
+     */
+    private void mostrarGanador(Tenista t) throws IOException
+    {
+        System.out.println("    ## Gana este juego:" + t.getNombre() + " con: " + t.getPuntosAcumulados() + " puntos acumulados.");
+                    
+        fichero.write("\n     ## Gana este juego:" + t.getNombre() + " con: " + t.getPuntosAcumulados() + " puntos acumulados.");
+    }
+    
+    /**
+     * Se muestra pòr pantalla quien ha perdido el juego
+     * 
+     * @param Tenista t: perdedor del juego
+     */
+    private void mostrarPerdedor(Tenista t) throws IOException
+    {
+        System.out.println("    ## Se elimina:" + t.getNombre() + " con: " + t.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " 
+        + t.getOrdenEliminado());
+                    
+        fichero.write("\n     ## Se elimina:" + t.getNombre() + " con: " + t.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: "
+        + t.getOrdenEliminado());
+    }
+    
+    /**
      * Comprueba que tenista ha ganado el partido y hace lo correspondiente si el tenista ha ganado o ha perdido
      *
      * @param  Tenistas t1 y t2 son los tenistas que estan jugando el partido, int tamanoLista es el valor del tamaño de la lista de competidores - 1,
@@ -204,87 +241,38 @@ public class Campeonato
                 sumat2 = t2.getSaque() + t2.getResto();
                 if (sumat1 > sumat2){
                     //sumat2 habra ganado
-                    
-                    t1.setOrdenEliminado(auxNum);
-                    eliminados.add(t1);
-                    eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
+                    eliminarTenista(t1,auxNum);
                     
                     competidores.set(i,t2); //intercambia la posicion del tenista
-                    
-                    //muestro ganador y perdedor
-                    System.out.println("    ## Gana este juego:" + 
-                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados.");
-                    
-                    fichero.write("\n     ## Gana este juego:" + t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados.");
-                    
-                    System.out.println("    ## Se elimina:" + 
-                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
-                    t1.getOrdenEliminado());
-                    
-                    fichero.write("\n     ## Se elimina:" + 
-                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " +  t1.getOrdenEliminado());
+                    //a continuacion se muestra el ganador y perdedor por pantalla
+                    mostrarGanador(t2);
+                    mostrarPerdedor(t1);
                 }
                 else{
                     //sumat1 habra gando dado que sumat2 es menor
-                    
-                    t2.setOrdenEliminado(auxNum);
-                    eliminados.add(t2);
-                    eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
-                    
-                    //muestro ganador y perdedor
-                    System.out.println("    ## Gana este juego:" + 
-                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados.");
-                    
-                    fichero.write("\n     ## Gana este juego:" + t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados.");
-                    
-                    System.out.println("    ## Se elimina:" + 
-                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
-                    t2.getOrdenEliminado());
-                    
-                    fichero.write("\n     ## Se elimina:" + 
-                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + t2.getOrdenEliminado());
+                    eliminarTenista(t2,auxNum);
+                    //a continuacion se muestra el ganador y perdedor por pantalla
+                    mostrarGanador(t1);
+                    mostrarPerdedor(t2);
                 }
                 competidores.remove(tamanoLista); 
         }
         else{
                 if( t1.getPuntosAcumulados() > t2.getPuntosAcumulados() ){
                     //t1 es mayor, gana t1
-                    
-                    t2.setOrdenEliminado(auxNum);
-                    eliminados.add(t2);
-                    eliminados.sort( new ComparatorEliminados() ); //ordena la lista de eliminados de manera descendente
-                    
-                    System.out.println("    ## Gana este juego:" + 
-                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados.");
-                    
-                    fichero.write("\n     ## Gana este juego:" + t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados.");
-                    
-                    System.out.println("    ## Se elimina:" + 
-                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
-                    t2.getOrdenEliminado());
-                    
-                    fichero.write("\n     ## Se elimina:" + 
-                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + t2.getOrdenEliminado());
+                    eliminarTenista(t2,auxNum);
+                    //a continuacion se muestra el ganador y perdedor por pantalla
+                    mostrarGanador(t1);
+                    mostrarPerdedor(t2);
                 }
                 else{
                     //t2 es mayor, gana t2
-                    
-                    t1.setOrdenEliminado(auxNum);
-                    eliminados.add(t1);
-                    eliminados.sort( new ComparatorEliminados() );  //ordena la lista de eliminados de manera descendente
+                    eliminarTenista(t1,auxNum);
                     
                     competidores.set(i,t2); //intercambia la posicion del tenista
-                    
-                                        
-                    System.out.println("    ## Gana este juego:" + 
-                    t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados.");
-                    fichero.write("\n     ## Gana este juego:" + t2.getNombre() + " con: " + t2.getPuntosAcumulados() + " puntos acumulados.");
-                    
-                    System.out.println("    ## Se elimina:" + 
-                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + 
-                    t1.getOrdenEliminado());
-                    fichero.write("    ## Se elimina:" + 
-                    t1.getNombre() + " con: " + t1.getPuntosAcumulados() + " puntos acumulados. Tenista eliminado num: " + t1.getOrdenEliminado());
+                    //a continuacion se muestra el ganador y perdedor por pantalla
+                    mostrarGanador(t2);
+                    mostrarPerdedor(t1);
                 }
                 competidores.remove(tamanoLista);
         }
