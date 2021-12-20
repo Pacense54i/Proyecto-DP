@@ -26,7 +26,7 @@ public class Voleadores extends Tenista
     public void golpear()
     {
         double acumulados = 0.0;
-        RaquetaGenerica aux = super.getRaqueta();        
+        Raqueta aux = super.getRaqueta();        
         
         acumulados = super.getPuntosAcumulados() + aux.calcularPotencia() * 0.15 ;
         
@@ -45,10 +45,10 @@ public class Voleadores extends Tenista
     {
         Iterator <RaquetaGenerica> iterator = Campeonato.getInstancia().getRaquetasCampeonato().iterator();
         boolean enc = false;
-        RaquetaGenerica r = super.getRaqueta();
+        Raqueta r = super.getRaqueta();
         while (iterator.hasNext() && enc==false)
         {
-            RaquetaGenerica aux = (RaquetaGenerica) iterator.next();
+            Raqueta aux = (Raqueta) iterator.next();
             if( aux.calcularVelocidad() > r.calcularVelocidad()){
                 enc=true;
                 iterator.remove();

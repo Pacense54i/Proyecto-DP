@@ -22,7 +22,7 @@ public class Golpeadores extends Tenista
     public void golpear()
     {
         double acumulados = 0.0;
-        RaquetaGenerica aux = super.getRaqueta();        
+        Raqueta aux = super.getRaqueta();        
         
         acumulados = super.getPuntosAcumulados() + aux.calcularVelocidad() * 0.10 ;
         

@@ -102,7 +102,7 @@ public class Campeonato
     private void mostrarCompetidores() throws IOException
     {
         iZapatillas z = null;
-        RaquetaGenerica r = null;
+        Raqueta r = null;
         
         System.out.println("**** Listado de competidores");
         fichero.write("\n**** Listado de competidores");
@@ -128,7 +128,7 @@ public class Campeonato
     private void mostrarEliminados() throws IOException
     {
         iZapatillas z = null;
-        RaquetaGenerica r = null;
+        Raqueta r = null;
         
         System.out.println("**********Listado de eliminados");
         
@@ -163,7 +163,7 @@ public class Campeonato
         fichero.write("\n**********Listado de raquetas disponibles:");
         fichero.write("\n");
        
-        for(RaquetaGenerica r: raquetasCampeonato){
+        for(Raqueta r: raquetasCampeonato){
           System.out.println(r);
           
           fichero.write("\n");
@@ -228,8 +228,6 @@ public class Campeonato
      * int i es usa variable que indica la posicion en la que se esta recorriendo el bucle, auxNum = numero de veces que se ha jugado un partido.
      * 
      */
-    
-    //cada vez que añadamos un nuevo tenista a la lista de elominados tendremos que ordenar meterlo en orden descendiente
     private void comprobacionVictoria(Tenista t1,Tenista t2,int tamanoLista,int i,int auxNum) throws IOException
     {
         
@@ -306,12 +304,8 @@ public class Campeonato
         int auxNum = 0; //numero de veces que se ejecuta un partido
         int numBucle = 0; //numero de veces que se juega un partido en cada ronda
         
-        /*Ejecutamos while de tal manera que el código no terminará hasta
-         * quedar un único tenista final que será el ganador de la 
-         * competición.
-        */
+        //Ejecutamos while de tal manera que el código no terminará hasta quedar un único tenista final que será el ganador de la competición.
         
-       
         inicioDelCampeonato();
         
             while (competidores.size() > 1){
@@ -459,7 +453,7 @@ public class Campeonato
      */
     public void asignarRaquetas() throws IOException
     {
-        RaquetaGenerica raquet = new RaquetaGenerica(); 
+        Raqueta raquet = null; 
         Tenista aux = null;
         
         //se mira el numero de raquetas y el de tenistas en la competicion

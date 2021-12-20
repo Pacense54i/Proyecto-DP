@@ -22,7 +22,7 @@ public abstract class Tenista
     private iZapatillas zapatilla;
     
     private double numPie;
-    private RaquetaGenerica raqueta;
+    private Raqueta raqueta;
     
     // guardarPtoSaque es una variable creada para guardar los puntos que ha conseguido un tenista con su saque
     //Al ser una variable creada con ese proposito no es necesario mostrarla por pantalla en el metodo mostrarTenista
@@ -295,9 +295,9 @@ public abstract class Tenista
     /**
      * Set raq para especificar la raqueta del Tenista
      * 
-     * @param RaquetaGenerica raq: nueva raqueta para el Tenista.
+     * @param Raqueta raq: nueva raqueta para el Tenista.
      */
-    public void setRaqueta(RaquetaGenerica raq)
+    public void setRaqueta(Raqueta raq)
     {
         this.raqueta = raq;
     }
@@ -305,9 +305,9 @@ public abstract class Tenista
     /**
      * Devuelve el valor guardado en la variable raqueta.
      * 
-     * @return RaquetaGenerica: devuelve la raqueta del tenista.
+     * @return Raqueta: devuelve la raqueta del tenista.
      */
-    public RaquetaGenerica getRaqueta()
+    public Raqueta getRaqueta()
     {
        return this.raqueta;
     }
@@ -323,8 +323,7 @@ public abstract class Tenista
     {
         double result;
         result = 0;
-        iZapatillas auxZapa = new Zapatillas();
-        auxZapa = this.getZapatilla();
+        iZapatillas auxZapa = this.getZapatilla();
         
         result =  this.getSaque() * auxZapa.calcularValorSaque() * raqueta.calcularPotencia() * raqueta.calcularVelocidad();
         guardarPtoSaque = result;
@@ -358,8 +357,7 @@ public abstract class Tenista
     {
         double result;
         result = 0;
-        iZapatillas auxZapa = new Zapatillas();
-        auxZapa = this.getZapatilla();
+        iZapatillas auxZapa = this.getZapatilla();
         
         result =  this.getResto() * auxZapa.calcularValorResto() * raqueta.calcularControl() * raqueta.calcularVelocidad();
         
@@ -460,7 +458,7 @@ public abstract class Tenista
     public void cambiarRaqueta() throws IOException //gancho
     {
         TreeSet <RaquetaGenerica> listaRaquetas = Campeonato.getInstancia().getRaquetasCampeonato();
-        RaquetaGenerica aux = null; 
+        Raqueta aux = null; 
         
         aux = listaRaquetas.pollFirst();
         
@@ -468,6 +466,7 @@ public abstract class Tenista
         
         System.out.println("       " + getNombre() + " cambia su raqueta por: " + aux.getClass().getName() + " modelo =" + aux.getModelo() + " Velocidad = " 
         + aux.calcularVelocidad());
+        
     }
 }
     
